@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import SkillsSection from "@/components/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import FeaturedProjectSection from "@/components/FeaturedProjectSection";
 import EducationSection from "@/components/EducationSection";
 
 const Index = () => {
