@@ -38,7 +38,7 @@ const HeroSection = () => {
             <span className="flex items-center gap-2">
               <MapPin className="w-4 h-4" /> Coimbatore, India
             </span>
-            <a href="https://www.linkedin.com/in/abishek-pranav-g-v/?skipRedirect=true" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <a href="https://www.linkedin.com/in/abishek-pranav-g-v/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Linkedin className="w-4 h-4" /> LinkedIn
             </a>
             <a href="https://github.com/AbishekPranavGV/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
