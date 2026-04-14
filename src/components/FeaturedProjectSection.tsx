@@ -119,6 +119,8 @@ const FeaturedProjectSection = () => {
                     View on GitHub
                     <ExternalLink className="w-4 h-4" />
                   </a>
+                </Button>
+                <Button variant="outline" asChild className="gap-2">
                   <a
                     href="https://www.linkedin.com/in/abishek-pranav-g-v/"
                     target="_blank"
