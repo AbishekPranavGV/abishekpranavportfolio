@@ -1,48 +1,60 @@
 import { motion } from "framer-motion";
-import { BarChart3, TrendingUp, Newspaper, Leaf, ShoppingCart, Activity, ExternalLink } from "lucide-react";
+import { 
+  BarChart3, 
+  TrendingUp, 
+  Newspaper, 
+  Leaf, 
+  ShoppingCart, 
+  Activity, 
+  ExternalLink, 
+  Bot, 
+  BrainCircuit, 
+  ScanFace,
+  Database
+} from "lucide-react";
 
 const projects = [
   {
-    icon: Leaf,
-    title: "Climate Impact ESG Dashboard",
-    description: "Live Environmental, Social & Governance monitoring system with real-time weather and air quality API integration, persistent SQLite data logging, and interactive Plotly analytics for risk trend visualization.",
-    tags: ["Streamlit", "Pandas", "Plotly", "SQLite", "API Integration"],
-    github: "https://github.com/AbishekPranavGV/Climate-Impact-ESG-Dashboard",
+    icon: Bot,
+    title: "Enterprise Knowledge RAG Bot",
+    description: "Architected a Retrieval-Augmented Generation (RAG) system grounded in custom datasets to virtually eliminate AI hallucinations. Features a high-performance retrieval pipeline using Vector Embeddings for real-time context injection.",
+    tags: ["LangChain", "OpenAI", "Pinecone", "Vector DB", "RAG"],
+    github: "https://abishekpranavportfolio.lovable.app/",
   },
   {
     icon: BarChart3,
-    title: "Customer Churn Decision Analysis",
-    description: "End-to-end analysis identifying customer attrition drivers with actionable retention strategies. Built classification models and a Streamlit dashboard for stakeholder monitoring.",
-    tags: ["Python", "Logistic Regression", "Streamlit", "EDA"],
-    github: "https://github.com/AbishekPranavGV/Customer-Churn-Decision-Analysis",
+    title: "Retail Performance & Predictive Analytics",
+    description: "Built an end-to-end data pipeline in SQL Server for 500K+ records. Developed ARIMA & Prophet models with 85% accuracy and interactive Power BI dashboards for ABC/XYZ inventory optimization.",
+    tags: ["SQL Server", "Power BI", "Time-Series", "Prophet"],
+    github: "https://github.com/AbishekPranavGV/Retail-Sales-Performance-Predictive-Analytics",
+  },
+  {
+    icon: ScanFace,
+    title: "Emotion-Based Recommendation Engine",
+    description: "Developed an innovative engine using DeepFace and OpenCV to detect user emotional states via live video feed, mapping emotional metadata to personalized content streams to boost engagement.",
+    tags: ["DeepFace", "OpenCV", "Computer Vision", "Python"],
+    github: "https://github.com/AbishekPranavGV/Emotion-Recommendation",
   },
   {
     icon: TrendingUp,
     title: "Financial Time Series Forecasting",
-    description: "ARIMA-based forecasting engine predicting closing prices for volatile equity assets, enabling data-backed risk assessment with automated API data extraction.",
-    tags: ["ARIMA", "Python", "API Integration", "Visualization"],
+    description: "ARIMA-based forecasting engine predicting closing prices for volatile equity assets like RELIANCE.NS. Includes automated API data extraction and rigorous ADF stationarity testing.",
+    tags: ["ARIMA", "Statsmodels", "yfinance", "Matplotlib"],
     github: "https://github.com/AbishekPranavGV/Stock-Price-Prediction-using-ARIMA",
-  },
-  {
-    icon: ShoppingCart,
-    title: "E-Commerce Recommendation Engine",
-    description: "Hybrid recommendation system combining SVD collaborative filtering with a Two-Tower neural retrieval model. Includes K-Means cold-start handling and real-time top-5 item serving.",
-    tags: ["SVD", "TensorFlow", "K-Means", "scikit-learn"],
-    github: "https://github.com/AbishekPranavGV/E-commerce-Recommendation-Engine",
-  },
-  {
-    icon: Activity,
-    title: "COVID-19 Global Forecasting",
-    description: "Predictive analysis of confirmed cases and fatalities using ARIMA with stationarity checks (ADF test), ACF/PACF parameter tuning, and segmented country-level forecasting.",
-    tags: ["ARIMA", "statsmodels", "Plotly", "Predictive Analytics"],
-    github: "https://github.com/AbishekPranavGV/COVID-19-Global-Forecasting-Predictive-Analysis",
   },
   {
     icon: Newspaper,
     title: "Sentiment Analysis of News Headlines",
-    description: "NLP pipeline quantifying market sentiment for Tier-1 tech stocks using NLTK VADER, with K-Means clustering to identify thematic patterns in financial news.",
-    tags: ["NLP", "NLTK", "K-Means", "Sentiment Analysis"],
+    description: "NLP pipeline quantifying market sentiment for Tier-1 tech stocks using NLTK VADER, scraping real-time financial news to identify thematic patterns and trading signals.",
+    tags: ["NLP", "NLTK", "BeautifulSoup", "Scikit-learn"],
     github: "https://github.com/AbishekPranavGV/Sentimental-analysis-of-News-Headlines",
+  },
+  {
+    icon: Leaf,
+    title: "Climate Impact ESG Dashboard",
+    description: "Live Environmental, Social & Governance monitoring system with real-time weather/air quality API integration and interactive Plotly analytics for risk trend visualization.",
+    tags: ["Streamlit", "Plotly", "SQLite", "API Integration"],
+    github: "https://github.com/AbishekPranavGV/Climate-Impact-ESG-Dashboard",
   },
 ];
 
@@ -57,7 +69,7 @@ const ProjectsSection = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="section-divider mb-4" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 tracking-tight">Technical Projects</h2>
         </motion.div>
 
         <div className="grid gap-6">
@@ -71,21 +83,42 @@ const ProjectsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glass-card p-6 group hover:border-primary/40 transition-colors block cursor-pointer"
+              className={`glass-card p-6 group transition-all block cursor-pointer border rounded-xl shadow-sm ${
+                i === 0 
+                  ? "border-primary/40 bg-primary/[0.03] shadow-md ring-1 ring-primary/20" 
+                  : "hover:border-primary/40 hover:bg-secondary/10"
+              }`}
             >
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <proj.icon className="w-5 h-5 text-primary" />
+              <div className="flex items-start gap-4 md:gap-6">
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${
+                  i === 0 ? "bg-primary/20 scale-110 shadow-inner" : "bg-primary/10 group-hover:bg-primary/20"
+                }`}>
+                  <proj.icon className={`w-6 h-6 text-primary ${i === 0 ? "animate-pulse" : ""}`} />
                 </div>
+                
                 <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-2">
-                    <h3 className="text-lg font-semibold">{proj.title}</h3>
-                    <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-3">
+                      <h3 className="text-lg font-bold tracking-tight">{proj.title}</h3>
+                      {i === 0 && (
+                        <span className="text-[10px] bg-primary text-primary-foreground px-2 py-0.5 rounded-full uppercase tracking-widest font-black shadow-sm">
+                          Featured
+                        </span>
+                      )}
+                    </div>
+                    <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0" />
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">{proj.description}</p>
+                  
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                    {proj.description}
+                  </p>
+                  
                   <div className="flex flex-wrap gap-2">
                     {proj.tags.map((tag) => (
-                      <span key={tag} className="text-xs bg-secondary text-secondary-foreground px-2.5 py-1 rounded-full">
+                      <span 
+                        key={tag} 
+                        className="text-[11px] bg-secondary/80 text-secondary-foreground border border-border/50 px-3 py-1 rounded-md font-medium"
+                      >
                         {tag}
                       </span>
                     ))}
