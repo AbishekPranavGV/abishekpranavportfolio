@@ -3,23 +3,27 @@ import { motion } from "framer-motion";
 const skillCategories = [
   {
     title: "Operations & Business Analytics",
-    skills: ["Process Mapping", "Workflow Automation", "KPI Design", "Cycle Time Reduction", "Root Cause Analysis"],
+    skills: ["Process Mapping", "Workflow Automation", "KPI Design", "Cycle Time Reduction", "Root Cause Analysis", "ABC/XYZ Classification"],
   },
   {
     title: "Data Analysis & Modeling",
-    skills: ["Python (Pandas, NumPy, Scikit-learn)", "SQL", "Advanced Excel", "Power Query", "Pivot Tables"],
+    skills: ["Python (Pandas, NumPy, Scikit-learn)", "SQL / SQL Server", "Advanced Excel", "Power Query", "Pivot Tables", "ETL Pipelines"],
+  },
+  {
+    title: "AI & Machine Learning",
+    skills: ["LangChain", "RAG Systems", "OpenAI API", "Vector Embeddings", "Pinecone", "DeepFace", "OpenCV", "Computer Vision"],
   },
   {
     title: "Predictive & Statistical",
-    skills: ["Logistic Regression", "Churn Analysis", "Time Series (ARIMA)", "Model Evaluation"],
+    skills: ["Logistic Regression", "Churn Analysis", "Time Series (ARIMA/Prophet)", "Model Evaluation", "ADF Stationarity Testing", "NLP / NLTK"],
   },
   {
     title: "Visualization & Decision Support",
-    skills: ["Tableau / Power BI", "Matplotlib", "Seaborn", "Streamlit", "Executive Dashboards"],
+    skills: ["Tableau / Power BI", "Matplotlib", "Seaborn", "Plotly", "Streamlit", "Executive Dashboards"],
   },
   {
     title: "Tools & Platforms",
-    skills: ["Git & GitHub", "Jupyter Notebook", "CRM Systems", "Export/Compliance Portals"],
+    skills: ["Git & GitHub", "Jupyter Notebook", "CRM Systems", "SQLite", "BeautifulSoup", "yfinance", "API Integration"],
   },
 ];
 
