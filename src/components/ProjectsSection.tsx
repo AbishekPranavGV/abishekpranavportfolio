@@ -9,11 +9,11 @@ import {
   ScanFace,
 } from "lucide-react";
 import projectRagBot from "@/assets/project-rag-bot.jpg";
-import retailDashboard from "@/assets/retail-dashboard.png";
+import projectRetail from "@/assets/project-retail-gh.png";
 import projectEmotion from "@/assets/project-emotion.jpg";
-import projectStock from "@/assets/project-stock.jpg";
-import projectSentiment from "@/assets/project-sentiment.jpg";
-import projectEsg from "@/assets/project-esg.jpg";
+import projectStock from "@/assets/project-stock-gh.png";
+import projectSentiment from "@/assets/project-sentiment-gh.png";
+import projectEsg from "@/assets/project-esg-gh.png";
 
 const projects = [
   {
@@ -30,7 +30,7 @@ const projects = [
     description: "Built an end-to-end data pipeline in SQL Server for 500K+ records. Developed ARIMA & Prophet models with 85% accuracy and interactive Power BI dashboards for ABC/XYZ inventory optimization.",
     tags: ["SQL Server", "Power BI", "Time-Series", "Prophet"],
     github: "https://github.com/AbishekPranavGV/Retail-Sales-Performance-Predictive-Analytics",
-    image: retailDashboard,
+    image: projectRetail,
   },
   {
     icon: ScanFace,
