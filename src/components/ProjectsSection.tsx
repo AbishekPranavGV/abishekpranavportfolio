@@ -2,11 +2,11 @@ import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, Search, ArrowUpRight, Sparkles, Filter, CheckCircle2 } from "lucide-react";
 
-type ProjectCategory = "all" | "ai" | "data" | "automation";
+type ProjectCategory = "all" | "ai" | "data" | "operations";
 
 type Project = {
   title: string;
-  category: "ai" | "data" | "automation";
+  category: "ai" | "data" | "operations";
   categoryLabel: string;
   description: string;
   impact: string;
@@ -18,108 +18,99 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Retail Sales Performance & Predictive Analytics",
+    title: "AI Catalogue Studio",
+    category: "ai",
+    categoryLabel: "Generative AI & LLMs",
+    description: "Product research, structured technical specification extraction, LLM-assisted catalogue content, and automated branded PDF generation.",
+    impact: "80% reduction in manual catalog drafting • High-precision deterministic schema extraction",
+    stack: ["Python", "Flask", "Gemini API", "PDF Generation", "Vercel", "Tailwind CSS"],
+    github: "https://github.com/AbishekPranavGV/MedX",
+    demo: "https://nunes-catalogue-studio-live.vercel.app/",
+    highlight: true,
+  },
+  {
+    title: "Retail Predictive Inventory Model",
     category: "data",
     categoryLabel: "Predictive Analytics",
-    description: "Bridged inventory logistics and customer demand using automated SQL CTE pipelines, Facebook Prophet & ARIMA seasonality forecasting.",
-    impact: "$1B+ inventory gap resolved • 85% forecast accuracy • 10 hrs/wk reporting automated",
+    description: "Python, SQL and Power BI demand forecasting system to optimise inventory reorder points and eliminate warehouse stockouts.",
+    impact: "85% forecast accuracy • 10 hrs/wk reporting automated • $1B+ inventory gap resolved",
     stack: ["SQL Window CTEs", "Python", "ARIMA", "Facebook Prophet", "Power BI", "GitHub Pages"],
     github: "https://github.com/AbishekPranavGV/Retail-Sales-Performance-Predictive-Analytics",
     demo: "https://abishekpranavgv.github.io/Retail-Sales-Performance-Predictive-Analytics/",
     highlight: true,
   },
   {
-    title: "NUNES MedX AI Catalogue Studio",
+    title: "IndiaMART Product Automation",
     category: "ai",
-    categoryLabel: "Applied AI",
-    description: "Production multi-modal industrial catalogue synthesis engine that ingests raw vendor brochures, extracts specs with LLMs, and compiles branded PDFs.",
-    impact: "Automated 80% of catalog drafting cycle • Deterministic schema validation",
-    stack: ["Python", "Flask", "Gemini API", "PDF Compilation", "Tailwind CSS", "Vercel"],
-    github: "https://github.com/AbishekPranavGV/MedX",
-    demo: "https://nunes-catalogue-studio-live.vercel.app/",
+    categoryLabel: "Process Automation",
+    description: "Playwright browser automation for product listing data, form validation, and multi-account marketplace management workflows.",
+    impact: "Bypasses anti-bot barriers with deterministic local AI seed population",
+    stack: ["JavaScript", "Node.js", "Playwright", "Generative AI", "Vercel"],
+    github: "https://github.com/AbishekPranavGV/IndiaMART-AI-Content-Catalog-Generator",
+    demo: "https://nunes-social-post-machine-mu.vercel.app/",
     highlight: true,
   },
   {
-    title: "NUNES Social Media Command Center",
-    category: "automation",
-    categoryLabel: "Full-Stack Automation",
-    description: "Multi-channel social automation machine integrating Meta Instagram Graph APIs, scheduled publishing pipelines, and analytics telemetry.",
-    impact: "Centralized marketing operations • Automated queue worker execution",
-    stack: ["Next.js 16", "React 19", "Meta Graph API", "Tailwind CSS", "Vercel"],
+    title: "NUNES Operations Intelligence Dashboard",
+    category: "operations",
+    categoryLabel: "Full-Stack BI & Operations",
+    description: "React/TypeScript dashboard for branch KPIs, purchasing visibility, service request tracking, and automated reporting.",
+    impact: "Real-time branch telemetry & cross-department operational visibility",
+    stack: ["React 19", "Next.js 16", "Supabase", "TypeScript", "Tailwind CSS", "Vercel"],
     github: "https://github.com/AbishekPranavGV/social-command-center",
     demo: "https://nunes-social-post-machine-mu.vercel.app/",
     highlight: true,
   },
   {
-    title: "NICMS Sri Lanka Case Management Blueprint",
-    category: "automation",
-    categoryLabel: "Strategic Architecture",
-    description: "National Integrated Case Management System blueprint detailing judicial automation, digital intake, role-based workflows, and SRS specifications.",
-    impact: "Architectural blueprint deployed to GitHub Pages and Netlify",
-    stack: ["HTML5", "JavaScript", "SRS Architecture", "GitHub Pages", "Netlify"],
+    title: "Customer Churn Decision Analysis",
+    category: "data",
+    categoryLabel: "Financial & Decision ML",
+    description: "End-to-end framework treating customer churn as a financial decision problem, using an interpretable ML pipeline and an interactive dashboard.",
+    impact: "Quantified customer attrition risk and financial retention decision matrix",
+    stack: ["Python", "Streamlit", "Logistic Regression", "EDA", "Decision Trees", "Pandas"],
+    github: "https://github.com/AbishekPranavGV/Customer-Churn-Decision-Analysis",
+    highlight: false,
+  },
+  {
+    title: "Financial Time-Series Forecasting Engine",
+    category: "data",
+    categoryLabel: "Deep Learning & Forecasting",
+    description: "Python tool using ARIMA and SARIMA models combined with LSTM neural architectures to forecast asset price movements and analyse volatility.",
+    impact: "Pre-trained deep neural weights (.h5/.keras) with rolling prediction confidence",
+    stack: ["TensorFlow", "Keras", "ARIMA / SARIMA", "LSTM", "Statsmodels", "NumPy"],
+    github: "https://github.com/AbishekPranavGV/Stock-Price-Prediction-using-ARIMA",
+    highlight: false,
+  },
+  {
+    title: "Climate Impact & ESG Dashboard",
+    category: "data",
+    categoryLabel: "Sustainability & BI",
+    description: "Streamlit and Power BI dashboard tracking corporate carbon emissions, resource consumption, and sustainability metrics.",
+    impact: "Real-time dynamic ESG telemetry replacing static annual CO2 spreadsheets",
+    stack: ["Python", "Streamlit", "Power BI", "SQL", "Pandas", "Matplotlib"],
+    github: "https://github.com/AbishekPranavGV/Climate-Impact-ESG-Dashboard",
+    highlight: false,
+  },
+  {
+    title: "Export Logistics Infrastructure Model",
+    category: "operations",
+    categoryLabel: "Operations & Logistics",
+    description: "Dynamic financial and operational Excel models to optimise freight handling capacity, BL documentation, and shipping clearance timelines.",
+    impact: "30% cycle time reduction in export documentation and customs turnaround",
+    stack: ["Advanced Excel", "Tally Integration", "Process Mapping", "Export Logistics", "Financial Modeling"],
     github: "https://github.com/AbishekPranavGV/NICMS-SriLanka-Strategic-Blueprint",
     demo: "https://abishekpranavgv.github.io/NICMS-SriLanka-Strategic-Blueprint/",
     highlight: false,
   },
   {
-    title: "Climate Impact & Real-time ESG Monitoring Dashboard",
-    category: "data",
-    categoryLabel: "Data Science & ESG",
-    description: "Transitioning static CO2 estimates into a dynamic, live Environmental, Social, and Governance telemetry platform for corporate sustainability.",
-    impact: "Real-time carbon estimation and interactive visual ESG telemetry",
-    stack: ["Python", "Jupyter", "Pandas", "Matplotlib", "Streamlit", "SQL"],
-    github: "https://github.com/AbishekPranavGV/Climate-Impact-ESG-Dashboard",
-    highlight: false,
-  },
-  {
-    title: "Stock Market Price Prediction (ARIMA & LSTM)",
-    category: "data",
-    categoryLabel: "Deep Learning & Time-Series",
-    description: "Financial time-series forecasting combining statistical ARIMA modeling with deep Bidirectional LSTM neural networks for asset volatility tracking.",
-    impact: "Pre-trained neural weights (.h5/.keras) with rolling prediction intervals",
-    stack: ["TensorFlow", "Keras", "LSTM", "ARIMA", "Statsmodels", "NumPy"],
-    github: "https://github.com/AbishekPranavGV/Stock-Price-Prediction-using-ARIMA",
-    highlight: false,
-  },
-  {
-    title: "Customer Churn Decision Analysis",
-    category: "data",
-    categoryLabel: "Business Analytics",
-    description: "End-to-end churn prediction case study uncovering the root causes of customer attrition and formulating ROI-optimized retention policies.",
-    impact: "Quantified customer lifecycle risk and retention opportunity matrix",
-    stack: ["Python", "Logistic Regression", "EDA", "Decision Trees", "Seaborn"],
-    github: "https://github.com/AbishekPranavGV/Customer-Churn-Decision-Analysis",
-    highlight: false,
-  },
-  {
-    title: "IndiaMART AI Content & Catalog Generator",
-    category: "ai",
-    categoryLabel: "Generative AI",
-    description: "Autonomous catalog creator taking a single seed product name, crafting technical specs, generating visuals, and pre-filling marketplace templates.",
-    impact: "Bypasses anti-bot barriers with local generation and automated fill",
-    stack: ["JavaScript", "Node.js", "Generative AI", "PDF Processing", "Automation"],
-    github: "https://github.com/AbishekPranavGV/IndiaMART-AI-Content-Catalog-Generator",
-    demo: "https://nunes-social-post-machine-mu.vercel.app/",
-    highlight: false,
-  },
-  {
-    title: "Multi-Account Gmail Inbox Hygiene Agent",
-    category: "automation",
-    categoryLabel: "Autonomous Agents",
-    description: "Autonomous email triage utility managing up to 10 Gmail accounts simultaneously, auto-archiving promotional clutter and sorting operational messages.",
-    impact: "Maintains zero-inbox hygiene across multiple enterprise mailboxes",
-    stack: ["Python", "Gmail API", "OAuth2", "Batch Automation"],
-    github: "https://github.com/AbishekPranavGV/Multi-Account-Gmail-Inbox-Hygiene-Agent",
-    highlight: false,
-  },
-  {
-    title: "Autonomous System Temp Cleaner",
-    category: "automation",
-    categoryLabel: "System Maintenance",
-    description: "Silent background maintenance utility that clears Windows temporary and cache directories on automated schedules to preserve maximum throughput.",
-    impact: "Zero-footprint silent Windows task maintaining drive health",
-    stack: ["Windows Batch", "Task Scheduler", "PowerShell", "Automation"],
-    github: "https://github.com/AbishekPranavGV/Autonomous-System-Temp-Cleaner",
+    title: "Multi-Industry BI Dashboards",
+    category: "operations",
+    categoryLabel: "Executive Dashboards",
+    description: "Power BI and Tableau dashboards with cross-filtering, drill-through DAX measures, and executive KPI summaries across finance and operations.",
+    impact: "Unified KPI design and cycle time tracking for executive leadership",
+    stack: ["Power BI", "DAX", "Tableau", "SQL Server", "ETL Pipelines", "Advanced Excel"],
+    github: "https://github.com/AbishekPranavGV/Streamlit",
+    demo: "https://blank-app-template.streamlit.app/",
     highlight: false,
   },
 ];
@@ -150,7 +141,7 @@ export default function ProjectsSection() {
               Production Portfolio
             </p>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-              Featured Work & Live Deployments
+              Featured Projects & Live Systems
             </h2>
           </div>
 
@@ -170,10 +161,10 @@ export default function ProjectsSection() {
         {/* Filter Pills */}
         <div className="flex flex-wrap gap-2 mb-10">
           {[
-            { id: "all", label: "All Projects (10)" },
-            { id: "ai", label: "Applied AI & Agents" },
-            { id: "data", label: "Predictive Analytics & ML" },
-            { id: "automation", label: "Full-Stack Automation" },
+            { id: "all", label: "All Projects (9)" },
+            { id: "ai", label: "AI & Automation" },
+            { id: "data", label: "Data & BI Analytics" },
+            { id: "operations", label: "Operations & Logistics" },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -190,7 +181,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
             {filteredProjects.map((project) => (
               <motion.div
@@ -211,7 +202,7 @@ export default function ProjectsSection() {
                     <span className="text-xs font-semibold uppercase tracking-wider text-primary">
                       {project.categoryLabel}
                     </span>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1.5">
                       <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full">
                         <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                         CI Passing
@@ -225,11 +216,11 @@ export default function ProjectsSection() {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-bold group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
 
-                  <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">
+                  <p className="mt-2.5 text-xs text-muted-foreground leading-relaxed line-clamp-3">
                     {project.description}
                   </p>
 
@@ -243,7 +234,7 @@ export default function ProjectsSection() {
                     {project.stack.map((t) => (
                       <span
                         key={t}
-                        className="rounded-md border border-border/70 bg-secondary/30 px-2.5 py-1 text-[11px] font-medium text-muted-foreground"
+                        className="rounded-md border border-border/70 bg-secondary/30 px-2 py-0.5 text-[10px] font-medium text-muted-foreground"
                       >
                         {t}
                       </span>
@@ -259,8 +250,8 @@ export default function ProjectsSection() {
                     rel="noreferrer"
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    <Github className="h-4 w-4" />
-                    <span>View Repository</span>
+                    <Github className="h-3.5 w-3.5" />
+                    <span>Repo</span>
                   </a>
 
                   {project.demo ? (
@@ -270,12 +261,12 @@ export default function ProjectsSection() {
                       rel="noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary/80 transition-colors"
                     >
-                      <span>Open Live App</span>
-                      <ArrowUpRight className="h-4 w-4" />
+                      <span>Live App</span>
+                      <ArrowUpRight className="h-3.5 w-3.5" />
                     </a>
                   ) : (
                     <span className="text-[11px] text-muted-foreground/60 italic">
-                      CLI / Core Package
+                      Internal / Model
                     </span>
                   )}
                 </div>

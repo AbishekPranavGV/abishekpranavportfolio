@@ -1,14 +1,33 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowDownRight, ArrowUpRight, Github, Linkedin, Mail, MapPin, Sparkles, Activity, ShieldCheck, Terminal } from "lucide-react";
+import { 
+  ArrowDownRight, 
+  ArrowUpRight, 
+  Github, 
+  Linkedin, 
+  Mail, 
+  Phone,
+  MapPin, 
+  Sparkles, 
+  Activity, 
+  FileText,
+  CheckCircle2,
+  TrendingUp,
+  Clock,
+  Layers
+} from "lucide-react";
+
+interface HeroSectionProps {
+  onOpenResume?: () => void;
+}
 
 const impactMetrics = [
   { value: "24", label: "Production Repos", sub: "100% CI/CD Verified Live" },
-  { value: "85%", label: "Forecast Accuracy", sub: "ARIMA & Prophet Demand Models" },
-  { value: "10 hrs/wk", label: "Manual Work Saved", sub: "Automated SQL Data Pipelines" },
-  { value: "$1B+", label: "Inventory Impact", sub: "Stockout & Distortion Solved" },
+  { value: "30%", label: "Cycle Time Cut", sub: "Export Logistics & Invoicing Automation" },
+  { value: "85%", label: "Forecast Accuracy", sub: "ARIMA & Prophet Demand Modeling" },
+  { value: "50%", label: "Screening Time Saved", sub: "Automated Candidate & Data Triage" },
 ];
 
-export default function HeroSection() {
+export default function HeroSection({ onOpenResume }: HeroSectionProps) {
   const reduceMotion = useReducedMotion();
 
   return (
@@ -18,6 +37,7 @@ export default function HeroSection() {
       <div aria-hidden="true" className="hero-glow pointer-events-none absolute -left-48 top-1/2 h-[500px] w-[500px] rounded-full opacity-30" />
 
       <div className="relative mx-auto max-w-6xl">
+        {/* Status Pill */}
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -28,11 +48,14 @@ export default function HeroSection() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
-          <span>Forward Deployed AI & Automation Engineer</span>
+          <span>Business Analyst & Data/AI Automation Specialist</span>
           <span className="text-muted-foreground/60">•</span>
-          <span className="text-foreground/90 font-medium">All 24 GitHub CI/CD Pipelines Live</span>
+          <span className="text-foreground/90 font-medium">Coimbatore, India</span>
+          <span className="text-muted-foreground/60">•</span>
+          <span className="text-emerald-400 font-semibold">24/24 CI/CD Workflows Live</span>
         </motion.div>
 
+        {/* Headline */}
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -40,11 +63,19 @@ export default function HeroSection() {
           className="mb-8"
         >
           <h1 className="max-w-4xl text-4xl font-extrabold leading-[1.1] tracking-tight md:text-6xl lg:text-7xl">
-            Engineering <span className="text-gradient">Intelligent Systems</span> That Turn Complex Operations Into Autonomous Realities.
+            Bridging Finance, Operations & <span className="text-gradient">Applied AI Automation</span>.
           </h1>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-xl">
-            I build end-to-end autonomous agentic pipelines, industrial document intelligence platforms, and predictive demand forecasting models that eliminate operational friction and deliver quantified enterprise revenue.
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-xl">
+            Business Analyst and automation professional with a <strong>BBA in Data Science & AI</strong>, an <strong>MBA in Artificial Intelligence (in progress)</strong>, and <strong>3 years of Chartered Accountancy preparation</strong>. Blending financial rigor, process improvement, and predictive data engineering using SQL, Python, Power BI, Advanced Excel, React, Next.js, and Supabase.
           </p>
+
+          <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs md:text-sm text-muted-foreground">
+            <span className="flex items-center gap-1.5"><MapPin className="h-4 w-4 text-primary" /> Coimbatore, Tamil Nadu, India</span>
+            <span>•</span>
+            <a href="tel:+916383500484" className="flex items-center gap-1.5 hover:text-primary transition-colors"><Phone className="h-4 w-4 text-primary" /> +91 63835 00484</a>
+            <span>•</span>
+            <a href="mailto:Abishekpranav403@gmail.com" className="flex items-center gap-1.5 hover:text-primary transition-colors"><Mail className="h-4 w-4 text-primary" /> Abishekpranav403@gmail.com</a>
+          </div>
         </motion.div>
 
         {/* Action Buttons */}
@@ -54,20 +85,29 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-14 flex flex-wrap items-center gap-4"
         >
+          <button
+            onClick={onOpenResume}
+            className="action-primary inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-bold shadow-lg shadow-primary/25 hover:scale-[1.02] active:scale-[0.98] transition-all"
+          >
+            <FileText className="h-4 w-4" />
+            <span>View Full Official CV</span>
+            <ArrowUpRight className="h-4 w-4" />
+          </button>
+
           <a
             href="#projects"
-            className="action-primary inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
+            className="action-outline inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold hover:border-primary/50 hover:bg-card transition-all"
           >
-            <span>Explore Live Projects</span>
+            <span>Verified Projects</span>
             <ArrowDownRight className="h-4 w-4" />
           </a>
 
           <a
             href="#architecture"
-            className="action-outline inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold hover:border-primary/50 hover:bg-card transition-all"
+            className="action-outline inline-flex items-center gap-2 rounded-xl px-4 py-3.5 text-sm font-semibold hover:border-primary/50 transition-all"
           >
             <Activity className="h-4 w-4 text-primary" />
-            <span>Interactive Architecture</span>
+            <span className="hidden sm:inline">24-Repo Matrix</span>
           </a>
 
           <a

@@ -7,16 +7,27 @@ import FeaturedProjectSection from "@/components/FeaturedProjectSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import SkillsSection from "@/components/SkillsSection";
 import EducationSection from "@/components/EducationSection";
-import { ArrowUpRight, Github, Linkedin, Mail, Check, Copy, Sparkles, Terminal } from "lucide-react";
+import ResumeModal from "@/components/ResumeModal";
+import { ArrowUpRight, Github, Linkedin, Mail, Phone, MapPin, Check, Copy, Sparkles, FileText, Download } from "lucide-react";
 
 export default function Index() {
-  const [copied, setCopied] = useState(false);
-  const email = "Abishekpranav403@gmail.com";
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
 
-  const handleCopy = () => {
+  const email = "Abishekpranav403@gmail.com";
+  const phone = "+91 63835 00484";
+
+  const handleCopyEmail = () => {
     navigator.clipboard.writeText(email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 2500);
+  };
+
+  const handleCopyPhone = () => {
+    navigator.clipboard.writeText(phone);
+    setCopiedPhone(true);
+    setTimeout(() => setCopiedPhone(false), 2500);
   };
 
   return (
@@ -28,10 +39,10 @@ export default function Index() {
         Skip to content
       </a>
 
-      <Navbar />
+      <Navbar onOpenResume={() => setIsResumeOpen(true)} />
 
       <main id="main">
-        <HeroSection />
+        <HeroSection onOpenResume={() => setIsResumeOpen(true)} />
         <LiveArchitectureSection />
         <ProjectsSection />
         <FeaturedProjectSection />
@@ -47,52 +58,81 @@ export default function Index() {
             <div className="relative z-10 max-w-3xl">
               <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary mb-4">
                 <Sparkles className="h-3.5 w-3.5" />
-                <span>Let's Build Together</span>
+                <span>Start a Conversation</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight tracking-tight text-foreground">
-                Have an enterprise workflow or complex data challenge?
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-foreground">
+                Looking for a high-impact Business Analyst & Automation Specialist?
               </h2>
 
               <p className="mt-4 text-base md:text-lg text-muted-foreground leading-relaxed">
-                Whether you're looking for a Forward Deployed AI Engineer, autonomous document pipelines, or high-accuracy demand forecasting models—I'd be glad to discuss how we can engineer an impactful solution.
+                Combining finance foundations, business operations, and applied AI automation to eliminate manual bottlenecks, build executive BI dashboards, and engineer intelligent workflows.
               </p>
 
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a
                   href={`mailto:${email}`}
-                  className="action-primary inline-flex items-center gap-2 rounded-xl px-6 py-4 text-sm font-bold shadow-lg shadow-primary/25 hover:scale-[1.02] active:scale-[0.98] transition-all"
+                  className="action-primary inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-bold shadow-lg shadow-primary/25 hover:scale-[1.02] active:scale-[0.98] transition-all"
                 >
                   <Mail className="h-4 w-4" />
-                  <span>Start an Email Conversation</span>
+                  <span>Send Email</span>
                   <ArrowUpRight className="h-4 w-4" />
                 </a>
 
                 <button
-                  onClick={handleCopy}
-                  className="action-outline inline-flex items-center gap-2 rounded-xl px-5 py-4 text-sm font-semibold hover:border-primary/50 transition-all"
+                  onClick={() => setIsResumeOpen(true)}
+                  className="action-outline inline-flex items-center gap-2 rounded-xl px-5 py-3.5 text-sm font-semibold hover:border-primary/50 transition-all"
                 >
-                  {copied ? (
+                  <FileText className="h-4 w-4 text-primary" />
+                  <span>View Official CV</span>
+                </button>
+
+                <button
+                  onClick={handleCopyEmail}
+                  className="action-outline inline-flex items-center gap-2 rounded-xl px-4 py-3.5 text-sm font-semibold hover:border-primary/50 transition-all"
+                  title="Copy email to clipboard"
+                >
+                  {copiedEmail ? (
                     <>
                       <Check className="h-4 w-4 text-emerald-400" />
-                      <span className="text-emerald-400">Copied to Clipboard!</span>
+                      <span className="text-emerald-400">Email Copied!</span>
                     </>
                   ) : (
                     <>
                       <Copy className="h-4 w-4 text-muted-foreground" />
-                      <span>Copy Email ({email})</span>
+                      <span>{email}</span>
+                    </>
+                  )}
+                </button>
+
+                <button
+                  onClick={handleCopyPhone}
+                  className="action-outline inline-flex items-center gap-2 rounded-xl px-4 py-3.5 text-sm font-semibold hover:border-primary/50 transition-all"
+                  title="Copy phone to clipboard"
+                >
+                  {copiedPhone ? (
+                    <>
+                      <Check className="h-4 w-4 text-emerald-400" />
+                      <span className="text-emerald-400">Phone Copied!</span>
+                    </>
+                  ) : (
+                    <>
+                      <Phone className="h-4 w-4 text-muted-foreground" />
+                      <span>{phone}</span>
                     </>
                   )}
                 </button>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-border/60 flex items-center gap-6 text-xs text-muted-foreground">
+              <div className="mt-8 pt-6 border-t border-border/60 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
                 <span className="flex items-center gap-1.5 font-medium text-foreground">
                   <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                  Available for High-Impact Roles & Collaborations
+                  Available for High-Impact Roles & Consulting
                 </span>
                 <span>•</span>
-                <span>Coimbatore / Remote Worldwide</span>
+                <span className="flex items-center gap-1"><MapPin className="h-3 w-3 text-primary" /> Coimbatore, Tamil Nadu, India</span>
+                <span>•</span>
+                <span>Hybrid / Remote Worldwide</span>
               </div>
             </div>
           </div>
@@ -105,7 +145,7 @@ export default function Index() {
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
             <span className="font-bold text-foreground">Abishek Pranav G V</span>
             <span className="hidden sm:inline">•</span>
-            <span>Applied AI & Automation Systems Architect</span>
+            <span>Business Analyst | Data & AI Automation | Process Improvement</span>
           </div>
 
           <div className="flex items-center gap-6">
@@ -135,6 +175,9 @@ export default function Index() {
           </div>
         </div>
       </footer>
+
+      {/* Interactive Official CV Modal */}
+      <ResumeModal isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
     </div>
   );
 }

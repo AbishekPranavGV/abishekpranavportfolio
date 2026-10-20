@@ -8,39 +8,42 @@ import {
   Terminal,
   Cpu,
   LineChart,
-  ShieldCheck
+  ShieldCheck,
+  CheckCircle2,
+  DollarSign,
+  Briefcase
 } from "lucide-react";
 
 const skillCategories = [
   {
-    icon: Bot,
-    title: "AI & Agentic Systems",
-    skills: ["Gemini API", "OpenAI API", "LangChain", "RAG Systems", "Vector Embeddings", "Prompt Engineering", "OpenCV", "Multi-Modal Ingestion"],
+    icon: Briefcase,
+    title: "Business Analysis & Process",
+    skills: ["Requirements Analysis", "Process Mapping", "Workflow Optimisation", "Business Process Improvement", "Operational Analysis", "Decision Support", "Stakeholder Communication"],
   },
   {
     icon: BarChart3,
-    title: "Predictive Analytics & ML",
-    skills: ["Time Series (ARIMA/Prophet)", "LSTM Deep Learning", "Logistic Regression", "Customer Churn Modeling", "Feature Engineering", "Scikit-Learn"],
+    title: "Data Analytics & BI",
+    skills: ["SQL", "Python", "Power BI", "DAX", "Tableau", "Streamlit", "Advanced Excel", "Data Analysis", "Dashboard Development", "KPI Dashboards"],
   },
   {
-    icon: Database,
-    title: "Data Engineering & SQL",
-    skills: ["SQL Window Functions", "Recursive CTEs", "Data Warehousing", "ETL Pipelines", "Pandas & NumPy", "Data Cleaning & Imputation"],
+    icon: Bot,
+    title: "AI & Automation",
+    skills: ["LLM APIs", "OpenAI API", "Prompt Engineering", "AI-Assisted Document Extraction", "Playwright", "REST API Integration", "Workflow Automation", "Process Automation"],
   },
   {
     icon: Layers,
-    title: "Full-Stack & Cloud Architecture",
-    skills: ["Python (Flask)", "Next.js / React 19", "TypeScript", "Tailwind CSS", "Vercel & Netlify", "REST APIs & Webhooks"],
+    title: "Web & Cloud Deployment",
+    skills: ["React", "Next.js", "TypeScript", "Supabase", "GitHub", "Vercel", "Tailwind CSS"],
   },
   {
-    icon: Workflow,
-    title: "Operations & Business Strategy",
-    skills: ["Process Mapping", "Cycle Time Reduction", "KPI Design", "BRD & FRD Authoring", "Supply Chain Optimization", "Root Cause Analysis"],
+    icon: DollarSign,
+    title: "Operations & Finance",
+    skills: ["Export Logistics", "Supply Chain Operations", "CRM Management", "Documentation Management", "Financial Reconciliation", "Invoicing", "TDS Compliance", "Tally", "Accounting", "Cost Management"],
   },
   {
-    icon: Terminal,
-    title: "Developer Tools & CI/CD",
-    skills: ["GitHub Actions (CI/CD)", "Git & Version Control", "Power BI / DAX", "Windows Task Automation", "Batch Scripting", "Jupyter Notebooks"],
+    icon: ShieldCheck,
+    title: "Project & Agile Delivery",
+    skills: ["Agile Scrum", "Lean Six Sigma", "Project Coordination", "CI/CD Workflows", "Sprint Planning", "Cross-Functional Alignment"],
   },
 ];
 
@@ -56,10 +59,10 @@ export default function SkillsSection() {
         >
           <div className="section-divider mb-4" />
           <p className="text-xs font-semibold uppercase tracking-[.22em] text-primary mb-2">
-            Technical Proficiency
+            Skill Inventory
           </p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-12">
-            Skills & Capabilities
+            Skills & Competencies
           </h2>
         </motion.div>
 

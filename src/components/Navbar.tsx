@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Menu, X, Activity, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight, Menu, X, Activity, Github, Linkedin, Mail, FileText, Phone } from "lucide-react";
+
+interface NavbarProps {
+  onOpenResume?: () => void;
+}
 
 const links = [
   { label: "Overview", href: "#home" },
@@ -11,7 +15,7 @@ const links = [
   { label: "Education", href: "#education" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ onOpenResume }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -41,7 +45,7 @@ export default function Navbar() {
             </span>
             <span className="text-[11px] font-medium text-muted-foreground flex items-center gap-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span>AI & Automation Engineer</span>
+              <span>Business Analyst & Data/AI Automation</span>
             </span>
           </div>
         </a>
@@ -59,8 +63,16 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Action Button & Contact */}
-        <div className="hidden sm:flex items-center gap-3">
+        {/* Action Button & CV Shortcut */}
+        <div className="hidden sm:flex items-center gap-2.5">
+          <button
+            onClick={onOpenResume}
+            className="action-outline inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold hover:border-primary/50 transition-all"
+          >
+            <FileText className="h-3.5 w-3.5 text-primary" />
+            <span>Resume</span>
+          </button>
+
           <a
             href="https://github.com/AbishekPranavGV"
             target="_blank"
@@ -81,7 +93,7 @@ export default function Navbar() {
           </a>
           <a
             href="#contact"
-            className="action-primary inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold shadow-sm"
+            className="action-primary inline-flex items-center gap-1 px-3.5 py-1.5 rounded-xl text-xs font-bold shadow-sm"
           >
             <span>Connect</span>
             <ArrowUpRight className="h-3.5 w-3.5" />
@@ -113,6 +125,17 @@ export default function Navbar() {
               </a>
             ))}
             <div className="pt-4 border-t border-border flex items-center justify-between">
+              <button
+                onClick={() => {
+                  setOpen(false);
+                  if (onOpenResume) onOpenResume();
+                }}
+                className="action-outline inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold"
+              >
+                <FileText className="h-3.5 w-3.5 text-primary" />
+                <span>View Full CV</span>
+              </button>
+
               <div className="flex gap-4">
                 <a href="https://github.com/AbishekPranavGV" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground">
                   <Github className="h-5 w-5" />
@@ -121,13 +144,6 @@ export default function Navbar() {
                   <Linkedin className="h-5 w-5" />
                 </a>
               </div>
-              <a
-                href="#contact"
-                onClick={() => setOpen(false)}
-                className="action-primary px-4 py-2 rounded-xl text-xs font-bold"
-              >
-                Start a Conversation
-              </a>
             </div>
           </div>
         </div>
