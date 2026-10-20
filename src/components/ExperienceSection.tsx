@@ -2,6 +2,16 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
+    company: "Nunes Instrumentation",
+    role: "Forward Deployed Engineer · Applied AI & Automation",
+    period: "Aug 2026 – Present",
+    bullets: [
+      "Developing AI-assisted catalogue generation and practical business automation workflows for instrumentation operations.",
+      "Translating staff feedback and operational requirements into product features, implementation plans, and technical improvements.",
+      "Working across Python applications, APIs, document processing and web interfaces."
+    ],
+  },
+  {
     company: "RXG Studios",
     role: "Head of Operations",
     period: "May 2025 – Nov 2025",
