@@ -17,7 +17,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <p className="text-primary font-medium tracking-[0.3em] uppercase text-sm mb-4">
-            Business Analyst · Data Analysis
+            AI Engineer · Generative AI · Forward Deployed Engineering
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.9] mb-8" style={{ fontFamily: 'var(--font-display)' }}>
             <span className="text-foreground">Abishek</span>
@@ -25,7 +25,7 @@ const HeroSection = () => {
             <span className="text-gradient">Pranav G V</span>
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
-            Analytical MBA (AI) candidate with a proven track record of reducing operational processing time by 30% through workflow digitization and process mapping. Expert in bridging data modeling and practical business logistics.
+            I build applied AI products, data-driven applications and workflow automations that connect software with real business operations. Explore practical work across document processing, analytics, and intelligent business tools.
           </p>
 
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
@@ -38,7 +38,7 @@ const HeroSection = () => {
             <span className="flex items-center gap-2">
               <MapPin className="w-4 h-4" /> Coimbatore, India
             </span>
-            <a href="https://www.linkedin.com/in/abishek-pranav1312/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <a href="https://www.linkedin.com/in/abishek-pranav-g-v-/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Linkedin className="w-4 h-4" /> LinkedIn
             </a>
             <a href="https://github.com/AbishekPranavGV/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
