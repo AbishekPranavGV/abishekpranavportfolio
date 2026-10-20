@@ -1,54 +1,54 @@
-import { motion } from "framer-motion";
-import { MapPin, Mail, Phone, Linkedin, Github } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
+import { ArrowDownRight, ArrowUpRight, Github, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
 
-const HeroSection = () => {
+const pillars = [
+  { number: "01", title: "Applied AI", detail: "Document intelligence & intelligent workflows" },
+  { number: "02", title: "Product engineering", detail: "Useful interfaces connected to business operations" },
+  { number: "03", title: "Data & insights", detail: "Analytics, forecasting & decision systems" },
+];
+
+export default function HeroSection() {
+  const reduceMotion = useReducedMotion();
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden">
-      {/* Background grid */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: 'linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)',
-        backgroundSize: '60px 60px'
-      }} />
-
-      <div className="max-w-4xl w-full relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <p className="text-primary font-medium tracking-[0.3em] uppercase text-sm mb-4">
-            AI Engineer · Generative AI · Forward Deployed Engineering
-          </p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.9] mb-8" style={{ fontFamily: 'var(--font-display)' }}>
-            <span className="text-foreground">Abishek</span>
-            <br />
-            <span className="text-gradient">Pranav G V</span>
+    <section id="home" className="relative isolate overflow-hidden px-6 pt-36 pb-20 md:pt-48 md:pb-28">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 hero-grid opacity-60" />
+      <div aria-hidden="true" className="hero-glow pointer-events-none absolute -right-48 -top-40 h-[640px] w-[640px] rounded-full" />
+      <div className="relative mx-auto max-w-6xl">
+        <motion.div initial={reduceMotion ? false : {opacity:0,y:22}} animate={{opacity:1,y:0}} transition={{duration:.65,ease:"easeOut"}} className="max-w-5xl">
+          <div className="mb-9 inline-flex items-center gap-3 rounded-full border border-primary/25 bg-primary/[.07] px-4 py-2 text-xs font-semibold tracking-wide text-primary">
+            <Sparkles className="h-4 w-4" aria-hidden="true" />
+            AI ENGINEERING / AUTOMATION / ANALYTICS
+          </div>
+          <p className="mb-5 text-sm font-medium uppercase tracking-[.24em] text-muted-foreground">Hello, I'm Abishek Pranav G V</p>
+          <h1 className="max-w-5xl text-[clamp(3.5rem,8.4vw,7.75rem)] font-semibold leading-[.98] tracking-[-.07em] text-foreground">
+            Building AI that <span className="text-gradient">works in the real world.</span>
           </h1>
-          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
-            I build applied AI products, data-driven applications and workflow automations that connect software with real business operations. Explore practical work across document processing, analytics, and intelligent business tools.
+          <p className="mt-8 max-w-2xl text-base leading-8 text-muted-foreground md:text-xl md:leading-9">
+            An applied AI builder working at the intersection of intelligent automation,
+            product engineering and data. I turn operational challenges into practical
+            software people can use.
           </p>
-
-          <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-            <a href="tel:+916383500484" className="flex items-center gap-2 hover:text-primary transition-colors">
-              <Phone className="w-4 h-4" /> +91 6383500484
-            </a>
-            <a href="mailto:abishekpranav403@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
-              <Mail className="w-4 h-4" /> abishekpranav403@gmail.com
-            </a>
-            <span className="flex items-center gap-2">
-              <MapPin className="w-4 h-4" /> Coimbatore, India
-            </span>
-            <a href="https://www.linkedin.com/in/abishek-pranav-g-v-/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
-              <Linkedin className="w-4 h-4" /> LinkedIn
-            </a>
-            <a href="https://github.com/AbishekPranavGV/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
-              <Github className="w-4 h-4" /> GitHub
-            </a>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <a href="#projects" className="action-primary group inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold">Explore selected work <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></a>
+            <a href="#featured-project" className="action-outline inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold">View case study <ArrowDownRight className="h-4 w-4" /></a>
+          </div>
+          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4 text-sm text-muted-foreground">
+            <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> Coimbatore, India</span>
+            <a href="mailto:Abishekpranav403@gmail.com" className="inline-flex items-center gap-2 transition-colors hover:text-primary"><Mail className="h-4 w-4" /> Email</a>
+            <a href="https://github.com/AbishekPranavGV" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 transition-colors hover:text-primary"><Github className="h-4 w-4" /> GitHub</a>
+            <a href="https://www.linkedin.com/in/abishek-pranav-g-v-/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 transition-colors hover:text-primary"><Linkedin className="h-4 w-4" /> LinkedIn</a>
           </div>
         </motion.div>
+        <div className="mt-20 grid grid-cols-1 overflow-hidden rounded-2xl border border-border bg-card/70 shadow-2xl shadow-black/10 sm:grid-cols-3">
+          {pillars.map((pillar,i)=>(
+            <div key={pillar.number} className={`p-6 md:p-8 ${i<2?"border-b sm:border-b-0 sm:border-r border-border":""}`}>
+              <span className="mb-5 block font-mono text-xs tracking-wider text-primary">{pillar.number} / FOCUS</span>
+              <h2 className="mb-2 text-lg font-semibold tracking-tight">{pillar.title}</h2>
+              <p className="text-sm leading-6 text-muted-foreground">{pillar.detail}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
-};
-
-export default HeroSection;
+}
