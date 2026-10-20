@@ -17,7 +17,7 @@ const Index = () => {
       <FeaturedProjectSection />
       <EducationSection />
       <footer className="text-center py-12 text-muted-foreground text-sm border-t border-border">
-        © 2025 Abishek Pranav G V. All rights reserved.
+        © {new Date().getFullYear()} Abishek Pranav G V. All rights reserved.
       </footer>
     </div>
   );
