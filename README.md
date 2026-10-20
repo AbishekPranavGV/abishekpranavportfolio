@@ -1,25 +1,42 @@
-# Abishek Pranav | AI-Driven Business Analytics Portfolio
+# Abishek Pranav G V — AI Engineer & Applied AI Portfolio
 
-This repository contains the source code for my professional portfolio website, built using **React**, **Vite**, and **Tailwind CSS**. 
+Building practical AI-powered applications, automation workflows, and analytics products.
 
-## 🌐 Live Website
-[View My Portfolio Here](https://abishekpranavportfolio.lovable.app)
+**[Live Portfolio](https://abishekpranavportfolio.lovable.app/)** · **[GitHub](https://github.com/AbishekPranavGV)** · **[LinkedIn](https://www.linkedin.com/in/abishek-pranav-g-v-/)**
 
-## 🎯 Professional Objective
-MBA Candidate specializing in Artificial Intelligence with a focus on bridging the gap between data-driven insights and business operations.
+## Selected repositories
 
-## 🚀 Key Projects Featured
-* **Stock Price Forecasting Engine:** Built an ARIMA(5,1,0) model to predict RELIANCE.NS equity trends.
-* **Emotion-Based Recommendation System:** Real-time movie suggestions using DeepFace and OpenCV.
-* **Financial News Sentiment Pipeline:** NLP-based market sentiment analysis.
-* **COVID-19 Global Trends:** Predictive time-series forecasting pipeline.
+| Project | Focus | Source / Demo |
+| --- | --- | --- |
+| NUNES Catalogue Studio | AI-assisted product catalogue generation and technical document processing | [Source](https://github.com/AbishekPranavGV/MedX) · [Demo](https://nunes-catalogue-studio-live.vercel.app/) |
+| E-commerce Recommendation Engine | Recommendation systems | [Source](https://github.com/AbishekPranavGV/E-commerce-Recommendation-Engine) |
+| Retail Sales Performance & Predictive Analytics | Business intelligence and forecasting | [Source](https://github.com/AbishekPranavGV/Retail-Sales-Performance-Predictive-Analytics) |
+| Customer Churn Decision Analysis | Analytics and decision support | [Source](https://github.com/AbishekPranavGV/Customer-Churn-Decision-Analysis) |
+| Stock Price Prediction using ARIMA | Financial time-series analysis | [Source](https://github.com/AbishekPranavGV/Stock-Price-Prediction-using-ARIMA) |
+| News Headlines Sentiment Analysis | Natural language processing | [Source](https://github.com/AbishekPranavGV/Sentimental-analysis-of-News-Headlines) |
 
-## 🛠️ Technical Toolkit
-* **Languages:** Python (Pandas, NumPy, Statsmodels), SQL, TypeScript.
-* **AI/ML:** ARIMA, NLP, Computer Vision (OpenCV), Recommendation Engines.
-* **Business:** Operations Analysis, Supply Chain Optimization, ESG Analytics.
-* **Tools:** AWS, Bloomberg Market Concepts (BMC), Git, Power BI.
+## Technical interests
 
-## 📬 Contact & Connect
-* **LinkedIn:** [linkedin.com/in/abishek-pranav-g-v](https://www.linkedin.com/in/abishek-pranav-g-v)
-* **Location:** Coimbatore, Tamil Nadu
+- Applied AI, AI-powered workflow automation, and document processing
+- Python, TypeScript, React, data analytics, and forecasting
+- Building useful, demonstrable products for operational teams
+
+## Portfolio source
+
+This repository contains the portfolio website, developed using React, Vite, TypeScript, and Tailwind CSS.
+
+### Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Build with `npm run build`.
+
+> Project details and deployments may evolve. Follow each repository for its documentation, setup requirements, and current status.
+
+## Contact
+
+**Email:** [Abishekpranav403@gmail.com](mailto:Abishekpranav403@gmail.com)  
+**Based in:** Coimbatore, India
