@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Github, Search, ArrowUpRight, Sparkles, Filter, CheckCircle2, Eye } from "lucide-react";
+import { Github, Search, ArrowUpRight, Sparkles } from "lucide-react";
 
 type ProjectCategory = "all" | "ai" | "data" | "operations";
 
@@ -13,13 +13,11 @@ type Project = {
   stack: string[];
   github: string;
   demo: string;
-  externalApp?: string;
   highlight?: boolean;
   image: string;
 };
 
 const resolveImagePath = (path: string) => {
-  // If Vite's import.meta.env.BASE_URL is set, use it; fallback to relative ./
   const base = import.meta.env.BASE_URL || "./";
   const cleanBase = base.endsWith("/") ? base : base + "/";
   const cleanPath = path.startsWith("/") ? path.slice(1) : path;
@@ -37,7 +35,6 @@ const projects: Project[] = [
     stack: ["Python", "Flask", "Gemini API", "PDF Generation", "Vercel", "Tailwind CSS"],
     github: "https://github.com/AbishekPranavGV/MedX",
     demo: "https://nunes-catalogue-studio-live.vercel.app/",
-    externalApp: "https://abishekpranavgv.github.io/MedX/",
     highlight: true,
     image: "projects/medx.svg",
   },
@@ -50,7 +47,6 @@ const projects: Project[] = [
     stack: ["JavaScript", "Node.js", "Generative AI", "B2B Schemas", "Vercel"],
     github: "https://github.com/AbishekPranavGV/IndiaMART-AI-Content-Catalog-Generator",
     demo: "https://nunes-social-post-machine-mu.vercel.app/",
-    externalApp: "https://abishekpranavgv.github.io/IndiaMART-AI-Content-Catalog-Generator/",
     highlight: true,
     image: "projects/indiamart.svg",
   },
@@ -63,7 +59,6 @@ const projects: Project[] = [
     stack: ["React 19", "Next.js", "Node.js 20", "Webhooks", "Tailwind CSS"],
     github: "https://github.com/AbishekPranavGV/social-command-center",
     demo: "https://nunes-social-post-machine-mu.vercel.app/",
-    externalApp: "https://abishekpranavgv.github.io/social-command-center/",
     highlight: true,
     image: "projects/social-command-center.svg",
   },
@@ -308,7 +303,6 @@ const projects: Project[] = [
     stack: ["Python", "Streamlit", "Plotly", "Multi-Page Router", "Cloud CI/CD"],
     github: "https://github.com/AbishekPranavGV/Streamlit",
     demo: "https://blank-app-template.streamlit.app/",
-    externalApp: "https://abishekpranavgv.github.io/Streamlit/",
     highlight: false,
     image: "projects/streamlit-app.svg",
   },
@@ -321,7 +315,6 @@ const projects: Project[] = [
     stack: ["TypeScript", "React 18", "Vite", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/AbishekPranavGV/abishekpranavportfolio",
     demo: "https://abishekpranavportfolio.lovable.app/",
-    externalApp: "https://abishekpranavgv.github.io/abishekpranavportfolio/",
     highlight: false,
     image: "projects/portfolio.svg",
   },
@@ -356,7 +349,7 @@ export default function ProjectsSection() {
               Featured Projects & Live Results
             </h2>
             <p className="text-muted-foreground mt-2 text-sm md:text-base max-w-2xl">
-              Every system below includes an official live result preview, direct production deployment link, and verified GitHub repository.
+              Every system below features an active direct live execution page with official verified output result previews.
             </p>
           </div>
 
@@ -395,7 +388,7 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-        {/* Projects Grid with Live Result Image Previews */}
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
             {filteredProjects.map((project) => (
@@ -413,12 +406,18 @@ export default function ProjectsSection() {
                 }`}
               >
                 <div>
-                  {/* Result Image Preview Frame */}
-                  <div className="relative w-full h-48 rounded-xl overflow-hidden mb-4 border border-border/80 bg-background/80 shadow-inner group/img">
+                  {/* Clickable Live Result Image Preview */}
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block relative w-full h-48 rounded-xl overflow-hidden mb-4 border border-border/80 bg-background/80 shadow-inner group/img cursor-pointer"
+                    title={`Click to Run ${project.title} as Live`}
+                  >
                     <img 
                       src={resolveImagePath(project.image)} 
                       alt={`${project.title} Result Output Preview`}
-                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover/img:scale-105"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-80" />
@@ -435,17 +434,12 @@ export default function ProjectsSection() {
                         Live Result
                       </span>
 
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-1 text-[10px] font-bold text-primary bg-primary/20 hover:bg-primary/30 backdrop-blur px-2.5 py-1 rounded-md border border-primary/40 transition-colors"
-                      >
-                        <span>Launch App</span>
+                      <span className="inline-flex items-center gap-1 text-[11px] font-bold text-primary bg-primary/20 group-hover/img:bg-primary group-hover/img:text-primary-foreground backdrop-blur px-3 py-1 rounded-md border border-primary/40 transition-all">
+                        <span>▶ Run as Live</span>
                         <ArrowUpRight className="h-3 w-3" />
-                      </a>
+                      </span>
                     </div>
-                  </div>
+                  </a>
 
                   <h3 className="text-lg font-bold mb-1.5 group-hover:text-primary transition-colors flex items-center gap-2">
                     {project.title}
@@ -482,38 +476,26 @@ export default function ProjectsSection() {
                   </div>
                 </div>
 
+                {/* Direct Action Row */}
                 <div className="pt-3 border-t border-border/60 flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-1.5">
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-primary/80 transition-colors bg-primary/10 hover:bg-primary/20 px-3 py-1.5 rounded-lg border border-primary/30"
-                    >
-                      <span>Direct Live App</span>
-                      <ArrowUpRight className="h-3 w-3" />
-                    </a>
-                    {project.externalApp && (
-                      <a
-                        href={project.externalApp}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-1 text-[10px] font-semibold text-muted-foreground hover:text-foreground transition-colors px-2 py-1 rounded-md border border-border/40"
-                        title="Alternative Mirror Deployment"
-                      >
-                        <span>Pages Mirror</span>
-                      </a>
-                    )}
-                  </div>
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-primary/90 transition-all bg-primary/10 hover:bg-primary/20 px-3.5 py-2 rounded-lg border border-primary/30 shadow-sm"
+                  >
+                    <span>▶ Run as Live</span>
+                    <ArrowUpRight className="h-3.5 w-3.5" />
+                  </a>
 
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary/60 transition-colors border border-border/40"
+                    className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary/60 transition-colors border border-border/40"
                     title="View GitHub Repository"
                   >
-                    <Github className="h-3.5 w-3.5" />
+                    <Github className="h-4 w-4" />
                   </a>
                 </div>
               </motion.div>
