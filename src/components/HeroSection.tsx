@@ -1,53 +1,122 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowDownRight, ArrowUpRight, Github, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Github, Linkedin, Mail, MapPin, Sparkles, Activity, ShieldCheck, Terminal } from "lucide-react";
 
-const pillars = [
-  { number: "01", title: "Applied AI", detail: "Document intelligence & intelligent workflows" },
-  { number: "02", title: "Product engineering", detail: "Useful interfaces connected to business operations" },
-  { number: "03", title: "Data & insights", detail: "Analytics, forecasting & decision systems" },
+const impactMetrics = [
+  { value: "24", label: "Production Repos", sub: "100% CI/CD Verified Live" },
+  { value: "85%", label: "Forecast Accuracy", sub: "ARIMA & Prophet Demand Models" },
+  { value: "10 hrs/wk", label: "Manual Work Saved", sub: "Automated SQL Data Pipelines" },
+  { value: "$1B+", label: "Inventory Impact", sub: "Stockout & Distortion Solved" },
 ];
 
 export default function HeroSection() {
   const reduceMotion = useReducedMotion();
+
   return (
-    <section id="home" className="relative isolate overflow-hidden px-6 pt-36 pb-20 md:pt-48 md:pb-28">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 hero-grid opacity-60" />
+    <section id="home" className="relative isolate overflow-hidden px-6 pt-32 pb-20 md:pt-44 md:pb-28">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 hero-grid opacity-50" />
       <div aria-hidden="true" className="hero-glow pointer-events-none absolute -right-48 -top-40 h-[640px] w-[640px] rounded-full" />
+      <div aria-hidden="true" className="hero-glow pointer-events-none absolute -left-48 top-1/2 h-[500px] w-[500px] rounded-full opacity-30" />
+
       <div className="relative mx-auto max-w-6xl">
-        <motion.div initial={reduceMotion ? false : {opacity:0,y:22}} animate={{opacity:1,y:0}} transition={{duration:.65,ease:"easeOut"}} className="max-w-5xl">
-          <div className="mb-9 inline-flex items-center gap-3 rounded-full border border-primary/25 bg-primary/[.07] px-4 py-2 text-xs font-semibold tracking-wide text-primary">
-            <Sparkles className="h-4 w-4" aria-hidden="true" />
-            AI ENGINEERING / AUTOMATION / ANALYTICS
-          </div>
-          <p className="mb-5 text-sm font-medium uppercase tracking-[.24em] text-muted-foreground">Hello, I'm Abishek Pranav G V</p>
-          <h1 className="max-w-5xl text-[clamp(3.5rem,8.4vw,7.75rem)] font-semibold leading-[.98] tracking-[-.07em] text-foreground">
-            Building AI that <span className="text-gradient">works in the real world.</span>
-          </h1>
-          <p className="mt-8 max-w-2xl text-base leading-8 text-muted-foreground md:text-xl md:leading-9">
-            An applied AI builder working at the intersection of intelligent automation,
-            product engineering and data. I turn operational challenges into practical
-            software people can use.
-          </p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <a href="#projects" className="action-primary group inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold">Explore selected work <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></a>
-            <a href="#featured-project" className="action-outline inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold">View case study <ArrowDownRight className="h-4 w-4" /></a>
-          </div>
-          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4 text-sm text-muted-foreground">
-            <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> Coimbatore, India</span>
-            <a href="mailto:Abishekpranav403@gmail.com" className="inline-flex items-center gap-2 transition-colors hover:text-primary"><Mail className="h-4 w-4" /> Email</a>
-            <a href="https://github.com/AbishekPranavGV" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 transition-colors hover:text-primary"><Github className="h-4 w-4" /> GitHub</a>
-            <a href="https://www.linkedin.com/in/abishek-pranav-g-v-/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 transition-colors hover:text-primary"><Linkedin className="h-4 w-4" /> LinkedIn</a>
-          </div>
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-6 inline-flex flex-wrap items-center gap-2.5 rounded-full border border-primary/25 bg-primary/10 px-4 py-1.5 text-xs font-semibold text-primary backdrop-blur"
+        >
+          <span className="flex h-2 w-2 relative">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          <span>Forward Deployed AI & Automation Engineer</span>
+          <span className="text-muted-foreground/60">•</span>
+          <span className="text-foreground/90 font-medium">All 24 GitHub CI/CD Pipelines Live</span>
         </motion.div>
-        <div className="mt-20 grid grid-cols-1 overflow-hidden rounded-2xl border border-border bg-card/70 shadow-2xl shadow-black/10 sm:grid-cols-3">
-          {pillars.map((pillar,i)=>(
-            <div key={pillar.number} className={`p-6 md:p-8 ${i<2?"border-b sm:border-b-0 sm:border-r border-border":""}`}>
-              <span className="mb-5 block font-mono text-xs tracking-wider text-primary">{pillar.number} / FOCUS</span>
-              <h2 className="mb-2 text-lg font-semibold tracking-tight">{pillar.title}</h2>
-              <p className="text-sm leading-6 text-muted-foreground">{pillar.detail}</p>
+
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mb-8"
+        >
+          <h1 className="max-w-4xl text-4xl font-extrabold leading-[1.1] tracking-tight md:text-6xl lg:text-7xl">
+            Engineering <span className="text-gradient">Intelligent Systems</span> That Turn Complex Operations Into Autonomous Realities.
+          </h1>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-xl">
+            I build end-to-end autonomous agentic pipelines, industrial document intelligence platforms, and predictive demand forecasting models that eliminate operational friction and deliver quantified enterprise revenue.
+          </p>
+        </motion.div>
+
+        {/* Action Buttons */}
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mb-14 flex flex-wrap items-center gap-4"
+        >
+          <a
+            href="#projects"
+            className="action-primary inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
+          >
+            <span>Explore Live Projects</span>
+            <ArrowDownRight className="h-4 w-4" />
+          </a>
+
+          <a
+            href="#architecture"
+            className="action-outline inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold hover:border-primary/50 hover:bg-card transition-all"
+          >
+            <Activity className="h-4 w-4 text-primary" />
+            <span>Interactive Architecture</span>
+          </a>
+
+          <a
+            href="https://github.com/AbishekPranavGV"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="action-outline inline-flex items-center gap-2 rounded-xl px-4 py-3.5 text-sm font-semibold hover:text-primary transition-colors"
+            aria-label="GitHub Profile"
+          >
+            <Github className="h-4 w-4" />
+            <span className="hidden sm:inline">GitHub (24 Repos)</span>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/abishek-pranav-g-v-/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="action-outline inline-flex items-center gap-2 rounded-xl px-4 py-3.5 text-sm font-semibold hover:text-primary transition-colors"
+            aria-label="LinkedIn Profile"
+          >
+            <Linkedin className="h-4 w-4" />
+            <span className="hidden sm:inline">LinkedIn</span>
+          </a>
+        </motion.div>
+
+        {/* Quantified Impact Metrics Grid */}
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4"
+        >
+          {impactMetrics.map((item, idx) => (
+            <div
+              key={idx}
+              className="rounded-2xl border border-border/70 bg-card/70 backdrop-blur-md p-5 hover:border-primary/40 transition-all duration-300 group"
+            >
+              <div className="text-3xl lg:text-4xl font-extrabold tracking-tight text-primary group-hover:scale-105 transition-transform duration-300">
+                {item.value}
+              </div>
+              <div className="mt-1 text-sm font-semibold text-foreground">
+                {item.label}
+              </div>
+              <div className="mt-0.5 text-xs text-muted-foreground">
+                {item.sub}
+              </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

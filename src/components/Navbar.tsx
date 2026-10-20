@@ -1,38 +1,137 @@
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X, Activity, Github, Linkedin, Mail } from "lucide-react";
 
 const links = [
-  {label:"Work",href:"#projects"},
-  {label:"Case study",href:"#featured-project"},
-  {label:"Experience",href:"#experience"},
-  {label:"Skills",href:"#skills"},
-  {label:"Education",href:"#education"},
+  { label: "Overview", href: "#home" },
+  { label: "Architecture", href: "#architecture" },
+  { label: "Projects", href: "#projects" },
+  { label: "Case Studies", href: "#featured-project" },
+  { label: "Experience", href: "#experience" },
+  { label: "Skills", href: "#skills" },
+  { label: "Education", href: "#education" },
 ];
 
-export default function Navbar(){
-  const [scrolled,setScrolled]=useState(false);
-  const [open,setOpen]=useState(false);
-  useEffect(()=>{
-    const onScroll=()=>setScrolled(window.scrollY>24);
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
-    window.addEventListener("scroll",onScroll,{passive:true});
-    return ()=>window.removeEventListener("scroll",onScroll);
-  },[]);
-  return <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled||open?"border-b border-border bg-background/95 shadow-lg shadow-black/5 backdrop-blur-xl":"bg-background/75 backdrop-blur-md"}`}>
-    <nav aria-label="Primary navigation" className="mx-auto flex h-[76px] max-w-6xl items-center justify-between px-6">
-      <a href="#home" aria-label="Abishek Pranav, go to top" onClick={()=>setOpen(false)} className="group flex items-center gap-3 font-semibold tracking-tight">
-        <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 text-sm font-bold text-primary transition-colors group-hover:bg-primary/20">AP</span>
-        <span className="hidden text-sm sm:block">Abishek Pranav<span className="ml-1 text-primary">.</span></span>
-      </a>
-      <div className="hidden items-center gap-7 lg:flex">{links.map(link=><a key={link.href} href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">{link.label}</a>)}</div>
-      <div className="flex items-center gap-3">
-        <a href="mailto:Abishekpranav403@gmail.com" className="action-outline hidden items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold sm:inline-flex">Let's connect <ArrowUpRight className="h-4 w-4"/></a>
-        <button type="button" className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-card lg:hidden" aria-label={open?"Close menu":"Open menu"} aria-controls="mobile-navigation" aria-expanded={open} onClick={()=>setOpen(v=>!v)}>{open?<X className="h-5 w-5"/>:<Menu className="h-5 w-5"/>}</button>
-      </div>
-    </nav>
-    {open&&<div id="mobile-navigation" className="border-t border-border bg-background px-6 py-4 lg:hidden">
-      <div className="mx-auto flex max-w-6xl flex-col gap-1">{links.map(link=><a key={link.href} href={link.href} onClick={()=>setOpen(false)} className="rounded-lg px-3 py-3 text-sm font-medium text-foreground hover:bg-secondary">{link.label}</a>)}
-      <a href="mailto:Abishekpranav403@gmail.com" onClick={()=>setOpen(false)} className="mt-2 rounded-lg bg-primary px-3 py-3 text-sm font-semibold text-primary-foreground">Get in touch</a></div>
-    </div>}
-  </header>;
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        scrolled || open
+          ? "border-b border-border/80 bg-background/90 shadow-xl shadow-black/10 backdrop-blur-xl"
+          : "bg-background/40 backdrop-blur-md"
+      }`}
+    >
+      <nav aria-label="Primary navigation" className="mx-auto flex h-[72px] max-w-6xl items-center justify-between px-6">
+        <a href="#home" className="flex items-center gap-3 group">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground font-black text-sm shadow-md shadow-primary/25 group-hover:scale-105 transition-transform">
+            AP
+          </div>
+          <div className="flex flex-col">
+            <span className="font-bold tracking-tight text-foreground text-sm group-hover:text-primary transition-colors">
+              Abishek Pranav G V
+            </span>
+            <span className="text-[11px] font-medium text-muted-foreground flex items-center gap-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span>AI & Automation Engineer</span>
+            </span>
+          </div>
+        </a>
+
+        {/* Desktop Links */}
+        <div className="hidden lg:flex items-center gap-1">
+          {links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="px-3.5 py-1.5 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-secondary/40"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+
+        {/* Action Button & Contact */}
+        <div className="hidden sm:flex items-center gap-3">
+          <a
+            href="https://github.com/AbishekPranavGV"
+            target="_blank"
+            rel="noreferrer"
+            className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary/40 transition-colors"
+            aria-label="GitHub Profile"
+          >
+            <Github className="h-4 w-4" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/abishek-pranav-g-v-/"
+            target="_blank"
+            rel="noreferrer"
+            className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary/40 transition-colors"
+            aria-label="LinkedIn Profile"
+          >
+            <Linkedin className="h-4 w-4" />
+          </a>
+          <a
+            href="#contact"
+            className="action-primary inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold shadow-sm"
+          >
+            <span>Connect</span>
+            <ArrowUpRight className="h-3.5 w-3.5" />
+          </a>
+        </div>
+
+        {/* Mobile Hamburger */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="lg:hidden p-2 rounded-lg text-muted-foreground hover:text-foreground"
+          aria-label={open ? "Close menu" : "Open menu"}
+        >
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </nav>
+
+      {/* Mobile Drawer */}
+      {open && (
+        <div className="lg:hidden border-b border-border bg-background/95 px-6 py-6 backdrop-blur-xl">
+          <div className="flex flex-col gap-3">
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="py-2 text-sm font-semibold text-muted-foreground hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+            <div className="pt-4 border-t border-border flex items-center justify-between">
+              <div className="flex gap-4">
+                <a href="https://github.com/AbishekPranavGV" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground">
+                  <Github className="h-5 w-5" />
+                </a>
+                <a href="https://www.linkedin.com/in/abishek-pranav-g-v-/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground">
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              </div>
+              <a
+                href="#contact"
+                onClick={() => setOpen(false)}
+                className="action-primary px-4 py-2 rounded-xl text-xs font-bold"
+              >
+                Start a Conversation
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
+  );
 }
