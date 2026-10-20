@@ -22,7 +22,7 @@ React 18 · TypeScript · Vite · Tailwind CSS · Framer Motion · Lucide icons
 ## Get started
 
 ```bash
-npm ci
+npm install
 npm run dev
 ```
 
@@ -35,7 +35,7 @@ npm run build
 npm test -- --passWithNoTests
 ```
 
-GitHub Actions runs these checks for pushes and pull requests targeting `main`.
+GitHub Actions runs these checks for pushes and pull requests targeting `main`. The existing lockfile currently needs to be regenerated; use `npm install` rather than `npm ci` until it is synchronized.
 
 ## Deploy
 
