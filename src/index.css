@@ -22,7 +22,7 @@
     --secondary-foreground: 40 20% 85%;
 
     --muted: 220 15% 14%;
-    --muted-foreground: 220 10% 55%;
+    --muted-foreground: 220 12% 68%;
 
     --accent: 45 80% 55%;
     --accent-foreground: 220 20% 6%;
@@ -30,7 +30,7 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 18%;
+    --border: 220 15% 24%;
     --input: 220 15% 18%;
     --ring: 45 100% 60%;
 
@@ -56,7 +56,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
     font-family: var(--font-body);
   }
 
@@ -79,3 +79,8 @@
     @apply bg-card border border-border rounded-lg backdrop-blur-sm;
   }
 }
+
+html { scroll-behavior: smooth; }
+::selection { background: hsl(var(--primary) / 0.25); color: hsl(var(--foreground)); }
+:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
