@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 340" width="100%" height="100%">
   <defs>
     <linearGradient id="bg_movie-emotion" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -63,10 +64,10 @@
           <text x="374" y="42" fill="#94a3b8" font-family="sans-serif" font-size="9">Interactive Frontend</text>
         </g>
 
-        <!-- Emotion Radar & Movie Cards -->
+        <!-- Emotion Radar &amp; Movie Cards -->
         <g transform="translate(0, 68)">
           <rect width="540" height="150" rx="8" fill="#201036" stroke="#4a2575" />
-          <text x="16" y="22" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">Sentiment Emotion Vector & Dynamic Watchlist Recommendations</text>
+          <text x="16" y="22" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">Sentiment Emotion Vector &amp; Dynamic Watchlist Recommendations</text>
           
           <rect x="25" y="38" width="150" height="88" rx="6" fill="#311952" stroke="#a855f7" />
           <text x="35" y="58" fill="#f3e8ff" font-family="sans-serif" font-size="11" font-weight="700">Inspirational / Awe</text>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 340" width="100%" height="100%">
   <defs>
     <linearGradient id="bg_nicms-specs" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -44,7 +45,7 @@
 
   <!-- Subtitle -->
   <text x="24" y="60" fill="#f3f4f6" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700">NICMS Sri Lanka Enterprise Specifications</text>
-  <text x="24" y="76" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5">System specifications, API governance & national infrastructure</text>
+  <text x="24" y="76" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5">System specifications, API governance &amp; national infrastructure</text>
 
   <!-- Visual Canvas -->
   <g transform="translate(24, 90)">
@@ -65,13 +66,13 @@
 
         <g transform="translate(0, 68)">
           <rect width="540" height="150" rx="8" fill="#0a1e36" stroke="#184378" />
-          <text x="16" y="22" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">Enterprise API Specification Schema & Topology</text>
+          <text x="16" y="22" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">Enterprise API Specification Schema &amp; Topology</text>
           
           <rect x="25" y="40" width="490" height="88" rx="6" fill="#05101c" stroke="#123359" />
           <text x="35" y="58" fill="#0ea5e9" font-family="monospace" font-size="9">GET /api/v1/national-id/verify -> Mutual TLS 1.3 Strict Mode</text>
           <text x="35" y="74" fill="#cbd5e1" font-family="monospace" font-size="9">POST /api/v1/inter-agency/dispatch -> Enterprise Service Bus Queue</text>
           <text x="35" y="90" fill="#10b981" font-family="monospace" font-size="9">AUDIT: Non-repudiation ledger hash signed by hardware security module</text>
-          <text x="35" y="106" fill="#f59e0b" font-family="monospace" font-size="9">COMPLIANCE: Meets ISO 27001 & NIST 800-53 security controls</text>
+          <text x="35" y="106" fill="#f59e0b" font-family="monospace" font-size="9">COMPLIANCE: Meets ISO 27001 &amp; NIST 800-53 security controls</text>
         </g>
         
   </g>

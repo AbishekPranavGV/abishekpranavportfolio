@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 340" width="100%" height="100%">
   <defs>
     <linearGradient id="bg_gmail-agent" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -44,7 +45,7 @@
 
   <!-- Subtitle -->
   <text x="24" y="60" fill="#f3f4f6" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700">Multi-Account Gmail Hygiene Agent</text>
-  <text x="24" y="76" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5">Autonomous multi-account inbox governance & rule-based archiving</text>
+  <text x="24" y="76" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5">Autonomous multi-account inbox governance &amp; rule-based archiving</text>
 
   <!-- Visual Canvas -->
   <g transform="translate(24, 90)">
@@ -66,7 +67,7 @@
         <!-- Inbox Clean Status -->
         <g transform="translate(0, 68)">
           <rect width="540" height="150" rx="8" fill="#260c0c" stroke="#5e2121" />
-          <text x="16" y="22" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">Autonomous Email Triage & Quarantine Monitor</text>
+          <text x="16" y="22" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">Autonomous Email Triage &amp; Quarantine Monitor</text>
           
           <rect x="25" y="40" width="490" height="88" rx="6" fill="#140606" stroke="#421717" />
           <text x="35" y="58" fill="#ea4335" font-family="monospace" font-size="9">[INBOX 1: WORK] Ingested 184 emails · 92 marketing auto-archived</text>

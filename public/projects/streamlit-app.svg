@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 340" width="100%" height="100%">
   <defs>
     <linearGradient id="bg_streamlit-app" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -44,7 +45,7 @@
 
   <!-- Subtitle -->
   <text x="24" y="60" fill="#f3f4f6" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700">Enterprise Streamlit Application Suite</text>
-  <text x="24" y="76" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5">Python reactive data app, widget state caching & multi-page layouts</text>
+  <text x="24" y="76" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5">Python reactive data app, widget state caching &amp; multi-page layouts</text>
 
   <!-- Visual Canvas -->
   <g transform="translate(24, 90)">
@@ -65,13 +66,13 @@
 
         <g transform="translate(0, 68)">
           <rect width="540" height="150" rx="8" fill="#2d1212" stroke="#662828" />
-          <text x="16" y="22" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">Streamlit Interactive Dashboard UI & Reactive Parameters</text>
+          <text x="16" y="22" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">Streamlit Interactive Dashboard UI &amp; Reactive Parameters</text>
           
           <rect x="25" y="40" width="490" height="88" rx="6" fill="#170909" stroke="#471c1c" />
           <text x="35" y="58" fill="#ff4b4b" font-family="monospace" font-size="9">st.sidebar.slider("Select Horizon (Weeks)", 1, 52, 12)</text>
           <text x="35" y="74" fill="#cbd5e1" font-family="monospace" font-size="9">@st.cache_data: Loaded 120,000 transaction rows in 12ms</text>
           <text x="35" y="90" fill="#10b981" font-family="monospace" font-size="9">Plotly Render: Multi-axis responsive chart rendered at 60fps</text>
-          <text x="35" y="106" fill="#38bdf8" font-family="monospace" font-size="9">Cloud Deploy: Streamlit Cloud containerized & live</text>
+          <text x="35" y="106" fill="#38bdf8" font-family="monospace" font-size="9">Cloud Deploy: Streamlit Cloud containerized &amp; live</text>
         </g>
         
   </g>
