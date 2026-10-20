@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg_gmail-agent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f0a0a" />
+      <stop offset="100%" stop-color="#0a0e17" />
+    </linearGradient>
+    <linearGradient id="acc_gmail-agent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea4335" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <filter id="glow_gmail-agent" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="590" height="340" fill="url(#bg_gmail-agent)" rx="14" />
+  
+  <!-- Subtle Grid -->
+  <g opacity="0.08" stroke="#fff" stroke-width="1">
+    <line x1="0" y1="50" x2="590" y2="50" />
+    <line x1="0" y1="110" x2="590" y2="110" />
+    <line x1="0" y1="170" x2="590" y2="170" />
+    <line x1="0" y1="230" x2="590" y2="230" />
+    <line x1="0" y1="290" x2="590" y2="290" />
+    <line x1="120" y1="0" x2="120" y2="340" />
+    <line x1="260" y1="0" x2="260" y2="340" />
+    <line x1="400" y1="0" x2="400" y2="340" />
+    <line x1="540" y1="0" x2="540" y2="340" />
+  </g>
+
+  <!-- Title Window Bar -->
+  <rect x="0" y="0" width="590" height="38" fill="#111827" opacity="0.9" rx="14" />
+  <circle cx="20" cy="19" r="4.5" fill="#ef4444" />
+  <circle cx="34" cy="19" r="4.5" fill="#f59e0b" />
+  <circle cx="48" cy="19" r="4.5" fill="#10b981" />
+  <text x="68" y="23" fill="#9ca3af" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">Multi-Account Gmail Hygiene Agent</text>
+  
+  <!-- Status Badge -->
+  <rect x="455" y="10" width="120" height="18" rx="9" fill="#ea4335" fill-opacity="0.18" stroke="#ea4335" stroke-width="1" />
+  <circle cx="466" cy="19" r="2.5" fill="#ea4335" />
+  <text x="474" y="22" fill="#ea4335" font-family="-apple-system, sans-serif" font-size="9" font-weight="700">LIVE GITHUB PAGES</text>
+
+  <!-- Subtitle -->
+  <text x="24" y="60" fill="#f3f4f6" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700">Multi-Account Gmail Hygiene Agent</text>
+  <text x="24" y="76" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5">Autonomous multi-account inbox governance & rule-based archiving</text>
+
+  <!-- Visual Canvas -->
+  <g transform="translate(24, 90)">
+    
+        <g>
+          <rect x="0" y="0" width="165" height="54" rx="8" fill="#361313" stroke="#5e2121" />
+          <text x="14" y="24" fill="#ea4335" font-family="sans-serif" font-size="18" font-weight="800">5,000+</text>
+          <text x="14" y="42" fill="#94a3b8" font-family="sans-serif" font-size="9">Daily Emails Processed</text>
+
+          <rect x="180" y="0" width="165" height="54" rx="8" fill="#361313" stroke="#5e2121" />
+          <text x="194" y="24" fill="#10b981" font-family="sans-serif" font-size="18" font-weight="800">Zero-Touch</text>
+          <text x="194" y="42" fill="#94a3b8" font-family="sans-serif" font-size="9">Newsletter Unsubscribe</text>
+
+          <rect x="360" y="0" width="180" height="54" rx="8" fill="#361313" stroke="#5e2121" />
+          <text x="374" y="24" fill="#38bdf8" font-family="sans-serif" font-size="18" font-weight="800">Multi-Account</text>
+          <text x="374" y="42" fill="#94a3b8" font-family="sans-serif" font-size="9">OAuth 2.0 Inboxes</text>
+        </g>
+
+        <!-- Inbox Clean Status -->
+        <g transform="translate(0, 68)">
+          <rect width="540" height="150" rx="8" fill="#260c0c" stroke="#5e2121" />
+          <text x="16" y="22" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">Autonomous Email Triage & Quarantine Monitor</text>
+          
+          <rect x="25" y="40" width="490" height="88" rx="6" fill="#140606" stroke="#421717" />
+          <text x="35" y="58" fill="#ea4335" font-family="monospace" font-size="9">[INBOX 1: WORK] Ingested 184 emails · 92 marketing auto-archived</text>
+          <text x="35" y="74" fill="#cbd5e1" font-family="monospace" font-size="9">[INBOX 2: CLIENTS] 8 priority RFPs routed directly to Focus Folder</text>
+          <text x="35" y="90" fill="#10b981" font-family="monospace" font-size="9">[SECURITY] SPF/DKIM verification passed for all inbound senders</text>
+          <text x="35" y="106" fill="#f59e0b" font-family="monospace" font-size="9">[STATUS] Inbox Zero sustained across all synchronized accounts</text>
+        </g>
+        
+  </g>
+</svg>

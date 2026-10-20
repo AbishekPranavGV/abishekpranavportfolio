@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, FileText, Github, Layers, Sparkles, Workflow, CheckCircle2, BarChart3, Database } from "lucide-react";
 
+const resolveImagePath = (path: string) => {
+  const base = import.meta.env.BASE_URL || "./";
+  const cleanBase = base.endsWith("/") ? base : base + "/";
+  const cleanPath = path.startsWith("/") ? path.slice(1) : path;
+  return `${cleanBase}${cleanPath}`;
+};
+
 export default function FeaturedProjectSection() {
   return (
     <section className="px-6 py-24 bg-card/20 border-t border-border/50" id="featured-project">
@@ -27,6 +34,15 @@ export default function FeaturedProjectSection() {
               <p className="mt-4 text-muted-foreground leading-relaxed text-sm md:text-base">
                 Engineering a high-throughput multi-modal pipeline converting unformatted vendor brochures into validated, print-ready technical catalogs and live web storefronts in seconds.
               </p>
+
+              {/* Live Result Image Preview */}
+              <div className="mt-6 rounded-2xl overflow-hidden border border-border/80 shadow-lg group">
+                <img 
+                  src={resolveImagePath("projects/medx.svg")} 
+                  alt="MedX Catalogue Studio Result Output Preview"
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
                 <div className="rounded-xl border border-border/60 bg-secondary/30 p-4">
@@ -113,6 +129,15 @@ export default function FeaturedProjectSection() {
               <p className="mt-4 text-muted-foreground leading-relaxed text-sm md:text-base">
                 Ending the "inventory guessing game" by bridging warehouse logistics with real-world consumer demand using automated SQL data engineering and Facebook Prophet seasonality models.
               </p>
+
+              {/* Live Result Image Preview */}
+              <div className="mt-6 rounded-2xl overflow-hidden border border-border/80 shadow-lg group">
+                <img 
+                  src={resolveImagePath("projects/retail-dashboard.png")} 
+                  alt="Retail Predictive Analytics Dashboard Result Preview"
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
                 <div className="rounded-xl border border-border/60 bg-secondary/30 p-4">

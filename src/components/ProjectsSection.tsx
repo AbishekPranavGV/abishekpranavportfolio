@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Github, Search, ArrowUpRight, Sparkles, Filter, CheckCircle2 } from "lucide-react";
+import { ExternalLink, Github, Search, ArrowUpRight, Sparkles, Filter, CheckCircle2, Eye } from "lucide-react";
 
 type ProjectCategory = "all" | "ai" | "data" | "operations";
 
@@ -15,6 +15,15 @@ type Project = {
   demo: string;
   externalApp?: string;
   highlight?: boolean;
+  image: string;
+};
+
+const resolveImagePath = (path: string) => {
+  // If Vite's import.meta.env.BASE_URL is set, use it; fallback to relative ./
+  const base = import.meta.env.BASE_URL || "./";
+  const cleanBase = base.endsWith("/") ? base : base + "/";
+  const cleanPath = path.startsWith("/") ? path.slice(1) : path;
+  return `${cleanBase}${cleanPath}`;
 };
 
 const projects: Project[] = [
@@ -23,25 +32,27 @@ const projects: Project[] = [
     title: "AI Catalogue Studio",
     category: "ai",
     categoryLabel: "Generative AI & LLMs",
-    description: "Product research, structured technical specification extraction, LLM-assisted catalogue content, and automated branded PDF generation.",
+    description: "Multi-modal studio automating supplier brochure ingestion, ISO/CE regulatory compliance checks, and deterministic vector PDF catalogue generation.",
     impact: "80% reduction in manual catalog drafting • High-precision deterministic schema extraction",
     stack: ["Python", "Flask", "Gemini API", "PDF Generation", "Vercel", "Tailwind CSS"],
     github: "https://github.com/AbishekPranavGV/MedX",
-    demo: "https://abishekpranavgv.github.io/MedX/",
-    externalApp: "https://nunes-catalogue-studio-live.vercel.app/",
+    demo: "https://nunes-catalogue-studio-live.vercel.app/",
+    externalApp: "https://abishekpranavgv.github.io/MedX/",
     highlight: true,
+    image: "projects/medx.svg",
   },
   {
     title: "IndiaMART Product Automation",
     category: "ai",
     categoryLabel: "B2B Commerce & Automation",
-    description: "Automated B2B product catalog generation, spec extraction, dynamic price tier calculations, and high-conversion catalog synthesis.",
+    description: "Automated B2B product catalog generation, spec extraction, dynamic wholesale price tiering, and high-conversion listings.",
     impact: "10,000+ SKUs automated • 95% faster catalog creation • 100% schema compliant",
     stack: ["JavaScript", "Node.js", "Generative AI", "B2B Schemas", "Vercel"],
     github: "https://github.com/AbishekPranavGV/IndiaMART-AI-Content-Catalog-Generator",
-    demo: "https://abishekpranavgv.github.io/IndiaMART-AI-Content-Catalog-Generator/",
-    externalApp: "https://nunes-social-post-machine-mu.vercel.app",
+    demo: "https://nunes-social-post-machine-mu.vercel.app/",
+    externalApp: "https://abishekpranavgv.github.io/IndiaMART-AI-Content-Catalog-Generator/",
     highlight: true,
+    image: "projects/indiamart.svg",
   },
   {
     title: "Social Command Center",
@@ -51,31 +62,34 @@ const projects: Project[] = [
     impact: "12+ social platforms • 450+ autonomous posts/mo • 99.4% SLA delivery",
     stack: ["React 19", "Next.js", "Node.js 20", "Webhooks", "Tailwind CSS"],
     github: "https://github.com/AbishekPranavGV/social-command-center",
-    demo: "https://abishekpranavgv.github.io/social-command-center/",
-    externalApp: "https://nunes-social-post-machine-mu.vercel.app",
+    demo: "https://nunes-social-post-machine-mu.vercel.app/",
+    externalApp: "https://abishekpranavgv.github.io/social-command-center/",
     highlight: true,
+    image: "projects/social-command-center.svg",
   },
   {
     title: "SocmedX Growth Engine",
     category: "ai",
     categoryLabel: "Social Operations Suite",
-    description: "Centralized social command operations managing concurrent campaigns, sentiment telemetry, and algorithmic audience reach timing.",
+    description: "Centralized social operations managing concurrent brand campaigns, sentiment telemetry, and algorithmic audience reach timing.",
     impact: "Unified multi-network sync • Automated sentiment radar • +34.2% MoM reach",
     stack: ["Node.js", "Social Graph APIs", "Sentiment Telemetry", "Campaign Automation"],
     github: "https://github.com/AbishekPranavGV/SocmedX",
     demo: "https://abishekpranavgv.github.io/SocmedX/",
     highlight: false,
+    image: "projects/socmedx.svg",
   },
   {
     title: "Nunes Local AI Marketing Starter",
     category: "ai",
     categoryLabel: "Edge AI & Offline LLMs",
-    description: "Private local language model marketing stack for offline copy generation, social campaigns, and SME promotional collateral.",
+    description: "Private local language model marketing stack for offline copy generation, social campaigns, and SME promotional collateral with zero cloud API costs.",
     impact: "100% private offline inference • Zero API cloud costs • Turnkey 5-min setup",
     stack: ["Local LLM", "Quantized Models", "Python", "Prompt Engineering"],
     github: "https://github.com/AbishekPranavGV/NUNES-Local-AI-Marketing-Starter",
     demo: "https://abishekpranavgv.github.io/NUNES-Local-AI-Marketing-Starter/",
     highlight: false,
+    image: "projects/local-ai-marketing.svg",
   },
   {
     title: "Smart Brochure to Catalog Converter",
@@ -87,6 +101,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/Smart-Brochure-to-Catalog-Converter",
     demo: "https://abishekpranavgv.github.io/Smart-Brochure-to-Catalog-Converter/",
     highlight: false,
+    image: "projects/brochure-converter.svg",
   },
   {
     title: "AI-Powered Enterprise CRM",
@@ -98,6 +113,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/Crm",
     demo: "https://abishekpranavgv.github.io/Crm/",
     highlight: false,
+    image: "projects/crm.svg",
   },
   {
     title: "Multi-Account Gmail Hygiene Agent",
@@ -109,6 +125,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/Multi-Account-Gmail-Inbox-Hygiene-Agent",
     demo: "https://abishekpranavgv.github.io/Multi-Account-Gmail-Inbox-Hygiene-Agent/",
     highlight: false,
+    image: "projects/gmail-agent.svg",
   },
 
   // --- DATA & PREDICTIVE ANALYTICS (8) ---
@@ -122,6 +139,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/Retail-Sales-Performance-Predictive-Analytics",
     demo: "https://abishekpranavgv.github.io/Retail-Sales-Performance-Predictive-Analytics/",
     highlight: true,
+    image: "projects/retail-dashboard.png",
   },
   {
     title: "Quantitative Stock Price Forecaster",
@@ -133,6 +151,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/Stock-Price-Prediction-using-ARIMA",
     demo: "https://abishekpranavgv.github.io/Stock-Price-Prediction-using-ARIMA/",
     highlight: true,
+    image: "projects/project-stock-gh.png",
   },
   {
     title: "Climate Impact & Real-Time ESG Dashboard",
@@ -144,6 +163,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/Climate-Impact-ESG-Dashboard",
     demo: "https://abishekpranavgv.github.io/Climate-Impact-ESG-Dashboard/",
     highlight: true,
+    image: "projects/project-esg-gh.png",
   },
   {
     title: "COVID-19 Global Forecasting Model",
@@ -155,6 +175,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/COVID-19-Global-Forecasting-Predictive-Analysis",
     demo: "https://abishekpranavgv.github.io/COVID-19-Global-Forecasting-Predictive-Analysis/",
     highlight: false,
+    image: "projects/covid-forecasting.svg",
   },
   {
     title: "Customer Churn Decision Framework",
@@ -166,6 +187,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/Customer-Churn-Decision-Analysis",
     demo: "https://abishekpranavgv.github.io/Customer-Churn-Decision-Analysis/",
     highlight: false,
+    image: "projects/customer-churn.svg",
   },
   {
     title: "E-commerce Recommendation Engine",
@@ -177,6 +199,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/E-commerce-Recommendation-Engine",
     demo: "https://abishekpranavgv.github.io/E-commerce-Recommendation-Engine/",
     highlight: false,
+    image: "projects/ecommerce-recommender.svg",
   },
   {
     title: "Real-Time Face & Landmark Classifier",
@@ -188,6 +211,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/Facedetection",
     demo: "https://abishekpranavgv.github.io/Facedetection/",
     highlight: false,
+    image: "projects/facedetection.svg",
   },
   {
     title: "Emotion-Aware Movie Recommender",
@@ -199,6 +223,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/Movie_recommendation_using_emotion",
     demo: "https://abishekpranavgv.github.io/Movie_recommendation_using_emotion/",
     highlight: false,
+    image: "projects/project-emotion.jpg",
   },
 
   // --- OPERATIONS & SYSTEMS (8) ---
@@ -212,6 +237,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/NICMS-SriLanka-Strategic-Blueprint",
     demo: "https://abishekpranavgv.github.io/NICMS-SriLanka-Strategic-Blueprint/",
     highlight: true,
+    image: "projects/nicms-blueprint.svg",
   },
   {
     title: "NICMS Specifications & Project Specs",
@@ -223,6 +249,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/NICMS-SriLanka-Strategic-Blueprint_Project",
     demo: "https://abishekpranavgv.github.io/NICMS-SriLanka-Strategic-Blueprint_Project/",
     highlight: false,
+    image: "projects/nicms-specs.svg",
   },
   {
     title: "Global News Sentiment & Market Pulse",
@@ -234,6 +261,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/Sentimental-analysis-of-News-Headlines",
     demo: "https://abishekpranavgv.github.io/Sentimental-analysis-of-News-Headlines/",
     highlight: false,
+    image: "projects/project-sentiment-gh.png",
   },
   {
     title: "Smart PriceMaster Dynamic Pricing Tool",
@@ -245,6 +273,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/Smart-Price-Master-Catalog-Generator",
     demo: "https://abishekpranavgv.github.io/Smart-Price-Master-Catalog-Generator/",
     highlight: false,
+    image: "projects/price-master.svg",
   },
   {
     title: "Autonomous System Temp & Disk Optimizer",
@@ -256,6 +285,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/Autonomous-System-Temp-Cleaner",
     demo: "https://abishekpranavgv.github.io/Autonomous-System-Temp-Cleaner/",
     highlight: false,
+    image: "projects/temp-cleaner.svg",
   },
   {
     title: "Google Drive Automated Indexer",
@@ -267,6 +297,7 @@ const projects: Project[] = [
     github: "https://github.com/AbishekPranavGV/drive-file-index",
     demo: "https://abishekpranavgv.github.io/drive-file-index/",
     highlight: false,
+    image: "projects/drive-index.svg",
   },
   {
     title: "Enterprise Streamlit Application Suite",
@@ -276,9 +307,10 @@ const projects: Project[] = [
     impact: "Sub-50ms cache retrieval • 15+ reusable widgets • Instant cloud container deploy",
     stack: ["Python", "Streamlit", "Plotly", "Multi-Page Router", "Cloud CI/CD"],
     github: "https://github.com/AbishekPranavGV/Streamlit",
-    demo: "https://abishekpranavgv.github.io/Streamlit/",
-    externalApp: "https://blank-app-template.streamlit.app/",
+    demo: "https://blank-app-template.streamlit.app/",
+    externalApp: "https://abishekpranavgv.github.io/Streamlit/",
     highlight: false,
+    image: "projects/streamlit-app.svg",
   },
   {
     title: "Abishek Pranav Advanced Portfolio",
@@ -288,8 +320,10 @@ const projects: Project[] = [
     impact: "100% CI pass rate • Sub-second load time • Cross-environment deployment (Pages & Lovable)",
     stack: ["TypeScript", "React 18", "Vite", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/AbishekPranavGV/abishekpranavportfolio",
-    demo: "https://abishekpranavgv.github.io/abishekpranavportfolio/",
+    demo: "https://abishekpranavportfolio.lovable.app/",
+    externalApp: "https://abishekpranavgv.github.io/abishekpranavportfolio/",
     highlight: false,
+    image: "projects/portfolio.svg",
   },
 ];
 
@@ -316,13 +350,13 @@ export default function ProjectsSection() {
           <div>
             <div className="section-divider mb-4" />
             <p className="text-xs font-semibold uppercase tracking-[.22em] text-primary mb-2">
-              Production Portfolio · 24 Repositories Live
+              Production Portfolio · 24 Verified Live Systems
             </p>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-              Featured Projects & Live Systems
+              Featured Projects & Live Results
             </h2>
             <p className="text-muted-foreground mt-2 text-sm md:text-base max-w-2xl">
-              Every system below features an active GitHub Pages or cloud application deployment with 100% verified CI/CD workflows.
+              Every system below includes an official live result preview, direct production deployment link, and verified GitHub repository.
             </p>
           </div>
 
@@ -342,7 +376,7 @@ export default function ProjectsSection() {
         {/* Filter Pills */}
         <div className="flex flex-wrap gap-2 mb-10">
           {[
-            { id: "all", label: `All Projects (${projects.length})` },
+            { id: "all", label: `All Systems (${projects.length})` },
             { id: "ai", label: `AI & Automation (${projects.filter(p => p.category === 'ai').length})` },
             { id: "data", label: `Data & Predictive Analytics (${projects.filter(p => p.category === 'data').length})` },
             { id: "operations", label: `Operations & Systems (${projects.filter(p => p.category === 'operations').length})` },
@@ -361,7 +395,7 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-        {/* Projects Grid */}
+        {/* Projects Grid with Live Result Image Previews */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
             {filteredProjects.map((project) => (
@@ -372,74 +406,102 @@ export default function ProjectsSection() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
-                className={`group relative rounded-2xl border p-6 flex flex-col justify-between transition-all duration-300 ${
+                className={`group relative rounded-2xl border p-5 flex flex-col justify-between transition-all duration-300 ${
                   project.highlight
-                    ? "border-primary/40 bg-card/90 shadow-lg shadow-primary/5 hover:border-primary"
+                    ? "border-primary/50 bg-card/90 shadow-xl shadow-primary/5 hover:border-primary"
                     : "border-border bg-card/60 hover:border-border/90 hover:bg-card/90"
                 }`}
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-[11px] font-semibold text-primary uppercase tracking-wider bg-primary/10 px-2.5 py-1 rounded-md border border-primary/20">
-                      {project.categoryLabel}
-                    </span>
-                    <span className="inline-flex items-center gap-1.5 text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                      Live Verified
-                    </span>
+                  {/* Result Image Preview Frame */}
+                  <div className="relative w-full h-48 rounded-xl overflow-hidden mb-4 border border-border/80 bg-background/80 shadow-inner group/img">
+                    <img 
+                      src={resolveImagePath(project.image)} 
+                      alt={`${project.title} Result Output Preview`}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-80" />
+                    
+                    <div className="absolute top-2.5 left-2.5">
+                      <span className="text-[10px] font-semibold text-primary uppercase tracking-wider bg-background/90 backdrop-blur px-2.5 py-1 rounded-md border border-primary/30">
+                        {project.categoryLabel}
+                      </span>
+                    </div>
+
+                    <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between">
+                      <span className="inline-flex items-center gap-1.5 text-[10px] font-bold text-emerald-400 bg-background/90 backdrop-blur px-2.5 py-1 rounded-md border border-emerald-500/30">
+                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        Live Result
+                      </span>
+
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 text-[10px] font-bold text-primary bg-primary/20 hover:bg-primary/30 backdrop-blur px-2.5 py-1 rounded-md border border-primary/40 transition-colors"
+                      >
+                        <span>Launch App</span>
+                        <ArrowUpRight className="h-3 w-3" />
+                      </a>
+                    </div>
                   </div>
 
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors flex items-center gap-2">
+                  <h3 className="text-lg font-bold mb-1.5 group-hover:text-primary transition-colors flex items-center gap-2">
                     {project.title}
                   </h3>
 
-                  <p className="text-xs text-muted-foreground leading-relaxed mb-4">
+                  <p className="text-xs text-muted-foreground leading-relaxed mb-3 line-clamp-2">
                     {project.description}
                   </p>
 
-                  <div className="p-3 rounded-xl bg-secondary/30 border border-border/50 mb-4 text-xs">
-                    <span className="font-semibold text-foreground flex items-center gap-1.5 mb-1">
-                      <Sparkles className="h-3.5 w-3.5 text-primary" />
+                  <div className="p-2.5 rounded-lg bg-secondary/30 border border-border/50 mb-3 text-xs">
+                    <span className="font-semibold text-foreground flex items-center gap-1.5 mb-0.5 text-[11px]">
+                      <Sparkles className="h-3 w-3 text-primary" />
                       Impact & Results:
                     </span>
-                    <p className="text-muted-foreground text-[11px]">
+                    <p className="text-muted-foreground text-[10.5px] leading-snug">
                       {project.impact}
                     </p>
                   </div>
 
-                  <div className="flex flex-wrap gap-1.5 mb-6">
-                    {project.stack.map((tech) => (
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {project.stack.slice(0, 4).map((tech) => (
                       <span
                         key={tech}
-                        className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-secondary/60 text-muted-foreground border border-border/40"
+                        className="text-[9.5px] font-mono px-2 py-0.5 rounded-md bg-secondary/60 text-muted-foreground border border-border/40"
                       >
                         {tech}
                       </span>
                     ))}
+                    {project.stack.length > 4 && (
+                      <span className="text-[9.5px] font-mono px-1.5 py-0.5 text-muted-foreground/70">
+                        +{project.stack.length - 4}
+                      </span>
+                    )}
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-border/60 flex items-center justify-between gap-3">
-                  <div className="flex items-center gap-2">
+                <div className="pt-3 border-t border-border/60 flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-1.5">
                     <a
                       href={project.demo}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary/80 transition-colors bg-primary/10 hover:bg-primary/20 px-3 py-1.5 rounded-lg border border-primary/30"
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-primary/80 transition-colors bg-primary/10 hover:bg-primary/20 px-3 py-1.5 rounded-lg border border-primary/30"
                     >
-                      <span>Live App</span>
-                      <ArrowUpRight className="h-3.5 w-3.5" />
+                      <span>Direct Live App</span>
+                      <ArrowUpRight className="h-3 w-3" />
                     </a>
                     {project.externalApp && (
                       <a
                         href={project.externalApp}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400 hover:text-emerald-300 transition-colors bg-emerald-500/10 hover:bg-emerald-500/20 px-2.5 py-1.5 rounded-lg border border-emerald-500/30"
-                        title="External Production Cloud Host"
+                        className="inline-flex items-center gap-1 text-[10px] font-semibold text-muted-foreground hover:text-foreground transition-colors px-2 py-1 rounded-md border border-border/40"
+                        title="Alternative Mirror Deployment"
                       >
-                        <span>Cloud App</span>
-                        <ExternalLink className="h-3 w-3" />
+                        <span>Pages Mirror</span>
                       </a>
                     )}
                   </div>
@@ -448,10 +510,10 @@ export default function ProjectsSection() {
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary/60 transition-colors border border-border/40"
+                    className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary/60 transition-colors border border-border/40"
                     title="View GitHub Repository"
                   >
-                    <Github className="h-4 w-4" />
+                    <Github className="h-3.5 w-3.5" />
                   </a>
                 </div>
               </motion.div>

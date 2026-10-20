@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg_medx" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1d2e" />
+      <stop offset="100%" stop-color="#0a0e17" />
+    </linearGradient>
+    <linearGradient id="acc_medx" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <filter id="glow_medx" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="590" height="340" fill="url(#bg_medx)" rx="14" />
+  
+  <!-- Subtle Grid -->
+  <g opacity="0.08" stroke="#fff" stroke-width="1">
+    <line x1="0" y1="50" x2="590" y2="50" />
+    <line x1="0" y1="110" x2="590" y2="110" />
+    <line x1="0" y1="170" x2="590" y2="170" />
+    <line x1="0" y1="230" x2="590" y2="230" />
+    <line x1="0" y1="290" x2="590" y2="290" />
+    <line x1="120" y1="0" x2="120" y2="340" />
+    <line x1="260" y1="0" x2="260" y2="340" />
+    <line x1="400" y1="0" x2="400" y2="340" />
+    <line x1="540" y1="0" x2="540" y2="340" />
+  </g>
+
+  <!-- Title Window Bar -->
+  <rect x="0" y="0" width="590" height="38" fill="#111827" opacity="0.9" rx="14" />
+  <circle cx="20" cy="19" r="4.5" fill="#ef4444" />
+  <circle cx="34" cy="19" r="4.5" fill="#f59e0b" />
+  <circle cx="48" cy="19" r="4.5" fill="#10b981" />
+  <text x="68" y="23" fill="#9ca3af" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">MedX · Autonomous Catalogue Studio</text>
+  
+  <!-- Status Badge -->
+  <rect x="455" y="10" width="120" height="18" rx="9" fill="#06b6d4" fill-opacity="0.18" stroke="#06b6d4" stroke-width="1" />
+  <circle cx="466" cy="19" r="2.5" fill="#06b6d4" />
+  <text x="474" y="22" fill="#06b6d4" font-family="-apple-system, sans-serif" font-size="9" font-weight="700">LIVE ON VERCEL</text>
+
+  <!-- Subtitle -->
+  <text x="24" y="60" fill="#f3f4f6" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700">MedX · Autonomous Catalogue Studio</text>
+  <text x="24" y="76" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5">Automated extraction, ISO 13485 verification & vector PDF generator</text>
+
+  <!-- Visual Canvas -->
+  <g transform="translate(24, 90)">
+    
+        <!-- Top Metrics Cards -->
+        <rect x="0" y="0" width="165" height="58" rx="8" fill="#132438" stroke="#1e3a5f" />
+        <text x="12" y="24" fill="#06b6d4" font-family="sans-serif" font-size="18" font-weight="800">5,000+ SKUs</text>
+        <text x="12" y="44" fill="#94a3b8" font-family="sans-serif" font-size="10">Clinical Catalog Ingested</text>
+
+        <rect x="180" y="0" width="165" height="58" rx="8" fill="#132438" stroke="#1e3a5f" />
+        <text x="192" y="24" fill="#10b981" font-family="sans-serif" font-size="18" font-weight="800">0.4s Latency</text>
+        <text x="192" y="44" fill="#94a3b8" font-family="sans-serif" font-size="10">Sub-second PDF Generation</text>
+
+        <rect x="360" y="0" width="180" height="58" rx="8" fill="#132438" stroke="#1e3a5f" />
+        <text x="372" y="24" fill="#f59e0b" font-family="sans-serif" font-size="18" font-weight="800">ISO 13485 / CE</text>
+        <text x="372" y="44" fill="#94a3b8" font-family="sans-serif" font-size="10">Regulatory Compliance</text>
+
+        <!-- Spec Data Table Preview -->
+        <g transform="translate(0, 72)">
+          <rect width="540" height="145" rx="8" fill="#0d1b2a" stroke="#1e3a5f" />
+          <rect width="540" height="26" rx="8" fill="#1a2e45" />
+          <text x="15" y="17" fill="#cbd5e1" font-family="sans-serif" font-size="10" font-weight="700">SPECIFICATION KEY</text>
+          <text x="180" y="17" fill="#cbd5e1" font-family="sans-serif" font-size="10" font-weight="700">PARSED EXTRACT</text>
+          <text x="360" y="17" fill="#cbd5e1" font-family="sans-serif" font-size="10" font-weight="700">REGULATORY STATUS</text>
+
+          <text x="15" y="46" fill="#94a3b8" font-family="monospace" font-size="10">Device Classification</text>
+          <text x="180" y="46" fill="#f8fafc" font-family="monospace" font-size="10">Class II Medical Diagnostic</text>
+          <text x="360" y="46" fill="#10b981" font-family="sans-serif" font-size="10" font-weight="600">✓ FDA / CE Certified</text>
+
+          <text x="15" y="72" fill="#94a3b8" font-family="monospace" font-size="10">Spectrometry Band</text>
+          <text x="180" y="72" fill="#f8fafc" font-family="monospace" font-size="10">190nm - 1100nm UV/Vis</text>
+          <text x="360" y="72" fill="#10b981" font-family="sans-serif" font-size="10" font-weight="600">✓ Calibrated NIST</text>
+
+          <text x="15" y="98" fill="#94a3b8" font-family="monospace" font-size="10">Export Formats</text>
+          <text x="180" y="98" fill="#f8fafc" font-family="monospace" font-size="10">300 DPI Vector PDF + QR</text>
+          <text x="360" y="98" fill="#06b6d4" font-family="sans-serif" font-size="10" font-weight="600">✓ Auto-Dispatched</text>
+
+          <text x="15" y="124" fill="#94a3b8" font-family="monospace" font-size="10">Cloud Edge Host</text>
+          <text x="180" y="124" fill="#f8fafc" font-family="monospace" font-size="10">Vercel Serverless Functions</text>
+          <text x="360" y="124" fill="#10b981" font-family="sans-serif" font-size="10" font-weight="600">✓ 99.9% Uptime</text>
+        </g>
+        
+  </g>
+</svg>

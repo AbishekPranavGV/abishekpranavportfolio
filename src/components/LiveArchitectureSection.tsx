@@ -27,18 +27,27 @@ type RepoItem = {
   githubUrl: string;
   tech: string;
   tag: string;
+  image: string;
+};
+
+const resolveImagePath = (path: string) => {
+  const base = import.meta.env.BASE_URL || "./";
+  const cleanBase = base.endsWith("/") ? base : base + "/";
+  const cleanPath = path.startsWith("/") ? path.slice(1) : path;
+  return `${cleanBase}${cleanPath}`;
 };
 
 const allRepos: RepoItem[] = [
   {
     name: "abishekpranavportfolio",
     desc: "Modern Personal Portfolio & CI/CD Telemetry Hub",
-    runId: "39446406820",
-    runUrl: "https://github.com/AbishekPranavGV/abishekpranavportfolio/actions/runs/39446406820",
-    liveUrl: "https://abishekpranavgv.github.io/abishekpranavportfolio/",
+    runId: "39450416924",
+    runUrl: "https://github.com/AbishekPranavGV/abishekpranavportfolio/actions/runs/39450416924",
+    liveUrl: "https://abishekpranavportfolio.lovable.app/",
     githubUrl: "https://github.com/AbishekPranavGV/abishekpranavportfolio",
     tech: "TypeScript / React / Vite",
-    tag: "Web / Hub"
+    tag: "Web / Hub",
+    image: "projects/portfolio.svg"
   },
   {
     name: "Retail-Sales-Performance-Predictive-Analytics",
@@ -48,7 +57,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/Retail-Sales-Performance-Predictive-Analytics/",
     githubUrl: "https://github.com/AbishekPranavGV/Retail-Sales-Performance-Predictive-Analytics",
     tech: "Python / ARIMA / Power BI",
-    tag: "Forecasting"
+    tag: "Forecasting",
+    image: "projects/retail-dashboard.png"
   },
   {
     name: "NICMS-SriLanka-Strategic-Blueprint",
@@ -58,47 +68,52 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/NICMS-SriLanka-Strategic-Blueprint/",
     githubUrl: "https://github.com/AbishekPranavGV/NICMS-SriLanka-Strategic-Blueprint",
     tech: "Enterprise Architecture / BRD",
-    tag: "Public Sector"
+    tag: "Public Sector",
+    image: "projects/nicms-blueprint.svg"
   },
   {
     name: "social-command-center",
     desc: "Multi-Platform Autonomous Social Media Dispatcher",
     runId: "39449108783",
     runUrl: "https://github.com/AbishekPranavGV/social-command-center/actions/runs/39449108783",
-    liveUrl: "https://abishekpranavgv.github.io/social-command-center/",
+    liveUrl: "https://nunes-social-post-machine-mu.vercel.app/",
     githubUrl: "https://github.com/AbishekPranavGV/social-command-center",
     tech: "Next.js 20 / Node.js",
-    tag: "Automation"
+    tag: "Automation",
+    image: "projects/social-command-center.svg"
   },
   {
     name: "IndiaMART-AI-Content-Catalog-Generator",
     desc: "Industrial B2B Product Catalog & Margin Generator",
     runId: "39449128617",
     runUrl: "https://github.com/AbishekPranavGV/IndiaMART-AI-Content-Catalog-Generator/actions/runs/39449128617",
-    liveUrl: "https://abishekpranavgv.github.io/IndiaMART-AI-Content-Catalog-Generator/",
+    liveUrl: "https://nunes-social-post-machine-mu.vercel.app/",
     githubUrl: "https://github.com/AbishekPranavGV/IndiaMART-AI-Content-Catalog-Generator",
     tech: "Playwright / GenAI",
-    tag: "B2B AI"
+    tag: "B2B AI",
+    image: "projects/indiamart.svg"
   },
   {
     name: "MedX",
     desc: "Nunes Medical Catalogue Studio & Regulatory Specs",
     runId: "39449147425",
     runUrl: "https://github.com/AbishekPranavGV/MedX/actions/runs/39449147425",
-    liveUrl: "https://abishekpranavgv.github.io/MedX/",
+    liveUrl: "https://nunes-catalogue-studio-live.vercel.app/",
     githubUrl: "https://github.com/AbishekPranavGV/MedX",
     tech: "Python 3.11 / Flask / PDF",
-    tag: "Healthcare"
+    tag: "Healthcare",
+    image: "projects/medx.svg"
   },
   {
     name: "Streamlit",
     desc: "Enterprise Streamlit Interactive Application Suite",
     runId: "39449166722",
     runUrl: "https://github.com/AbishekPranavGV/Streamlit/actions/runs/39449166722",
-    liveUrl: "https://abishekpranavgv.github.io/Streamlit/",
+    liveUrl: "https://blank-app-template.streamlit.app/",
     githubUrl: "https://github.com/AbishekPranavGV/Streamlit",
     tech: "Python / Streamlit Cloud",
-    tag: "Analytics"
+    tag: "Analytics",
+    image: "projects/streamlit-app.svg"
   },
   {
     name: "Climate-Impact-ESG-Dashboard",
@@ -108,7 +123,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/Climate-Impact-ESG-Dashboard/",
     githubUrl: "https://github.com/AbishekPranavGV/Climate-Impact-ESG-Dashboard",
     tech: "Python / IoT Stream / SQL",
-    tag: "ESG"
+    tag: "ESG",
+    image: "projects/project-esg-gh.png"
   },
   {
     name: "COVID-19-Global-Forecasting-Predictive-Analysis",
@@ -118,7 +134,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/COVID-19-Global-Forecasting-Predictive-Analysis/",
     githubUrl: "https://github.com/AbishekPranavGV/COVID-19-Global-Forecasting-Predictive-Analysis",
     tech: "Python / SEIR / Curves",
-    tag: "Epidemiology"
+    tag: "Epidemiology",
+    image: "projects/covid-forecasting.svg"
   },
   {
     name: "Customer-Churn-Decision-Analysis",
@@ -128,7 +145,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/Customer-Churn-Decision-Analysis/",
     githubUrl: "https://github.com/AbishekPranavGV/Customer-Churn-Decision-Analysis",
     tech: "Decision Trees / ML",
-    tag: "Finance ML"
+    tag: "Finance ML",
+    image: "projects/customer-churn.svg"
   },
   {
     name: "E-commerce-Recommendation-Engine",
@@ -138,7 +156,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/E-commerce-Recommendation-Engine/",
     githubUrl: "https://github.com/AbishekPranavGV/E-commerce-Recommendation-Engine",
     tech: "Scikit-Learn / SVD",
-    tag: "E-Commerce"
+    tag: "E-Commerce",
+    image: "projects/ecommerce-recommender.svg"
   },
   {
     name: "Facedetection",
@@ -148,7 +167,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/Facedetection/",
     githubUrl: "https://github.com/AbishekPranavGV/Facedetection",
     tech: "OpenCV / Haar Cascades",
-    tag: "Vision"
+    tag: "Vision",
+    image: "projects/facedetection.svg"
   },
   {
     name: "Movie_recommendation_using_emotion",
@@ -158,7 +178,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/Movie_recommendation_using_emotion/",
     githubUrl: "https://github.com/AbishekPranavGV/Movie_recommendation_using_emotion",
     tech: "Affective NLP / Streamlit",
-    tag: "NLP"
+    tag: "NLP",
+    image: "projects/project-emotion.jpg"
   },
   {
     name: "Stock-Price-Prediction-using-ARIMA",
@@ -168,7 +189,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/Stock-Price-Prediction-using-ARIMA/",
     githubUrl: "https://github.com/AbishekPranavGV/Stock-Price-Prediction-using-ARIMA",
     tech: "TensorFlow / LSTM / ARIMA",
-    tag: "Quant"
+    tag: "Quant",
+    image: "projects/project-stock-gh.png"
   },
   {
     name: "Sentimental-analysis-of-News-Headlines",
@@ -178,7 +200,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/Sentimental-analysis-of-News-Headlines/",
     githubUrl: "https://github.com/AbishekPranavGV/Sentimental-analysis-of-News-Headlines",
     tech: "VADER / Text Mining",
-    tag: "Sentiment"
+    tag: "Sentiment",
+    image: "projects/project-sentiment-gh.png"
   },
   {
     name: "Autonomous-System-Temp-Cleaner",
@@ -188,7 +211,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/Autonomous-System-Temp-Cleaner/",
     githubUrl: "https://github.com/AbishekPranavGV/Autonomous-System-Temp-Cleaner",
     tech: "Windows Task Scheduler / Batch",
-    tag: "SysAdmin"
+    tag: "SysAdmin",
+    image: "projects/temp-cleaner.svg"
   },
   {
     name: "Crm",
@@ -198,7 +222,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/Crm/",
     githubUrl: "https://github.com/AbishekPranavGV/Crm",
     tech: "Skill Bundle / Lead AI",
-    tag: "CRM"
+    tag: "CRM",
+    image: "projects/crm.svg"
   },
   {
     name: "drive-file-index",
@@ -208,7 +233,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/drive-file-index/",
     githubUrl: "https://github.com/AbishekPranavGV/drive-file-index",
     tech: "Google Drive API v3",
-    tag: "Cloud"
+    tag: "Cloud",
+    image: "projects/drive-index.svg"
   },
   {
     name: "Multi-Account-Gmail-Inbox-Hygiene-Agent",
@@ -218,7 +244,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/Multi-Account-Gmail-Inbox-Hygiene-Agent/",
     githubUrl: "https://github.com/AbishekPranavGV/Multi-Account-Gmail-Inbox-Hygiene-Agent",
     tech: "Gmail API / OAuth 2.0",
-    tag: "Governance"
+    tag: "Governance",
+    image: "projects/gmail-agent.svg"
   },
   {
     name: "NICMS-SriLanka-Strategic-Blueprint_Project",
@@ -228,7 +255,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/NICMS-SriLanka-Strategic-Blueprint_Project/",
     githubUrl: "https://github.com/AbishekPranavGV/NICMS-SriLanka-Strategic-Blueprint_Project",
     tech: "Enterprise Architecture",
-    tag: "Specs"
+    tag: "Specs",
+    image: "projects/nicms-specs.svg"
   },
   {
     name: "NUNES-Local-AI-Marketing-Starter",
@@ -238,7 +266,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/NUNES-Local-AI-Marketing-Starter/",
     githubUrl: "https://github.com/AbishekPranavGV/NUNES-Local-AI-Marketing-Starter",
     tech: "Edge LLM / Quantized",
-    tag: "Local AI"
+    tag: "Local AI",
+    image: "projects/local-ai-marketing.svg"
   },
   {
     name: "Smart-Brochure-to-Catalog-Converter",
@@ -248,7 +277,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/Smart-Brochure-to-Catalog-Converter/",
     githubUrl: "https://github.com/AbishekPranavGV/Smart-Brochure-to-Catalog-Converter",
     tech: "OCR / Table Extraction",
-    tag: "IDP"
+    tag: "IDP",
+    image: "projects/brochure-converter.svg"
   },
   {
     name: "Smart-Price-Master-Catalog-Generator",
@@ -258,7 +288,8 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/Smart-Price-Master-Catalog-Generator/",
     githubUrl: "https://github.com/AbishekPranavGV/Smart-Price-Master-Catalog-Generator",
     tech: "Dynamic Pricing / Vector PDF",
-    tag: "Pricing"
+    tag: "Pricing",
+    image: "projects/price-master.svg"
   },
   {
     name: "SocmedX",
@@ -268,12 +299,13 @@ const allRepos: RepoItem[] = [
     liveUrl: "https://abishekpranavgv.github.io/SocmedX/",
     githubUrl: "https://github.com/AbishekPranavGV/SocmedX",
     tech: "Node.js / Social Engine",
-    tag: "Command Center"
+    tag: "Command Center",
+    image: "projects/socmedx.svg"
   }
 ];
 
 export default function LiveArchitectureSection() {
-  const [activeTab, setActiveTab] = useState<"ai" | "forecasting" | "cicd">("cicd");
+  const [activeTab, setActiveTab] = useState<"cicd" | "ai" | "forecasting">("cicd");
   const [searchRepo, setSearchRepo] = useState("");
 
   const filteredRepos = allRepos.filter(
@@ -294,10 +326,10 @@ export default function LiveArchitectureSection() {
               <span>Production Systems Architecture</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-              How the Systems Run Live
+              Live Verified Results & Pipelines
             </h2>
             <p className="text-muted-foreground mt-2 max-w-2xl text-base md:text-lg">
-              Explore the interactive pipelines powering document intelligence, retail demand forecasting, and automated CI/CD across 24 GitHub repositories.
+              Explore the direct result outputs, interactive dashboards, and automated CI/CD across 24 GitHub repositories.
             </p>
           </div>
 
@@ -311,7 +343,7 @@ export default function LiveArchitectureSection() {
               }`}
             >
               <ShieldCheck className="h-4 w-4" />
-              <span>24/24 CI/CD Grid</span>
+              <span>24/24 Live Matrix</span>
             </button>
             <button
               onClick={() => setActiveTab("ai")}
@@ -354,15 +386,15 @@ export default function LiveArchitectureSection() {
                     <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
                     <span>24 of 24 Repositories 100% Deployed & Passing</span>
                   </div>
-                  <h3 className="text-2xl font-bold mt-1">Live GitHub Actions & Pages Deployment Matrix</h3>
+                  <h3 className="text-2xl font-bold mt-1">Live Result Outputs & Production Matrix</h3>
                   <p className="text-xs text-muted-foreground mt-1">
-                    Every repository has an active web deployment at <code className="text-primary font-mono">abishekpranavgv.github.io/&lt;repo&gt;/</code> with passing CI workflows.
+                    Every repository below has a verified live production deployment with full visual result previews.
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
                   <input
                     type="text"
-                    placeholder="Filter 24 repos..."
+                    placeholder="Filter 24 systems..."
                     value={searchRepo}
                     onChange={(e) => setSearchRepo(e.target.value)}
                     className="px-3 py-1.5 text-xs rounded-lg border border-border bg-secondary/50 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50"
@@ -379,23 +411,30 @@ export default function LiveArchitectureSection() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
                 {filteredRepos.map((repo) => (
                   <div
                     key={repo.name}
-                    className="group relative flex flex-col justify-between p-4 rounded-xl border border-border/70 bg-secondary/20 hover:border-primary/50 hover:bg-secondary/40 transition-all duration-200"
+                    className="group relative flex flex-col justify-between p-4 rounded-xl border border-border/70 bg-secondary/20 hover:border-primary/60 hover:bg-secondary/40 transition-all duration-300 shadow-md"
                   >
                     <div>
-                      <div className="flex items-center justify-between gap-2 mb-2">
-                        <span className="text-[10px] font-semibold text-primary uppercase tracking-wider bg-primary/10 px-2 py-0.5 rounded border border-primary/20">
+                      {/* Thumbnail Result Image */}
+                      <div className="relative w-full h-36 rounded-lg overflow-hidden mb-3 border border-border/60 bg-background/80">
+                        <img 
+                          src={resolveImagePath(repo.image)} 
+                          alt={`${repo.name} Preview`}
+                          className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-60" />
+                        <span className="absolute top-2 left-2 text-[9px] font-semibold text-primary uppercase tracking-wider bg-background/90 backdrop-blur px-2 py-0.5 rounded border border-primary/20">
                           {repo.tag}
                         </span>
                         <a
                           href={repo.runUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-1 text-[10px] font-mono font-bold text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 px-2 py-0.5 rounded-full border border-emerald-500/20"
-                          title="View Verified GitHub Actions Run"
+                          className="absolute top-2 right-2 inline-flex items-center gap-1 text-[9px] font-mono font-bold text-emerald-400 bg-background/90 backdrop-blur px-2 py-0.5 rounded-full border border-emerald-500/30"
                         >
                           <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                           <span>Run #{repo.runId.slice(-5)}</span>
@@ -418,10 +457,10 @@ export default function LiveArchitectureSection() {
                         href={repo.liveUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary/80 transition-colors bg-primary/10 hover:bg-primary/20 px-2.5 py-1 rounded-md border border-primary/30"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary/80 transition-colors bg-primary/10 hover:bg-primary/20 px-3 py-1 rounded-md border border-primary/30"
                       >
                         <Globe className="h-3 w-3" />
-                        <span>Live Page</span>
+                        <span>Direct Live App</span>
                         <ArrowUpRight className="h-3 w-3" />
                       </a>
                       <a
@@ -456,12 +495,12 @@ export default function LiveArchitectureSection() {
                 </div>
                 <div className="flex items-center gap-3">
                   <a
-                    href="https://abishekpranavgv.github.io/MedX/"
+                    href="https://nunes-catalogue-studio-live.vercel.app/"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                   >
-                    <span>Launch Live Page</span>
+                    <span>Launch Live App</span>
                     <ArrowUpRight className="h-3.5 w-3.5" />
                   </a>
                 </div>
