@@ -8,16 +8,31 @@ import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
 
+// Dynamically determine basename:
+// - If loaded on GitHub Pages (/abishekpranavportfolio), use /abishekpranavportfolio
+// - If loaded on Lovable (abishekpranavportfolio.lovable.app) or root domain, use /
+const getBasename = () => {
+  if (typeof window !== "undefined") {
+    const pathname = window.location.pathname;
+    if (pathname.startsWith("/abishekpranavportfolio")) {
+      return "/abishekpranavportfolio";
+    }
+  }
+  return "/";
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={getBasename()}>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          <Route path="/abishekpranavportfolio" element={<Index />} />
+          <Route path="/abishekpranavportfolio/*" element={<Index />} />
+          {/* Catch-all renders Index so no path ever hits an unwanted 404 */}
+          <Route path="*" element={<Index />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
