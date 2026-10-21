@@ -2,7 +2,6 @@
 **Business Analyst | Data & AI Automation Specialist | Process Improvement Lead**  
 Coimbatore, Tamil Nadu, India | [+91 63835 00484](tel:+916383500484) | [Abishekpranav403@gmail.com](mailto:Abishekpranav403@gmail.com)  
 **Live Portfolio:** [abishekpranavgv.github.io/abishekpranavportfolio](https://abishekpranavgv.github.io/abishekpranavportfolio/)  
-**Portfolio Mirror:** [abishekpranavportfolio.lovable.app](https://abishekpranavportfolio.lovable.app/)  
 **LinkedIn:** [linkedin.com/in/abishek-pranav-g-v-](https://www.linkedin.com/in/abishek-pranav-g-v-/)  
 **GitHub:** [github.com/AbishekPranavGV](https://github.com/AbishekPranavGV) (24 Verified Repositories)
 

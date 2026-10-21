@@ -31,7 +31,6 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 Business Analyst | Data & AI Automation Specialist | Process Improvement Lead
 Coimbatore, Tamil Nadu, India | +91 63835 00484 | Abishekpranav403@gmail.com
 Portfolio: https://abishekpranavgv.github.io/abishekpranavportfolio/
-Portfolio Mirror: https://abishekpranavportfolio.lovable.app/
 LinkedIn: https://www.linkedin.com/in/abishek-pranav-g-v-/
 GitHub: https://github.com/AbishekPranavGV
 
@@ -262,17 +261,7 @@ CERTIFICATIONS
                   className="inline-flex items-center gap-1.5 font-semibold text-primary hover:underline"
                 >
                   <Globe className="h-3.5 w-3.5" />
-                  <span>Live Portfolio (Pages)</span>
-                  <ExternalLink className="h-3 w-3" />
-                </a>
-                <a
-                  href="https://abishekpranavportfolio.lovable.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 font-semibold text-primary hover:underline"
-                >
-                  <Globe className="h-3.5 w-3.5 text-accent" />
-                  <span>Portfolio Mirror (Lovable)</span>
+                  <span>Official Live Portfolio</span>
                   <ExternalLink className="h-3 w-3" />
                 </a>
                 <a
