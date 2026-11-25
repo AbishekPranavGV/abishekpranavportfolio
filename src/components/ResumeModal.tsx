@@ -96,9 +96,9 @@ Know: Enterprise AI Second-Brain & Workspace Suite | Next.js 15, React 19, TypeS
 Live App: https://abishekpranavportfolio.vercel.app/ | GitHub: https://github.com/AbishekPranavGV/know-ai-workspace
 • Engineered an enterprise second-brain and knowledge management platform featuring universal Cmd+K command palette, flashcard spaced repetition learning, agile task kanban, and LibSQL encrypted audit logs.
 
-Quick-Curie: Akshay Autonomous Personal AI & FinOS Hub | Python 3.11, PWA, Service Workers, FinOS, Vercel
-Live App: https://abishekpranavportfolio.vercel.app/ | GitHub: https://github.com/AbishekPranavGV/quick-curie
-• Architected an autonomous personal AI assistant and double-entry FinOS engine with offline-first PWA service workers, zero-variance balance integrity, and real-time hardware Galaxy Tab telemetry synchronization.
+TaxGuard Pro & Quick-Curie FinOS Engine | React, TypeScript, Tailwind CSS, Tesseract.js, FinOS, Vercel
+Live App: https://quick-curie.vercel.app/ | GitHub: https://github.com/AbishekPranavGV/quick-curie
+• Architected production AI property tax appeal diagnostic platform auditing 56 Cook & Lake County townships with 14-digit PIN regex matching and 3-year retroactive Certificate of Error (C of E) refund recovery, coupled with deterministic double-entry FinOS accounting ledger.
 
 NUNES School & Transport Circular Automation Suite | Next.js 14, React 19, TypeScript, SQLite, Vercel
 Live App: https://school-seven-eosin.vercel.app/ | Transport Live: https://nunes-transport.vercel.app/transport | GitHub: https://github.com/AbishekPranavGV/nunes-school-directory-coimbatore

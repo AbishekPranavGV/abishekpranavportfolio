@@ -53,7 +53,7 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
           <span className="text-muted-foreground/60">•</span>
           <span className="text-foreground/90 font-medium">Coimbatore, India</span>
           <span className="text-muted-foreground/60">•</span>
-          <span className="text-emerald-400 font-semibold">30 Production Repos • 8 Active Vercel Cloud Deployments Live</span>
+          <span className="text-emerald-400 font-semibold">30 Production Repos • 9 Active Vercel Cloud Deployments Live</span>
         </motion.div>
 
         {/* Headline */}

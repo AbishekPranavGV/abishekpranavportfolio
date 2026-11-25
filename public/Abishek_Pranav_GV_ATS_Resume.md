@@ -71,10 +71,10 @@ Results-driven **Business Analyst and AI Automation Specialist** with a **BBA in
 - **Live Vercel Hub:** [abishekpranavportfolio.vercel.app](https://abishekpranavportfolio.vercel.app/) | **GitHub:** [github.com/AbishekPranavGV/know-ai-workspace](https://github.com/AbishekPranavGV/know-ai-workspace)
 - Engineered an enterprise second-brain and knowledge management platform featuring universal Cmd+K command palette, flashcard spaced repetition learning, agile task kanban, and LibSQL encrypted audit logs.
 
-### **2. Quick-Curie: Akshay Autonomous Personal AI & FinOS Hub**
-- **Tech Stack:** Python 3.11, PWA, Service Workers, FinOS Double-Entry, WebSockets, Vercel
-- **Live Vercel Hub:** [abishekpranavportfolio.vercel.app](https://abishekpranavportfolio.vercel.app/) | **GitHub:** [github.com/AbishekPranavGV/quick-curie](https://github.com/AbishekPranavGV/quick-curie)
-- Architected an autonomous personal AI assistant and double-entry FinOS engine with offline-first PWA service workers, zero-variance balance integrity, and real-time hardware Galaxy Tab telemetry synchronization.
+### **2. TaxGuard Pro & Quick-Curie FinOS Engine**
+- **Tech Stack:** React, TypeScript, Tailwind CSS, Tesseract.js, FinOS Double-Entry, Vercel
+- **Live Vercel Hub:** [quick-curie.vercel.app](https://quick-curie.vercel.app/) | **GitHub:** [github.com/AbishekPranavGV/quick-curie](https://github.com/AbishekPranavGV/quick-curie)
+- Architected production AI property tax appeal diagnostic platform auditing 56 Cook & Lake County townships with 14-digit PIN regex matching and 3-year retroactive Certificate of Error (C of E) refund recovery, coupled with deterministic double-entry FinOS accounting ledger.
 
 ### **3. NUNES School & Transport Circular Automation Suite**
 - **Tech Stack:** Next.js 14, React 19, TypeScript, SQLite, Vercel
