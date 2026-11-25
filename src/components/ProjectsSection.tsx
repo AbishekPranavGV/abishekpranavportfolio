@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, Search, ArrowUpRight, Sparkles } from "lucide-react";
 
-type ProjectCategory = "all" | "ai" | "data" | "operations";
+type ProjectCategory = "flagship" | "all" | "ai" | "data" | "operations";
 
 type Project = {
   title: string;
@@ -34,7 +34,7 @@ const projects: Project[] = [
     impact: "Universal Cmd+K command palette • Spaced repetition recall engine • LibSQL encrypted audit logs",
     stack: ["Next.js 15", "React 19", "TypeScript", "Prisma", "LibSQL / Turso", "Tailwind CSS"],
     github: "https://github.com/AbishekPranavGV/know-ai-workspace",
-    demo: "https://abishekpranavportfolio.vercel.app/",
+    demo: "https://know-ai-workspace.vercel.app/dashboard",
     highlight: true,
     image: "projects/know-workspace.svg",
   },
@@ -334,12 +334,12 @@ const projects: Project[] = [
     title: "Autonomous System Temp & Disk Optimizer",
     category: "operations",
     categoryLabel: "Systems Administration",
-    description: "High-reliability background maintenance utility automating 4-hour cycle temporary file purges, memory cache cleanup, and disk optimization.",
-    impact: "15+ GB monthly disk space recovered • 0% CPU overhead • Safe-file exclusions",
-    stack: ["Batch Scripting", "Windows Task Scheduler", "Process Locking", "Audit Logs"],
+    description: "High-reliability background maintenance utility automating 4-hour cycle temporary file purges, memory cache cleanup, multi-drive storage telemetry, and disk optimization.",
+    impact: "15+ GB monthly disk space recovered • Win32 drive telemetry • Live Vercel dashboard",
+    stack: ["Python", "Win32 APIs", "System Telemetry", "PowerShell", "Vercel"],
     github: "https://github.com/AbishekPranavGV/Autonomous-System-Temp-Cleaner",
     demo: "https://autonomous-system-temp-cleaner-six.vercel.app/",
-    highlight: false,
+    highlight: true,
     image: "projects/temp-cleaner.svg",
   },
   {
@@ -381,12 +381,15 @@ const projects: Project[] = [
 ];
 
 export default function ProjectsSection() {
-  const [filter, setFilter] = useState<ProjectCategory>("all");
+  const [filter, setFilter] = useState<ProjectCategory>("flagship");
   const [search, setSearch] = useState("");
 
   const filteredProjects = useMemo(() => {
     return projects.filter((project) => {
-      const matchesCategory = filter === "all" || project.category === filter;
+      const matchesCategory =
+        filter === "flagship"
+          ? Boolean(project.highlight)
+          : filter === "all" || project.category === filter;
       const matchesSearch =
         search === "" ||
         project.title.toLowerCase().includes(search.toLowerCase()) ||
@@ -396,73 +399,112 @@ export default function ProjectsSection() {
     });
   }, [filter, search]);
 
+  const flagshipCount = useMemo(() => projects.filter((p) => p.highlight).length, []);
+
   return (
-    <section className="px-6 py-24" id="projects">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+    <section className="px-6 py-24 relative overflow-hidden" id="projects">
+      {/* Subtle background glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
           <div>
             <div className="section-divider mb-4" />
-            <p className="text-xs font-semibold uppercase tracking-[.22em] text-primary mb-2">
-              Production Portfolio · 24 Verified Live Systems
-            </p>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-              Featured Projects & Live Results
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-3">
+              <span className="h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
+              <span>10 Verified Live Cloud Deployments Active</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-foreground via-foreground/90 to-muted-foreground bg-clip-text text-transparent">
+              Production Portfolio &amp; Live Systems
             </h2>
             <p className="text-muted-foreground mt-2 text-sm md:text-base max-w-2xl">
-              Every system below features an active direct live execution page with official verified output result previews.
+              Curated enterprise AI agents, automated dispatch workflows, and predictive models — all deployed with live interactive results and direct production architecture.
             </p>
           </div>
 
           {/* Search bar */}
-          <div className="relative w-full md:w-72">
+          <div className="relative w-full md:w-80">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <input
               type="text"
-              placeholder="Search 24 live projects or stack..."
+              placeholder="Search by system name, tech, or stack..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 text-sm rounded-xl border border-border bg-card/80 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/60 transition-colors"
+              className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-border bg-card/80 backdrop-blur-md text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all shadow-sm"
             />
           </div>
         </div>
 
         {/* Filter Pills */}
-        <div className="flex flex-wrap gap-2 mb-10">
+        <div className="flex flex-wrap gap-2.5 mb-8">
           {[
-            { id: "all", label: `All Systems (${projects.length})` },
-            { id: "ai", label: `AI & Automation (${projects.filter(p => p.category === 'ai').length})` },
-            { id: "data", label: `Data & Predictive Analytics (${projects.filter(p => p.category === 'data').length})` },
-            { id: "operations", label: `Operations & Systems (${projects.filter(p => p.category === 'operations').length})` },
+            { id: "flagship", label: `⭐ Flagship Enterprise AI (${flagshipCount})`, isSpecial: true },
+            { id: "all", label: `All 30 Systems (${projects.length})` },
+            { id: "ai", label: `AI & Automation (${projects.filter((p) => p.category === "ai").length})` },
+            { id: "data", label: `Data & Predictive Analytics (${projects.filter((p) => p.category === "data").length})` },
+            { id: "operations", label: `Operations & Cloud (${projects.filter((p) => p.category === "operations").length})` },
           ].map((tab) => (
             <button
               key={tab.id}
               onClick={() => setFilter(tab.id as ProjectCategory)}
-              className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
+              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
                 filter === tab.id
-                  ? "bg-primary text-primary-foreground shadow-md shadow-primary/20 scale-105"
-                  : "border border-border bg-card/60 text-muted-foreground hover:text-foreground hover:border-border/80"
+                  ? tab.isSpecial
+                    ? "bg-gradient-to-r from-primary to-purple-600 text-white shadow-lg shadow-primary/25 scale-105 border border-primary/50"
+                    : "bg-primary text-primary-foreground shadow-md shadow-primary/20 scale-105"
+                  : "border border-border/80 bg-card/60 backdrop-blur text-muted-foreground hover:text-foreground hover:border-primary/40 hover:bg-card/90"
               }`}
             >
-              {tab.label}
+              <span>{tab.label}</span>
             </button>
           ))}
         </div>
 
+        {/* Flagship Highlight Banner */}
+        {filter === "flagship" && search === "" && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-8 p-4 rounded-xl bg-gradient-to-r from-primary/10 via-purple-500/10 to-emerald-500/10 border border-primary/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-md"
+          >
+            <div className="flex items-center gap-3">
+              <div className="h-9 w-9 rounded-lg bg-primary/20 flex items-center justify-center text-primary shrink-0">
+                <Sparkles className="h-5 w-5" />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-foreground">
+                  Highest-Impact Flagship Systems (Recommended for Senior AI / GenAI Roles)
+                </p>
+                <p className="text-[11px] text-muted-foreground">
+                  Verified enterprise architectures with live Vercel deployments, production APIs, and quantified real-world impact.
+                </p>
+              </div>
+            </div>
+            <button
+              onClick={() => setFilter("all")}
+              className="text-xs font-bold text-primary hover:text-primary/80 transition-colors whitespace-nowrap self-start sm:self-auto bg-card/60 px-3 py-1.5 rounded-lg border border-primary/20 hover:border-primary/40"
+            >
+              Explore All 30 Systems →
+            </button>
+          </motion.div>
+        )}
+
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <AnimatePresence>
+          <AnimatePresence mode="popLayout">
             {filteredProjects.map((project) => (
               <motion.div
                 key={project.title}
                 layout
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.3 }}
-                className={`group relative rounded-2xl border p-5 flex flex-col justify-between transition-all duration-300 ${
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.94 }}
+                transition={{ duration: 0.25 }}
+                whileHover={{ y: -6, transition: { duration: 0.2 } }}
+                className={`group relative rounded-2xl border p-5 flex flex-col justify-between transition-all duration-300 shadow-md ${
                   project.highlight
-                    ? "border-primary/50 bg-card/90 shadow-xl shadow-primary/5 hover:border-primary"
-                    : "border-border bg-card/60 hover:border-border/90 hover:bg-card/90"
+                    ? "border-primary/40 bg-gradient-to-b from-card/95 via-card/90 to-card/85 shadow-primary/10 hover:border-primary hover:shadow-2xl hover:shadow-primary/20"
+                    : "border-border/70 bg-card/60 hover:border-border hover:bg-card/90 hover:shadow-xl"
                 }`}
               >
                 <div>
@@ -474,28 +516,28 @@ export default function ProjectsSection() {
                     className="block relative w-full h-48 rounded-xl overflow-hidden mb-4 border border-border/80 bg-background/80 shadow-inner group/img cursor-pointer"
                     title={`Click to Run ${project.title} as Live`}
                   >
-                    <img 
-                      src={resolveImagePath(project.image)} 
+                    <img
+                      src={resolveImagePath(project.image)}
                       alt={`${project.title} Result Output Preview`}
                       className="w-full h-full object-cover object-top transition-transform duration-500 group-hover/img:scale-105"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-80" />
-                    
+
                     <div className="absolute top-2.5 left-2.5">
-                      <span className="text-[10px] font-semibold text-primary uppercase tracking-wider bg-background/90 backdrop-blur px-2.5 py-1 rounded-md border border-primary/30">
-                        {project.categoryLabel}
+                      <span className="text-[10px] font-bold text-primary uppercase tracking-wider bg-background/90 backdrop-blur px-2.5 py-1 rounded-md border border-primary/30 shadow-sm">
+                        {project.highlight ? "⭐ Flagship Enterprise" : project.categoryLabel}
                       </span>
                     </div>
 
                     <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between">
                       <span className="inline-flex items-center gap-1.5 text-[10px] font-bold text-emerald-400 bg-background/90 backdrop-blur px-2.5 py-1 rounded-md border border-emerald-500/30">
                         <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                        Live Result
+                        Live Cloud Result
                       </span>
 
-                      <span className="inline-flex items-center gap-1 text-[11px] font-bold text-primary bg-primary/20 group-hover/img:bg-primary group-hover/img:text-primary-foreground backdrop-blur px-3 py-1 rounded-md border border-primary/40 transition-all">
-                        <span>▶ Run as Live</span>
+                      <span className="inline-flex items-center gap-1 text-[11px] font-bold text-primary bg-primary/20 group-hover/img:bg-primary group-hover/img:text-primary-foreground backdrop-blur px-3 py-1 rounded-md border border-primary/40 transition-all shadow-sm">
+                        <span>▶ Launch Live</span>
                         <ArrowUpRight className="h-3 w-3" />
                       </span>
                     </div>
@@ -509,10 +551,10 @@ export default function ProjectsSection() {
                     {project.description}
                   </p>
 
-                  <div className="p-2.5 rounded-lg bg-secondary/30 border border-border/50 mb-3 text-xs">
-                    <span className="font-semibold text-foreground flex items-center gap-1.5 mb-0.5 text-[11px]">
+                  <div className="p-3 rounded-xl bg-secondary/30 border border-border/50 mb-3 text-xs">
+                    <span className="font-semibold text-foreground flex items-center gap-1.5 mb-1 text-[11px]">
                       <Sparkles className="h-3 w-3 text-primary" />
-                      Impact & Results:
+                      Impact &amp; Results:
                     </span>
                     <p className="text-muted-foreground text-[10.5px] leading-snug">
                       {project.impact}
@@ -542,9 +584,9 @@ export default function ProjectsSection() {
                     href={project.demo}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-primary/90 transition-all bg-primary/10 hover:bg-primary/20 px-3.5 py-2 rounded-lg border border-primary/30 shadow-sm"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-white transition-all bg-primary/10 hover:bg-primary px-3.5 py-2 rounded-lg border border-primary/30 shadow-sm"
                   >
-                    <span>▶ Run as Live</span>
+                    <span>▶ Launch Live System</span>
                     <ArrowUpRight className="h-3.5 w-3.5" />
                   </a>
 

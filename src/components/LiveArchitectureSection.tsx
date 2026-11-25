@@ -40,12 +40,12 @@ const resolveImagePath = (path: string) => {
 const allRepos: RepoItem[] = [
   {
     name: "know-ai-workspace",
-    desc: "Next.js 15 AI Second-Brain, Command Palette & Collaborative Vault",
+    desc: "Next.js 16 AI Second-Brain, Command Palette & Collaborative Vault",
     runId: "live",
     runUrl: "https://github.com/AbishekPranavGV/know-ai-workspace",
-    liveUrl: "https://abishekpranavportfolio.vercel.app/",
+    liveUrl: "https://know-ai-workspace.vercel.app/dashboard",
     githubUrl: "https://github.com/AbishekPranavGV/know-ai-workspace",
-    tech: "Next.js 15 / React 19 / Prisma / LibSQL / Vercel",
+    tech: "Next.js 16 / React 19 / Turbopack / Prisma / Vercel",
     tag: "Second-Brain & AI",
     image: "projects/know-workspace.svg"
   },

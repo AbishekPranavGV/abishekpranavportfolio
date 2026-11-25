@@ -67,8 +67,8 @@ Results-driven **Business Analyst and AI Automation Specialist** with a **BBA in
 ## KEY TECHNICAL PROJECTS & LIVE DEPLOYMENTS
 
 ### **1. Know: Enterprise AI Second-Brain & Workspace Suite**
-- **Tech Stack:** Next.js 15, React 19, TypeScript, Prisma, LibSQL / Turso
-- **Live Vercel Hub:** [abishekpranavportfolio.vercel.app](https://abishekpranavportfolio.vercel.app/) | **GitHub:** [github.com/AbishekPranavGV/know-ai-workspace](https://github.com/AbishekPranavGV/know-ai-workspace)
+- **Tech Stack:** Next.js 16, React 19, TypeScript, Turbopack, Prisma, LibSQL Serverless
+- **Live Vercel Hub:** [know-ai-workspace.vercel.app/dashboard](https://know-ai-workspace.vercel.app/dashboard) | **GitHub:** [github.com/AbishekPranavGV/know-ai-workspace](https://github.com/AbishekPranavGV/know-ai-workspace)
 - Engineered an enterprise second-brain and knowledge management platform featuring universal Cmd+K command palette, flashcard spaced repetition learning, agile task kanban, and LibSQL encrypted audit logs.
 
 ### **2. TaxGuard Pro & Quick-Curie FinOS Engine**

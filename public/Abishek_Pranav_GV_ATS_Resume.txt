@@ -63,8 +63,8 @@ Assistant Accountant | Jan 2022 – Jul 2022
 ================================================================================
 KEY TECHNICAL PROJECTS & LIVE DEPLOYMENTS
 ================================================================================
-Know: Enterprise AI Second-Brain & Workspace Suite | Next.js 15, React 19, TypeScript, Prisma, LibSQL
-Live App: https://abishekpranavportfolio.vercel.app/ | GitHub: https://github.com/AbishekPranavGV/know-ai-workspace
+Know: Enterprise AI Second-Brain & Workspace Suite | Next.js 16, React 19, TypeScript, Turbopack, Prisma, LibSQL
+Live App: https://know-ai-workspace.vercel.app/dashboard | GitHub: https://github.com/AbishekPranavGV/know-ai-workspace
 • Engineered an enterprise second-brain and knowledge management platform featuring universal Cmd+K command palette, flashcard spaced repetition learning, agile task kanban, and LibSQL encrypted audit logs.
 
 TaxGuard Pro & Quick-Curie FinOS Engine | React, TypeScript, Tailwind CSS, Tesseract.js, FinOS, Vercel
