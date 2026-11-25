@@ -39,6 +39,28 @@ const resolveImagePath = (path: string) => {
 
 const allRepos: RepoItem[] = [
   {
+    name: "know-ai-workspace",
+    desc: "Next.js 15 AI Second-Brain, Command Palette & Collaborative Vault",
+    runId: "live",
+    runUrl: "https://github.com/AbishekPranavGV/know-ai-workspace",
+    liveUrl: "https://abishekpranavportfolio.vercel.app/",
+    githubUrl: "https://github.com/AbishekPranavGV/know-ai-workspace",
+    tech: "Next.js 15 / React 19 / Prisma / LibSQL / Vercel",
+    tag: "Second-Brain & AI",
+    image: "projects/know-workspace.svg"
+  },
+  {
+    name: "quick-curie",
+    desc: "Akshay: Autonomous Personal AI Assistant, FinOS & PWA Monorepo",
+    runId: "live",
+    runUrl: "https://github.com/AbishekPranavGV/quick-curie",
+    liveUrl: "https://abishekpranavportfolio.vercel.app/",
+    githubUrl: "https://github.com/AbishekPranavGV/quick-curie",
+    tech: "Python / PWA / FinOS / WebSockets / Vercel",
+    tag: "Autonomous FinOS",
+    image: "projects/quick-curie.svg"
+  },
+  {
     name: "nunes-school-directory-coimbatore",
     desc: "Next.js Institutional Directory & Transport Circular Safety Suite",
     runId: "live",

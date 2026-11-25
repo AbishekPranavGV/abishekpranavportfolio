@@ -37,7 +37,7 @@ GitHub: https://github.com/AbishekPranavGV
 ================================================================================
 PROFESSIONAL SUMMARY
 ================================================================================
-Results-driven Business Analyst and AI Automation Specialist with a BBA in Data Science & AI, an MBA in Artificial Intelligence (in progress), and 3 years of rigorous Chartered Accountancy (ICAI) foundation. Proven track record of bridging financial governance, business operations, and enterprise data analytics to architect high-impact process improvements, automated ETL/BI pipelines, and LLM-assisted production workflows. Architected and deployed 28 verified production repositories across AI automation, institutional logistics, and real-time cloud microservices with 100% CI/CD uptime, integrating SQL, Python, Power BI, Advanced Excel, React, Next.js, and REST APIs to reduce manual turnaround times by up to 50% and optimize multimillion-dollar operations.
+Results-driven Business Analyst and AI Automation Specialist with a BBA in Data Science & AI, an MBA in Artificial Intelligence (in progress), and 3 years of rigorous Chartered Accountancy (ICAI) foundation. Proven track record of bridging financial governance, business operations, and enterprise data analytics to architect high-impact process improvements, automated ETL/BI pipelines, and LLM-assisted production workflows. Architected and deployed 30 verified production repositories across AI automation, second-brain knowledge systems, institutional logistics, and real-time cloud microservices across AI automation, institutional logistics, and real-time cloud microservices with 100% CI/CD uptime, integrating SQL, Python, Power BI, Advanced Excel, React, Next.js, and REST APIs to reduce manual turnaround times by up to 50% and optimize multimillion-dollar operations.
 
 ================================================================================
 CORE COMPETENCIES & TECHNICAL SKILLS
@@ -57,7 +57,7 @@ Generative AI & Business Automation Specialist | Aug 2026 – Present
 • Spearheaded enterprise AI catalog automation using Google Gemini API and Python, reducing technical specification extraction and branded PDF catalog assembly time by 95% across 5,000+ industrial SKUs.
 • Engineered robust Playwright browser automation bots for IndiaMART product listing workflows, automating data validation, form entry, and captcha-resilient multi-account catalog syndication.
 • Built full-stack operational web applications utilizing React, Next.js, TypeScript, and Supabase for real-time service requests, dynamic quote generation, and branch purchasing visibility dashboards.
-• Implemented automated CI/CD deployment pipelines on GitHub Actions and Vercel, maintaining 100% build pass rates, sub-second API latency, and automated error reporting across 28 verified repositories.
+• Implemented automated CI/CD deployment pipelines on GitHub Actions and Vercel, maintaining 100% build pass rates, sub-second API latency, and automated error reporting across 30 verified repositories.
 
 RXG Studios | Bengaluru, Karnataka (Hybrid)
 Operations & Business Analytics Lead | May 2025 – Nov 2025
@@ -92,6 +92,14 @@ Assistant Accountant | Jan 2022 – Jul 2022
 ================================================================================
 KEY TECHNICAL PROJECTS & LIVE DEPLOYMENTS
 ================================================================================
+Know: Enterprise AI Second-Brain & Workspace Suite | Next.js 15, React 19, TypeScript, Prisma, LibSQL
+Live App: https://abishekpranavportfolio.vercel.app/ | GitHub: https://github.com/AbishekPranavGV/know-ai-workspace
+• Engineered an enterprise second-brain and knowledge management platform featuring universal Cmd+K command palette, flashcard spaced repetition learning, agile task kanban, and LibSQL encrypted audit logs.
+
+Quick-Curie: Akshay Autonomous Personal AI & FinOS Hub | Python 3.11, PWA, Service Workers, FinOS, Vercel
+Live App: https://abishekpranavportfolio.vercel.app/ | GitHub: https://github.com/AbishekPranavGV/quick-curie
+• Architected an autonomous personal AI assistant and double-entry FinOS engine with offline-first PWA service workers, zero-variance balance integrity, and real-time hardware Galaxy Tab telemetry synchronization.
+
 NUNES School & Transport Circular Automation Suite | Next.js 14, React 19, TypeScript, SQLite, Vercel
 Live App: https://school-seven-eosin.vercel.app/ | Transport Live: https://nunes-transport.vercel.app/transport | GitHub: https://github.com/AbishekPranavGV/nunes-school-directory-coimbatore
 • Developed high-converting institutional circular generation and school discovery engine for Coimbatore district, automating transport safety communications with embedded breath analyser compliance copy and 16-page catalog attachments.
@@ -110,7 +118,7 @@ Live App: https://autonomous-system-temp-cleaner-six.vercel.app/ | GitHub: https
 
 Portfolio Hub & Live Production Infrastructure | React, Next.js, TypeScript, Vite, Vercel, GitHub CI/CD
 Live App: https://abishekpranavgv.github.io/abishekpranavportfolio/ | GitHub: https://github.com/AbishekPranavGV/abishekpranavportfolio
-• Engineered an executive portfolio ecosystem orchestrating 28 live micro-applications with 6 active Vercel production deployments with automated GitHub Actions CI/CD workflows, real-time telemetry streaming, and native Vercel deployment configurations.
+• Engineered an executive portfolio ecosystem orchestrating 30 live micro-applications with 8 active Vercel production deployments with 6 active Vercel production deployments with automated GitHub Actions CI/CD workflows, real-time telemetry streaming, and native Vercel deployment configurations.
 
 NUNES Medical Catalogue Studio (MedX) | Python, Flask, Gemini API, Vercel, ReportLab
 Live App: https://nunes-catalogue-studio-live.vercel.app/ | GitHub: https://github.com/AbishekPranavGV/MedX
@@ -295,7 +303,7 @@ CERTIFICATIONS
                   rel="noreferrer"
                   className="inline-flex items-center gap-1.5 font-semibold text-muted-foreground hover:text-foreground hover:underline"
                 >
-                  <span>GitHub Ecosystem (28 Repos)</span>
+                  <span>GitHub Ecosystem (30 Repos)</span>
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </div>
@@ -308,7 +316,7 @@ CERTIFICATIONS
                 <span>Professional Summary</span>
               </h2>
               <p className="text-muted-foreground text-xs md:text-sm leading-relaxed bg-secondary/20 p-4 rounded-xl border border-border/50">
-                Results-driven <strong>Business Analyst and AI Automation Specialist</strong> with a <strong>BBA in Data Science & AI</strong>, an <strong>MBA in Artificial Intelligence (in progress)</strong>, and 3 years of rigorous <strong>Chartered Accountancy (ICAI)</strong> foundation. Proven track record of bridging financial governance, business operations, and enterprise data analytics to architect high-impact process improvements, automated ETL/BI pipelines, and LLM-assisted production workflows. Architected and deployed <strong>28 verified production repositories across AI automation, institutional logistics, and real-time cloud microservices</strong> with 100% CI/CD uptime, integrating SQL, Python, Power BI, Advanced Excel, React, Next.js, and REST APIs to reduce manual turnaround times by up to <strong>50%</strong> and optimize multimillion-dollar operations.
+                Results-driven <strong>Business Analyst and AI Automation Specialist</strong> with a <strong>BBA in Data Science & AI</strong>, an <strong>MBA in Artificial Intelligence (in progress)</strong>, and 3 years of rigorous <strong>Chartered Accountancy (ICAI)</strong> foundation. Proven track record of bridging financial governance, business operations, and enterprise data analytics to architect high-impact process improvements, automated ETL/BI pipelines, and LLM-assisted production workflows. Architected and deployed <strong>30 verified production repositories across AI automation, second-brain knowledge systems, institutional logistics, and real-time cloud microservices across AI automation, institutional logistics, and real-time cloud microservices</strong> with 100% CI/CD uptime, integrating SQL, Python, Power BI, Advanced Excel, React, Next.js, and REST APIs to reduce manual turnaround times by up to <strong>50%</strong> and optimize multimillion-dollar operations.
               </p>
             </div>
 
@@ -363,7 +371,7 @@ CERTIFICATIONS
                     <li>Spearheaded enterprise AI catalog automation using Google Gemini API and Python, reducing technical specification extraction and branded PDF catalog assembly time by <strong>95%</strong> across 5,000+ industrial SKUs.</li>
                     <li>Engineered robust Playwright browser automation bots for IndiaMART product listing workflows, automating data validation, form entry, and captcha-resilient multi-account catalog syndication.</li>
                     <li>Built full-stack operational web applications utilizing React, Next.js, TypeScript, and Supabase for real-time service requests, dynamic quote generation, and branch purchasing visibility dashboards.</li>
-                    <li>Implemented automated CI/CD deployment pipelines on GitHub Actions and Vercel, maintaining 100% build pass rates, sub-second API latency, and automated error reporting across 28 verified repositories.</li>
+                    <li>Implemented automated CI/CD deployment pipelines on GitHub Actions and Vercel, maintaining 100% build pass rates, sub-second API latency, and automated error reporting across 30 verified repositories.</li>
                   </ul>
                 </div>
 
@@ -441,6 +449,50 @@ CERTIFICATIONS
                 <span>Key Technical Projects & Live Deployments</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                {/* Know AI Workspace */}
+                <div className="p-3.5 rounded-xl border border-border/70 bg-secondary/20 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-foreground text-sm">Know: AI Second-Brain Suite</span>
+                      <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Live Vercel</span>
+                    </div>
+                    <p className="text-[11px] text-primary/80 font-mono mt-0.5">Next.js 15 • React 19 • Prisma • LibSQL • Vercel</p>
+                    <p className="text-muted-foreground mt-2 leading-relaxed">
+                      AI second-brain with universal Cmd+K command palette, flashcards, task kanban, notes, and encrypted LibSQL audit logs.
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3 mt-3 pt-2 border-t border-border/40">
+                    <a href="https://abishekpranavportfolio.vercel.app/" target="_blank" rel="noreferrer" className="text-primary font-semibold hover:underline inline-flex items-center gap-1">
+                      <span>Live Vercel Hub</span> <ExternalLink className="h-3 w-3" />
+                    </a>
+                    <a href="https://github.com/AbishekPranavGV/know-ai-workspace" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1">
+                      <span>GitHub</span> <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </div>
+                </div>
+
+                {/* Quick-Curie Akshay FinOS */}
+                <div className="p-3.5 rounded-xl border border-border/70 bg-secondary/20 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-foreground text-sm">Quick-Curie: Akshay FinOS Hub</span>
+                      <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Live Vercel</span>
+                    </div>
+                    <p className="text-[11px] text-primary/80 font-mono mt-0.5">Python 3.11 • PWA • FinOS Double-Entry • Galaxy Tab Sync</p>
+                    <p className="text-muted-foreground mt-2 leading-relaxed">
+                      Autonomous AI assistant and double-entry FinOS engine with offline-first service workers and Galaxy Tab hardware sync.
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3 mt-3 pt-2 border-t border-border/40">
+                    <a href="https://abishekpranavportfolio.vercel.app/" target="_blank" rel="noreferrer" className="text-primary font-semibold hover:underline inline-flex items-center gap-1">
+                      <span>Live Vercel Hub</span> <ExternalLink className="h-3 w-3" />
+                    </a>
+                    <a href="https://github.com/AbishekPranavGV/quick-curie" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1">
+                      <span>GitHub</span> <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </div>
+                </div>
+
                 {/* Nunes School & Transport Suite */}
                 <div className="p-3.5 rounded-xl border border-border/70 bg-secondary/20 flex flex-col justify-between">
                   <div>

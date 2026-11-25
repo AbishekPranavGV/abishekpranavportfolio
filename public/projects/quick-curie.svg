@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgCurie" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="50%" stop-color="#3f3f46" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgCurie)" rx="24"/>
+  <circle cx="680" cy="90" r="150" fill="#fbbf24" opacity="0.15" />
+  <circle cx="120" cy="400" r="160" fill="#f59e0b" opacity="0.2" />
+  
+  <rect x="60" y="60" width="680" height="380" rx="16" fill="#18181b" fill-opacity="0.85" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="6 6"/>
+  
+  <rect x="90" y="90" width="220" height="32" rx="16" fill="url(#goldGlow)"/>
+  <text x="200" y="111" fill="#18181b" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="900" text-anchor="middle" letter-spacing="1">AUTONOMOUS FINOS &amp; AI</text>
+  
+  <text x="90" y="170" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800">Quick-Curie: Akshay AI &amp; FinOS Hub</text>
+  <text x="90" y="205" fill="#fef3c7" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500">Master Engineering Monorepo • Offline PWA • FinOS Double-Entry Engine • Galaxy Tab Sync</text>
+  
+  <rect x="90" y="240" width="190" height="150" rx="12" fill="#27272a" stroke="#52525b" stroke-width="1.5"/>
+  <text x="105" y="275" fill="#fbbf24" font-size="14" font-weight="700">Akshay AI Core 🤖</text>
+  <text x="105" y="305" fill="#d4d4d8" font-size="11">Imperishable autonomous agent</text>
+  <text x="105" y="325" fill="#d4d4d8" font-size="11">Internet-in-a-Box offline hub</text>
+  <text x="105" y="365" fill="#fbbf24" font-size="11" font-weight="700">Offline PWA Service Worker</text>
+  
+  <rect x="300" y="240" width="190" height="150" rx="12" fill="#27272a" stroke="#52525b" stroke-width="1.5"/>
+  <text x="315" y="275" fill="#f59e0b" font-size="14" font-weight="700">FinOS Engine 💹</text>
+  <text x="315" y="305" fill="#d4d4d8" font-size="11">Double-entry ledger rules</text>
+  <text x="315" y="325" fill="#d4d4d8" font-size="11">Zero-variance balance tracking</text>
+  <text x="315" y="365" fill="#f59e0b" font-size="11" font-weight="700">Strict CA-Grade Integrity</text>
+  
+  <rect x="510" y="240" width="200" height="150" rx="12" fill="#27272a" stroke="#52525b" stroke-width="1.5"/>
+  <text x="525" y="275" fill="#10b981" font-size="14" font-weight="700">Live Vercel Hub 🟢</text>
+  <text x="525" y="305" fill="#d4d4d8" font-size="11">abishekpranavportfolio.vercel.app</text>
+  <text x="525" y="325" fill="#d4d4d8" font-size="11">Galaxy Tab Hardware Sync</text>
+  <text x="525" y="365" fill="#10b981" font-size="11" font-weight="700">Active Ecosystem Hub</text>
+</svg>

@@ -3,12 +3,12 @@
 Coimbatore, Tamil Nadu, India | [+91 63835 00484](tel:+916383500484) | [Abishekpranav403@gmail.com](mailto:Abishekpranav403@gmail.com)  
 **Live Portfolio:** [abishekpranavgv.github.io/abishekpranavportfolio](https://abishekpranavgv.github.io/abishekpranavportfolio/)  
 **LinkedIn:** [linkedin.com/in/abishek-pranav-g-v-](https://www.linkedin.com/in/abishek-pranav-g-v-/)  
-**GitHub:** [github.com/AbishekPranavGV](https://github.com/AbishekPranavGV) (28 Verified Repositories)
+**GitHub:** [github.com/AbishekPranavGV](https://github.com/AbishekPranavGV) (30 Verified Repositories)
 
 ---
 
 ## PROFESSIONAL SUMMARY
-Results-driven **Business Analyst and AI Automation Specialist** with a **BBA in Data Science & AI**, an **MBA in Artificial Intelligence (in progress)**, and 3 years of rigorous **Chartered Accountancy (ICAI)** foundation. Proven track record of bridging financial governance, business operations, and enterprise data analytics to architect high-impact process improvements, automated ETL/BI pipelines, and LLM-assisted production workflows. Architected and deployed 28 verified production repositories across AI automation, institutional logistics, and real-time cloud microservices with 100% CI/CD uptime, integrating SQL, Python, Power BI, Advanced Excel, React, Next.js, and REST APIs to reduce manual turnaround times by up to 50% and optimize multimillion-dollar operations.
+Results-driven **Business Analyst and AI Automation Specialist** with a **BBA in Data Science & AI**, an **MBA in Artificial Intelligence (in progress)**, and 3 years of rigorous **Chartered Accountancy (ICAI)** foundation. Proven track record of bridging financial governance, business operations, and enterprise data analytics to architect high-impact process improvements, automated ETL/BI pipelines, and LLM-assisted production workflows. Architected and deployed 30 verified production repositories across AI automation, second-brain knowledge systems, institutional logistics, and real-time cloud microservices across AI automation, institutional logistics, and real-time cloud microservices with 100% CI/CD uptime, integrating SQL, Python, Power BI, Advanced Excel, React, Next.js, and REST APIs to reduce manual turnaround times by up to 50% and optimize multimillion-dollar operations.
 
 ---
 
@@ -30,7 +30,7 @@ Results-driven **Business Analyst and AI Automation Specialist** with a **BBA in
 - Spearheaded enterprise AI catalog automation using Google Gemini API and Python, reducing technical specification extraction and branded PDF catalog assembly time by **95%** across **5,000+** industrial SKUs.
 - Engineered robust Playwright browser automation bots for IndiaMART product listing workflows, automating data validation, form entry, and captcha-resilient multi-account catalog syndication.
 - Built full-stack operational web applications utilizing React, Next.js, TypeScript, and Supabase for real-time service requests, dynamic quote generation, and branch purchasing visibility dashboards.
-- Implemented automated CI/CD deployment pipelines on GitHub Actions and Vercel, maintaining 100% build pass rates, sub-second API latency, and automated error reporting across 28 verified repositories.
+- Implemented automated CI/CD deployment pipelines on GitHub Actions and Vercel, maintaining 100% build pass rates, sub-second API latency, and automated error reporting across 30 verified repositories.
 
 ### **RXG Studios** | Bengaluru, Karnataka (Hybrid)
 *Operations & Business Analytics Lead* | **May 2025 – Nov 2025**
@@ -66,7 +66,17 @@ Results-driven **Business Analyst and AI Automation Specialist** with a **BBA in
 
 ## KEY TECHNICAL PROJECTS & LIVE DEPLOYMENTS
 
-### **1. NUNES School & Transport Circular Automation Suite**
+### **1. Know: Enterprise AI Second-Brain & Workspace Suite**
+- **Tech Stack:** Next.js 15, React 19, TypeScript, Prisma, LibSQL / Turso
+- **Live Vercel Hub:** [abishekpranavportfolio.vercel.app](https://abishekpranavportfolio.vercel.app/) | **GitHub:** [github.com/AbishekPranavGV/know-ai-workspace](https://github.com/AbishekPranavGV/know-ai-workspace)
+- Engineered an enterprise second-brain and knowledge management platform featuring universal Cmd+K command palette, flashcard spaced repetition learning, agile task kanban, and LibSQL encrypted audit logs.
+
+### **2. Quick-Curie: Akshay Autonomous Personal AI & FinOS Hub**
+- **Tech Stack:** Python 3.11, PWA, Service Workers, FinOS Double-Entry, WebSockets, Vercel
+- **Live Vercel Hub:** [abishekpranavportfolio.vercel.app](https://abishekpranavportfolio.vercel.app/) | **GitHub:** [github.com/AbishekPranavGV/quick-curie](https://github.com/AbishekPranavGV/quick-curie)
+- Architected an autonomous personal AI assistant and double-entry FinOS engine with offline-first PWA service workers, zero-variance balance integrity, and real-time hardware Galaxy Tab telemetry synchronization.
+
+### **3. NUNES School & Transport Circular Automation Suite**
 - **Tech Stack:** Next.js 14, React 19, TypeScript, SQLite, Vercel
 - **Live Directory:** [school-seven-eosin.vercel.app](https://school-seven-eosin.vercel.app/) | **Transport Suite:** [nunes-transport.vercel.app/transport](https://nunes-transport.vercel.app/transport) | **GitHub:** [github.com/AbishekPranavGV/nunes-school-directory-coimbatore](https://github.com/AbishekPranavGV/nunes-school-directory-coimbatore)
 - Developed high-converting institutional circular generation and school discovery engine for Coimbatore district, automating transport safety communications with embedded breath analyser compliance copy and 16-page catalog attachments.
@@ -89,7 +99,7 @@ Results-driven **Business Analyst and AI Automation Specialist** with a **BBA in
 ### **5. Portfolio Hub & Live Production Infrastructure**
 - **Tech Stack:** React, Next.js, TypeScript, Vite, Vercel, GitHub Actions CI/CD
 - **Live App:** [abishekpranavgv.github.io/abishekpranavportfolio](https://abishekpranavgv.github.io/abishekpranavportfolio/) | **GitHub:** [github.com/AbishekPranavGV/abishekpranavportfolio](https://github.com/AbishekPranavGV/abishekpranavportfolio)
-- Engineered an executive portfolio ecosystem orchestrating 28 live micro-applications with 6 active Vercel production deployments with automated GitHub Actions CI/CD workflows, real-time telemetry streaming, and native Vercel deployment configurations.
+- Engineered an executive portfolio ecosystem orchestrating 30 live micro-applications with 8 active Vercel production deployments with 6 active Vercel production deployments with automated GitHub Actions CI/CD workflows, real-time telemetry streaming, and native Vercel deployment configurations.
 
 ### **2. NUNES Medical Catalogue Studio (MedX)**
 - **Tech Stack:** Python, Flask, Gemini API, Vercel, ReportLab

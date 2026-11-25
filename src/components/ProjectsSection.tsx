@@ -25,7 +25,31 @@ const resolveImagePath = (path: string) => {
 };
 
 const projects: Project[] = [
-  // --- AI & AUTOMATION (10) ---
+  // --- AI & AUTOMATION (12) ---
+  {
+    title: "Know: Enterprise AI Second-Brain & Workspace",
+    category: "ai",
+    categoryLabel: "Productivity & Second-Brain",
+    description: "Full-stack Next.js 15 AI second-brain and collaborative workspace suite featuring note vaults, flashcard spaced repetition, agile task kanban, command palette (Cmd+K), and LibSQL/Prisma audit logs.",
+    impact: "Universal Cmd+K command palette • Spaced repetition recall engine • LibSQL encrypted audit logs",
+    stack: ["Next.js 15", "React 19", "TypeScript", "Prisma", "LibSQL / Turso", "Tailwind CSS"],
+    github: "https://github.com/AbishekPranavGV/know-ai-workspace",
+    demo: "https://abishekpranavportfolio.vercel.app/",
+    highlight: true,
+    image: "projects/know-workspace.svg",
+  },
+  {
+    title: "Quick-Curie: Akshay AI & FinOS Engine",
+    category: "ai",
+    categoryLabel: "Autonomous FinOS & Agent",
+    description: "Autonomous Personal AI Assistant and FinOS Accounting Engine with offline-first PWA service workers, double-entry financial integrity rules, and real-time hardware Galaxy Tab telemetry sync.",
+    impact: "Zero-variance financial double-entry • PWA offline-first service worker • Galaxy Tab hardware sync",
+    stack: ["Python 3.11", "PWA", "Service Workers", "FinOS", "WebSockets", "Vercel"],
+    github: "https://github.com/AbishekPranavGV/quick-curie",
+    demo: "https://abishekpranavportfolio.vercel.app/",
+    highlight: true,
+    image: "projects/quick-curie.svg",
+  },
   {
     title: "NUNES School & Transport Circular Suite",
     category: "ai",
