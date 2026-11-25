@@ -21,7 +21,8 @@ interface HeroSectionProps {
 }
 
 const impactMetrics = [
-  { value: "24", label: "Production Repos", sub: "100% CI/CD Verified Live" },
+  { value: "28", label: "Production Repos", sub: "100% Verified Live Ecosystem" },
+  { value: "6", label: "Live Vercel Clouds", sub: "Sub-Second Microservices" },
   { value: "30%", label: "Cycle Time Cut", sub: "Export Logistics & Invoicing Automation" },
   { value: "85%", label: "Forecast Accuracy", sub: "ARIMA & Prophet Demand Modeling" },
   { value: "50%", label: "Screening Time Saved", sub: "Automated Candidate & Data Triage" },
@@ -52,7 +53,7 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
           <span className="text-muted-foreground/60">•</span>
           <span className="text-foreground/90 font-medium">Coimbatore, India</span>
           <span className="text-muted-foreground/60">•</span>
-          <span className="text-emerald-400 font-semibold">24/24 CI/CD Workflows Live</span>
+          <span className="text-emerald-400 font-semibold">28 Production Repos • 6 Active Vercel Deployments Live</span>
         </motion.div>
 
         {/* Headline */}

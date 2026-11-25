@@ -3,12 +3,12 @@
 Coimbatore, Tamil Nadu, India | [+91 63835 00484](tel:+916383500484) | [Abishekpranav403@gmail.com](mailto:Abishekpranav403@gmail.com)  
 **Live Portfolio:** [abishekpranavgv.github.io/abishekpranavportfolio](https://abishekpranavgv.github.io/abishekpranavportfolio/)  
 **LinkedIn:** [linkedin.com/in/abishek-pranav-g-v-](https://www.linkedin.com/in/abishek-pranav-g-v-/)  
-**GitHub:** [github.com/AbishekPranavGV](https://github.com/AbishekPranavGV) (24 Verified Repositories)
+**GitHub:** [github.com/AbishekPranavGV](https://github.com/AbishekPranavGV) (28 Verified Repositories)
 
 ---
 
 ## PROFESSIONAL SUMMARY
-Results-driven **Business Analyst and AI Automation Specialist** with a **BBA in Data Science & AI**, an **MBA in Artificial Intelligence (in progress)**, and 3 years of rigorous **Chartered Accountancy (ICAI)** foundation. Proven track record of bridging financial governance, business operations, and enterprise data analytics to architect high-impact process improvements, automated ETL/BI pipelines, and LLM-assisted production workflows. Architected and deployed 24 verified production repositories with 100% CI/CD uptime, integrating SQL, Python, Power BI, Advanced Excel, React, Next.js, and REST APIs to reduce manual turnaround times by up to 50% and optimize multimillion-dollar operations.
+Results-driven **Business Analyst and AI Automation Specialist** with a **BBA in Data Science & AI**, an **MBA in Artificial Intelligence (in progress)**, and 3 years of rigorous **Chartered Accountancy (ICAI)** foundation. Proven track record of bridging financial governance, business operations, and enterprise data analytics to architect high-impact process improvements, automated ETL/BI pipelines, and LLM-assisted production workflows. Architected and deployed 28 verified production repositories across AI automation, institutional logistics, and real-time cloud microservices with 100% CI/CD uptime, integrating SQL, Python, Power BI, Advanced Excel, React, Next.js, and REST APIs to reduce manual turnaround times by up to 50% and optimize multimillion-dollar operations.
 
 ---
 
@@ -30,7 +30,7 @@ Results-driven **Business Analyst and AI Automation Specialist** with a **BBA in
 - Spearheaded enterprise AI catalog automation using Google Gemini API and Python, reducing technical specification extraction and branded PDF catalog assembly time by **95%** across **5,000+** industrial SKUs.
 - Engineered robust Playwright browser automation bots for IndiaMART product listing workflows, automating data validation, form entry, and captcha-resilient multi-account catalog syndication.
 - Built full-stack operational web applications utilizing React, Next.js, TypeScript, and Supabase for real-time service requests, dynamic quote generation, and branch purchasing visibility dashboards.
-- Implemented automated CI/CD deployment pipelines on GitHub Actions and Vercel, maintaining 100% build pass rates, sub-second API latency, and automated error reporting across 24 repositories.
+- Implemented automated CI/CD deployment pipelines on GitHub Actions and Vercel, maintaining 100% build pass rates, sub-second API latency, and automated error reporting across 28 verified repositories.
 
 ### **RXG Studios** | Bengaluru, Karnataka (Hybrid)
 *Operations & Business Analytics Lead* | **May 2025 – Nov 2025**
@@ -66,10 +66,30 @@ Results-driven **Business Analyst and AI Automation Specialist** with a **BBA in
 
 ## KEY TECHNICAL PROJECTS & LIVE DEPLOYMENTS
 
-### **1. Portfolio Hub & Live Production Infrastructure**
+### **1. NUNES School & Transport Circular Automation Suite**
+- **Tech Stack:** Next.js 14, React 19, TypeScript, SQLite, Vercel
+- **Live Directory:** [school-seven-eosin.vercel.app](https://school-seven-eosin.vercel.app/) | **Transport Suite:** [nunes-transport.vercel.app/transport](https://nunes-transport.vercel.app/transport) | **GitHub:** [github.com/AbishekPranavGV/nunes-school-directory-coimbatore](https://github.com/AbishekPranavGV/nunes-school-directory-coimbatore)
+- Developed high-converting institutional circular generation and school discovery engine for Coimbatore district, automating transport safety communications with embedded breath analyser compliance copy and 16-page catalog attachments.
+
+### **2. LeadsAuto: Enterprise Lead Dual-Dispatch & DTP Studio**
+- **Tech Stack:** Node.js, Express, REST APIs, IndiaMART Webhooks, Vercel
+- **Live Dispatch:** [nunes-transport.vercel.app/transport](https://nunes-transport.vercel.app/transport) | **Supplier AI:** [nunes-supplier-ai.vercel.app/dashboard](https://nunes-supplier-ai.vercel.app/dashboard) | **GitHub:** [github.com/AbishekPranavGV/leads-auto-dispatch](https://github.com/AbishekPranavGV/leads-auto-dispatch)
+- Engineered dual-routing webhook dispatch pipeline for Nunes Instruments / InstruAsia, automatically calculating 2x wholesale markup and simultaneously routing verified customer quotes and internal purchase dispatches with zero latency.
+
+### **3. GmCL: Multi-Account Gmail Inbox Hygiene Suite**
+- **Tech Stack:** Python 3.11, Flask, Google Workspace API, OAuth2, Vercel Serverless
+- **Live Dashboard:** [gmcl-gmail-cleaner-mauve.vercel.app/#dashboard](https://gmcl-gmail-cleaner-mauve.vercel.app/#dashboard) | **GitHub:** [github.com/AbishekPranavGV/gmcl-gmail-cleaner](https://github.com/AbishekPranavGV/gmcl-gmail-cleaner)
+- Built enterprise multi-account Gmail inbox cleaner with live Vercel dashboard, real-time Google Workspace storage telemetry, rule-based category pruning, and automated large attachment radar.
+
+### **4. Autonomous System Temp Cleaner & Fleet Optimizer (V3.0 Pro)**
+- **Tech Stack:** Python, Win32 API, Vercel Serverless, REST Telemetry, Batch
+- **Live Console:** [autonomous-system-temp-cleaner-six.vercel.app](https://autonomous-system-temp-cleaner-six.vercel.app/) | **GitHub:** [github.com/AbishekPranavGV/Autonomous-System-Temp-Cleaner](https://github.com/AbishekPranavGV/Autonomous-System-Temp-Cleaner)
+- Deployed autonomous Windows cache cleaner with Win32 file-lock bypass and live Vercel telemetry dashboard, automating 4-hour cycle purges and recovering 15+ GB monthly disk headroom across fleet machines.
+
+### **5. Portfolio Hub & Live Production Infrastructure**
 - **Tech Stack:** React, Next.js, TypeScript, Vite, Vercel, GitHub Actions CI/CD
 - **Live App:** [abishekpranavgv.github.io/abishekpranavportfolio](https://abishekpranavgv.github.io/abishekpranavportfolio/) | **GitHub:** [github.com/AbishekPranavGV/abishekpranavportfolio](https://github.com/AbishekPranavGV/abishekpranavportfolio)
-- Engineered an executive portfolio ecosystem orchestrating 24 live micro-applications with automated GitHub Actions CI/CD workflows, real-time telemetry streaming, and native Vercel deployment configurations.
+- Engineered an executive portfolio ecosystem orchestrating 28 live micro-applications with 6 active Vercel production deployments with automated GitHub Actions CI/CD workflows, real-time telemetry streaming, and native Vercel deployment configurations.
 
 ### **2. NUNES Medical Catalogue Studio (MedX)**
 - **Tech Stack:** Python, Flask, Gemini API, Vercel, ReportLab

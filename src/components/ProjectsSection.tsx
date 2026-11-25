@@ -25,7 +25,31 @@ const resolveImagePath = (path: string) => {
 };
 
 const projects: Project[] = [
-  // --- AI & AUTOMATION (8) ---
+  // --- AI & AUTOMATION (10) ---
+  {
+    title: "NUNES School & Transport Circular Suite",
+    category: "ai",
+    categoryLabel: "Institutional Automation",
+    description: "Production Next.js web application for discovering, verifying, and dispatching school institutions and transport safety circulars with breath analyser compliance workflows.",
+    impact: "100% verified Coimbatore database • Multi-channel circular dispatch • Live on Vercel",
+    stack: ["Next.js 14", "React 19", "TypeScript", "Tailwind CSS", "SQLite", "Vercel"],
+    github: "https://github.com/AbishekPranavGV/nunes-school-directory-coimbatore",
+    demo: "https://school-seven-eosin.vercel.app/",
+    highlight: true,
+    image: "projects/school-directory.svg",
+  },
+  {
+    title: "LeadsAuto: Dual-Email Dispatch Engine",
+    category: "ai",
+    categoryLabel: "Enterprise Dual-Routing",
+    description: "Automated webhook-driven dual email dispatch engine for Nunes Instruments. Computes 2x wholesale margin rules, extracts live specs, and automates multi-catalog client attachments.",
+    impact: "Zero-latency dispatch • Automated 2x pricing rule • Direct buyer & internal routing",
+    stack: ["Node.js", "Express", "REST APIs", "IndiaMART Webhooks", "Vercel", "Tailscale"],
+    github: "https://github.com/AbishekPranavGV/leads-auto-dispatch",
+    demo: "https://nunes-transport.vercel.app/transport",
+    highlight: true,
+    image: "projects/leads-auto.svg",
+  },
   {
     title: "AI Catalogue Studio",
     category: "ai",
@@ -221,7 +245,19 @@ const projects: Project[] = [
     image: "projects/project-emotion.jpg",
   },
 
-  // --- OPERATIONS & SYSTEMS (8) ---
+  // --- OPERATIONS & SYSTEMS ---
+  {
+    title: "GmCL: Autonomous Gmail Cleaner",
+    category: "operations",
+    categoryLabel: "Inbox Hygiene & Cloud",
+    description: "Enterprise multi-account Gmail inbox cleaner with live Vercel dashboard, real-time Google Workspace storage telemetry, rule-based category pruning, and automated large attachment radar.",
+    impact: "Multi-account quota monitoring • Rule-based Promotions & Spam pruning • Vercel serverless ready",
+    stack: ["Python 3.11", "Flask", "Google APIs", "OAuth2", "Vercel Serverless"],
+    github: "https://github.com/AbishekPranavGV/gmcl-gmail-cleaner",
+    demo: "https://gmcl-gmail-cleaner-mauve.vercel.app/#dashboard",
+    highlight: true,
+    image: "projects/gmcl-cleaner.svg",
+  },
   {
     title: "NICMS Sri Lanka Strategic Blueprint",
     category: "operations",
@@ -278,7 +314,7 @@ const projects: Project[] = [
     impact: "15+ GB monthly disk space recovered • 0% CPU overhead • Safe-file exclusions",
     stack: ["Batch Scripting", "Windows Task Scheduler", "Process Locking", "Audit Logs"],
     github: "https://github.com/AbishekPranavGV/Autonomous-System-Temp-Cleaner",
-    demo: "https://abishekpranavgv.github.io/Autonomous-System-Temp-Cleaner/",
+    demo: "https://autonomous-system-temp-cleaner-six.vercel.app/",
     highlight: false,
     image: "projects/temp-cleaner.svg",
   },

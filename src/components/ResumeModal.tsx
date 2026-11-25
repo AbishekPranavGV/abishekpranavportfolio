@@ -37,7 +37,7 @@ GitHub: https://github.com/AbishekPranavGV
 ================================================================================
 PROFESSIONAL SUMMARY
 ================================================================================
-Results-driven Business Analyst and AI Automation Specialist with a BBA in Data Science & AI, an MBA in Artificial Intelligence (in progress), and 3 years of rigorous Chartered Accountancy (ICAI) foundation. Proven track record of bridging financial governance, business operations, and enterprise data analytics to architect high-impact process improvements, automated ETL/BI pipelines, and LLM-assisted production workflows. Architected and deployed 24 verified production repositories with 100% CI/CD uptime, integrating SQL, Python, Power BI, Advanced Excel, React, Next.js, and REST APIs to reduce manual turnaround times by up to 50% and optimize multimillion-dollar operations.
+Results-driven Business Analyst and AI Automation Specialist with a BBA in Data Science & AI, an MBA in Artificial Intelligence (in progress), and 3 years of rigorous Chartered Accountancy (ICAI) foundation. Proven track record of bridging financial governance, business operations, and enterprise data analytics to architect high-impact process improvements, automated ETL/BI pipelines, and LLM-assisted production workflows. Architected and deployed 28 verified production repositories across AI automation, institutional logistics, and real-time cloud microservices with 100% CI/CD uptime, integrating SQL, Python, Power BI, Advanced Excel, React, Next.js, and REST APIs to reduce manual turnaround times by up to 50% and optimize multimillion-dollar operations.
 
 ================================================================================
 CORE COMPETENCIES & TECHNICAL SKILLS
@@ -57,7 +57,7 @@ Generative AI & Business Automation Specialist | Aug 2026 – Present
 • Spearheaded enterprise AI catalog automation using Google Gemini API and Python, reducing technical specification extraction and branded PDF catalog assembly time by 95% across 5,000+ industrial SKUs.
 • Engineered robust Playwright browser automation bots for IndiaMART product listing workflows, automating data validation, form entry, and captcha-resilient multi-account catalog syndication.
 • Built full-stack operational web applications utilizing React, Next.js, TypeScript, and Supabase for real-time service requests, dynamic quote generation, and branch purchasing visibility dashboards.
-• Implemented automated CI/CD deployment pipelines on GitHub Actions and Vercel, maintaining 100% build pass rates, sub-second API latency, and automated error reporting across 24 repositories.
+• Implemented automated CI/CD deployment pipelines on GitHub Actions and Vercel, maintaining 100% build pass rates, sub-second API latency, and automated error reporting across 28 verified repositories.
 
 RXG Studios | Bengaluru, Karnataka (Hybrid)
 Operations & Business Analytics Lead | May 2025 – Nov 2025
@@ -92,9 +92,25 @@ Assistant Accountant | Jan 2022 – Jul 2022
 ================================================================================
 KEY TECHNICAL PROJECTS & LIVE DEPLOYMENTS
 ================================================================================
+NUNES School & Transport Circular Automation Suite | Next.js 14, React 19, TypeScript, SQLite, Vercel
+Live App: https://school-seven-eosin.vercel.app/ | Transport Live: https://nunes-transport.vercel.app/transport | GitHub: https://github.com/AbishekPranavGV/nunes-school-directory-coimbatore
+• Developed high-converting institutional circular generation and school discovery engine for Coimbatore district, automating transport safety communications with embedded breath analyser compliance copy and 16-page catalog attachments.
+
+LeadsAuto: Enterprise Lead Dual-Dispatch & DTP Studio | Node.js, Express, REST APIs, IndiaMART, Vercel
+Live App: https://nunes-transport.vercel.app/transport | Supplier AI: https://nunes-supplier-ai.vercel.app/dashboard | GitHub: https://github.com/AbishekPranavGV/leads-auto-dispatch
+• Engineered dual-routing webhook dispatch pipeline for Nunes Instruments / InstruAsia, automatically calculating 2x wholesale markup and simultaneously routing verified customer quotes and internal purchase dispatches with zero latency.
+
+GmCL: Multi-Account Gmail Inbox Hygiene Suite | Python 3.11, Flask, Google Workspace API, OAuth2, Vercel
+Live App: https://gmcl-gmail-cleaner-mauve.vercel.app/#dashboard | GitHub: https://github.com/AbishekPranavGV/gmcl-gmail-cleaner
+• Built enterprise multi-account Gmail inbox cleaner with live Vercel dashboard, real-time Google Workspace storage telemetry, rule-based category pruning, and automated large attachment radar.
+
+Autonomous System Temp Cleaner & Fleet Optimizer (V3.0 Pro) | Python, Win32 API, Vercel, REST Telemetry, Batch
+Live App: https://autonomous-system-temp-cleaner-six.vercel.app/ | GitHub: https://github.com/AbishekPranavGV/Autonomous-System-Temp-Cleaner
+• Deployed autonomous Windows cache cleaner with Win32 file-lock bypass and live Vercel telemetry dashboard, automating 4-hour cycle purges and recovering 15+ GB monthly disk headroom across fleet machines.
+
 Portfolio Hub & Live Production Infrastructure | React, Next.js, TypeScript, Vite, Vercel, GitHub CI/CD
 Live App: https://abishekpranavgv.github.io/abishekpranavportfolio/ | GitHub: https://github.com/AbishekPranavGV/abishekpranavportfolio
-• Engineered an executive portfolio ecosystem orchestrating 24 live micro-applications with automated GitHub Actions CI/CD workflows, real-time telemetry streaming, and native Vercel deployment configurations.
+• Engineered an executive portfolio ecosystem orchestrating 28 live micro-applications with 6 active Vercel production deployments with automated GitHub Actions CI/CD workflows, real-time telemetry streaming, and native Vercel deployment configurations.
 
 NUNES Medical Catalogue Studio (MedX) | Python, Flask, Gemini API, Vercel, ReportLab
 Live App: https://nunes-catalogue-studio-live.vercel.app/ | GitHub: https://github.com/AbishekPranavGV/MedX
@@ -279,7 +295,7 @@ CERTIFICATIONS
                   rel="noreferrer"
                   className="inline-flex items-center gap-1.5 font-semibold text-muted-foreground hover:text-foreground hover:underline"
                 >
-                  <span>GitHub Ecosystem (24 Repos)</span>
+                  <span>GitHub Ecosystem (28 Repos)</span>
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </div>
@@ -292,7 +308,7 @@ CERTIFICATIONS
                 <span>Professional Summary</span>
               </h2>
               <p className="text-muted-foreground text-xs md:text-sm leading-relaxed bg-secondary/20 p-4 rounded-xl border border-border/50">
-                Results-driven <strong>Business Analyst and AI Automation Specialist</strong> with a <strong>BBA in Data Science & AI</strong>, an <strong>MBA in Artificial Intelligence (in progress)</strong>, and 3 years of rigorous <strong>Chartered Accountancy (ICAI)</strong> foundation. Proven track record of bridging financial governance, business operations, and enterprise data analytics to architect high-impact process improvements, automated ETL/BI pipelines, and LLM-assisted production workflows. Architected and deployed <strong>24 verified production repositories</strong> with 100% CI/CD uptime, integrating SQL, Python, Power BI, Advanced Excel, React, Next.js, and REST APIs to reduce manual turnaround times by up to <strong>50%</strong> and optimize multimillion-dollar operations.
+                Results-driven <strong>Business Analyst and AI Automation Specialist</strong> with a <strong>BBA in Data Science & AI</strong>, an <strong>MBA in Artificial Intelligence (in progress)</strong>, and 3 years of rigorous <strong>Chartered Accountancy (ICAI)</strong> foundation. Proven track record of bridging financial governance, business operations, and enterprise data analytics to architect high-impact process improvements, automated ETL/BI pipelines, and LLM-assisted production workflows. Architected and deployed <strong>28 verified production repositories across AI automation, institutional logistics, and real-time cloud microservices</strong> with 100% CI/CD uptime, integrating SQL, Python, Power BI, Advanced Excel, React, Next.js, and REST APIs to reduce manual turnaround times by up to <strong>50%</strong> and optimize multimillion-dollar operations.
               </p>
             </div>
 
@@ -347,7 +363,7 @@ CERTIFICATIONS
                     <li>Spearheaded enterprise AI catalog automation using Google Gemini API and Python, reducing technical specification extraction and branded PDF catalog assembly time by <strong>95%</strong> across 5,000+ industrial SKUs.</li>
                     <li>Engineered robust Playwright browser automation bots for IndiaMART product listing workflows, automating data validation, form entry, and captcha-resilient multi-account catalog syndication.</li>
                     <li>Built full-stack operational web applications utilizing React, Next.js, TypeScript, and Supabase for real-time service requests, dynamic quote generation, and branch purchasing visibility dashboards.</li>
-                    <li>Implemented automated CI/CD deployment pipelines on GitHub Actions and Vercel, maintaining 100% build pass rates, sub-second API latency, and automated error reporting across 24 repositories.</li>
+                    <li>Implemented automated CI/CD deployment pipelines on GitHub Actions and Vercel, maintaining 100% build pass rates, sub-second API latency, and automated error reporting across 28 verified repositories.</li>
                   </ul>
                 </div>
 
@@ -425,6 +441,99 @@ CERTIFICATIONS
                 <span>Key Technical Projects & Live Deployments</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                {/* Nunes School & Transport Suite */}
+                <div className="p-3.5 rounded-xl border border-border/70 bg-secondary/20 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-foreground text-sm">NUNES School &amp; Transport Suite</span>
+                      <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Live Vercel</span>
+                    </div>
+                    <p className="text-[11px] text-primary/80 font-mono mt-0.5">Next.js 14 • React 19 • TypeScript • SQLite • Vercel</p>
+                    <p className="text-muted-foreground mt-2 leading-relaxed">
+                      Institutional directory &amp; transport circular automation suite with breath analyser compliance workflows and Coimbatore school database.
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3 mt-3 pt-2 border-t border-border/40">
+                    <a href="https://school-seven-eosin.vercel.app/" target="_blank" rel="noreferrer" className="text-primary font-semibold hover:underline inline-flex items-center gap-1">
+                      <span>Live Directory</span> <ExternalLink className="h-3 w-3" />
+                    </a>
+                    <a href="https://nunes-transport.vercel.app/transport" target="_blank" rel="noreferrer" className="text-emerald-400 font-semibold hover:underline inline-flex items-center gap-1">
+                      <span>Transport Suite</span> <ExternalLink className="h-3 w-3" />
+                    </a>
+                    <a href="https://github.com/AbishekPranavGV/nunes-school-directory-coimbatore" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1">
+                      <span>GitHub</span> <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </div>
+                </div>
+
+                {/* LeadsAuto Engine */}
+                <div className="p-3.5 rounded-xl border border-border/70 bg-secondary/20 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-foreground text-sm">LeadsAuto Dual-Dispatch Engine</span>
+                      <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Live Vercel</span>
+                    </div>
+                    <p className="text-[11px] text-primary/80 font-mono mt-0.5">Node.js • Express • Webhooks • Margin Engine • Vercel</p>
+                    <p className="text-muted-foreground mt-2 leading-relaxed">
+                      Automated webhook-driven dual email dispatch calculating 2x wholesale margin rules with instant spec extraction and PDF attachments.
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3 mt-3 pt-2 border-t border-border/40">
+                    <a href="https://nunes-transport.vercel.app/transport" target="_blank" rel="noreferrer" className="text-primary font-semibold hover:underline inline-flex items-center gap-1">
+                      <span>Live Dispatch</span> <ExternalLink className="h-3 w-3" />
+                    </a>
+                    <a href="https://nunes-supplier-ai.vercel.app/dashboard" target="_blank" rel="noreferrer" className="text-emerald-400 font-semibold hover:underline inline-flex items-center gap-1">
+                      <span>Supplier AI</span> <ExternalLink className="h-3 w-3" />
+                    </a>
+                    <a href="https://github.com/AbishekPranavGV/leads-auto-dispatch" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1">
+                      <span>GitHub</span> <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </div>
+                </div>
+
+                {/* GmCL Gmail Cleaner */}
+                <div className="p-3.5 rounded-xl border border-border/70 bg-secondary/20 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-foreground text-sm">GmCL Multi-Account Gmail Cleaner</span>
+                      <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Live Vercel</span>
+                    </div>
+                    <p className="text-[11px] text-primary/80 font-mono mt-0.5">Python 3.11 • Flask • Google Workspace APIs • Vercel</p>
+                    <p className="text-muted-foreground mt-2 leading-relaxed">
+                      Enterprise multi-account Gmail inbox cleaner with live Vercel telemetry dashboard, category auto-pruning, and large attachment radar.
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3 mt-3 pt-2 border-t border-border/40">
+                    <a href="https://gmcl-gmail-cleaner-mauve.vercel.app/#dashboard" target="_blank" rel="noreferrer" className="text-primary font-semibold hover:underline inline-flex items-center gap-1">
+                      <span>Live Dashboard</span> <ExternalLink className="h-3 w-3" />
+                    </a>
+                    <a href="https://github.com/AbishekPranavGV/gmcl-gmail-cleaner" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1">
+                      <span>GitHub</span> <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </div>
+                </div>
+
+                {/* Autonomous Temp Cleaner */}
+                <div className="p-3.5 rounded-xl border border-border/70 bg-secondary/20 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-foreground text-sm">Autonomous System Temp Cleaner</span>
+                      <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Live Vercel</span>
+                    </div>
+                    <p className="text-[11px] text-primary/80 font-mono mt-0.5">Python • Win32 API • 4H Automation • Vercel Dashboard</p>
+                    <p className="text-muted-foreground mt-2 leading-relaxed">
+                      Autonomous background Windows cache cleaner bypassing in-use file locks with zero system disruption and real-time fleet telemetry.
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3 mt-3 pt-2 border-t border-border/40">
+                    <a href="https://autonomous-system-temp-cleaner-six.vercel.app/" target="_blank" rel="noreferrer" className="text-primary font-semibold hover:underline inline-flex items-center gap-1">
+                      <span>Live Console</span> <ExternalLink className="h-3 w-3" />
+                    </a>
+                    <a href="https://github.com/AbishekPranavGV/Autonomous-System-Temp-Cleaner" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1">
+                      <span>GitHub</span> <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </div>
+                </div>
                 {/* Project 1 */}
                 <div className="p-3.5 rounded-xl border border-border/70 bg-secondary/20 flex flex-col justify-between">
                   <div>

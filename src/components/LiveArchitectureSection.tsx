@@ -39,6 +39,39 @@ const resolveImagePath = (path: string) => {
 
 const allRepos: RepoItem[] = [
   {
+    name: "nunes-school-directory-coimbatore",
+    desc: "Next.js Institutional Directory & Transport Circular Safety Suite",
+    runId: "live",
+    runUrl: "https://github.com/AbishekPranavGV/nunes-school-directory-coimbatore",
+    liveUrl: "https://school-seven-eosin.vercel.app/",
+    githubUrl: "https://github.com/AbishekPranavGV/nunes-school-directory-coimbatore",
+    tech: "Next.js 14 / React 19 / SQLite / Vercel",
+    tag: "Institutional / Safety",
+    image: "projects/school-directory.svg"
+  },
+  {
+    name: "leads-auto-dispatch",
+    desc: "Enterprise Dual-Email Automated Lead Dispatch & Pricing Engine",
+    runId: "live",
+    runUrl: "https://github.com/AbishekPranavGV/leads-auto-dispatch",
+    liveUrl: "https://nunes-transport.vercel.app/transport",
+    githubUrl: "https://github.com/AbishekPranavGV/leads-auto-dispatch",
+    tech: "Node.js / Express / Webhooks / Vercel",
+    tag: "B2B Automation",
+    image: "projects/leads-auto.svg"
+  },
+  {
+    name: "gmcl-gmail-cleaner",
+    desc: "Multi-Account Gmail Inbox Hygiene & Autonomous Cleaner Suite",
+    runId: "live",
+    runUrl: "https://github.com/AbishekPranavGV/gmcl-gmail-cleaner",
+    liveUrl: "https://gmcl-gmail-cleaner-mauve.vercel.app/#dashboard",
+    githubUrl: "https://github.com/AbishekPranavGV/gmcl-gmail-cleaner",
+    tech: "Python 3.11 / Flask / Google OAuth / Vercel",
+    tag: "Inbox Hygiene",
+    image: "projects/gmcl-cleaner.svg"
+  },
+  {
     name: "abishekpranavportfolio",
     desc: "Modern Personal Portfolio & CI/CD Telemetry Hub",
     runId: "39450416924",
@@ -208,7 +241,7 @@ const allRepos: RepoItem[] = [
     desc: "Windows Maintenance & 4-Hour Background Cache Purge",
     runId: "39449322965",
     runUrl: "https://github.com/AbishekPranavGV/Autonomous-System-Temp-Cleaner/actions/runs/39449322965",
-    liveUrl: "https://abishekpranavgv.github.io/Autonomous-System-Temp-Cleaner/",
+    liveUrl: "https://autonomous-system-temp-cleaner-six.vercel.app/",
     githubUrl: "https://github.com/AbishekPranavGV/Autonomous-System-Temp-Cleaner",
     tech: "Windows Task Scheduler / Batch",
     tag: "SysAdmin",
