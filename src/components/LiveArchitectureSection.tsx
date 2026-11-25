@@ -51,13 +51,13 @@ const allRepos: RepoItem[] = [
   },
   {
     name: "quick-curie",
-    desc: "TaxGuard Pro & FinOS: Property Tax Appeal AI & Autonomous FinOS Hub",
+    desc: "Akshay: Autonomous Personal AI Assistant, FinOS & Workstation Suite",
     runId: "live",
     runUrl: "https://github.com/AbishekPranavGV/quick-curie",
-    liveUrl: "https://quick-curie.vercel.app/",
+    liveUrl: "https://akshay-ai-personal-assistant.vercel.app/",
     githubUrl: "https://github.com/AbishekPranavGV/quick-curie",
-    tech: "React / TypeScript / Tesseract.js / FinOS / Vercel",
-    tag: "Property Tax AI",
+    tech: "Python / FastAPI / PWA / FinOS / Vercel",
+    tag: "Autonomous AI & FinOS",
     image: "projects/quick-curie.svg"
   },
   {
