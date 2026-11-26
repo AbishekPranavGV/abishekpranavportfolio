@@ -19,11 +19,11 @@ interface HeroSectionProps {
 }
 
 const ROLES = [
-  "Business Analysis & Operations Lead",
-  "Generative AI & LLM Automation Engineer",
-  "Data Analytics & Business Intelligence Specialist",
-  "Python Automation & API Architect",
-  "Predictive Modeling & Process Improvement Developer"
+  "Generative Executive AI / Forward Deployed Engineer",
+  "Applied AI & Enterprise Automation Specialist",
+  "Business Intelligence & Data Intelligence Lead",
+  "Python Automation & Full-Stack Systems Architect",
+  "Predictive Modeling & Operational Optimization Developer"
 ];
 
 const impactMetrics = [
@@ -69,7 +69,7 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
             </span>
             <span className="text-foreground/90 font-bold uppercase tracking-wider text-[11px]">Identity</span>
             <span className="text-muted-foreground/60">•</span>
-            <span className="text-foreground">Business Analysis | Data Intelligence | AI Automation</span>
+            <span className="text-foreground">Generative Executive AI / Forward Deployed Engineer</span>
             <span className="text-muted-foreground/60">•</span>
             <span className="text-emerald-400 font-semibold">10 Live Vercel Deployments • 30 Repos</span>
           </motion.div>

@@ -152,7 +152,7 @@ export default function Index() {
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
             <span className="font-bold text-foreground">Abishek Pranav G V</span>
             <span className="hidden sm:inline">•</span>
-            <span>Business Analysis | Data Intelligence | AI Automation</span>
+            <span>Generative Executive AI / Forward Deployed Engineer</span>
           </div>
 
           <div className="flex items-center gap-6">

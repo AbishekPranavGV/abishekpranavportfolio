@@ -4,7 +4,7 @@ import { Briefcase, Calendar, MapPin, CheckCircle2, Terminal, Cpu } from "lucide
 const experiences = [
   {
     company: "Nunes Instrumentation",
-    role: "Generative AI & Business Automation Specialist",
+    role: "Generative Executive AI / Forward Deployed Engineer",
     period: "Aug 2026 – Present",
     location: "Coimbatore, Tamil Nadu",
     current: true,
