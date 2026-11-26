@@ -383,9 +383,10 @@ const projects: Project[] = [
 export default function ProjectsSection() {
   const [filter, setFilter] = useState<ProjectCategory>("flagship");
   const [search, setSearch] = useState("");
+  const [showAll, setShowAll] = useState(false);
 
   const filteredProjects = useMemo(() => {
-    return projects.filter((project) => {
+    const list = projects.filter((project) => {
       const matchesCategory =
         filter === "flagship"
           ? Boolean(project.highlight)
@@ -397,7 +398,12 @@ export default function ProjectsSection() {
         project.stack.some((s) => s.toLowerCase().includes(search.toLowerCase()));
       return matchesCategory && matchesSearch;
     });
-  }, [filter, search]);
+
+    if (!showAll && search === "") {
+      return list.slice(0, 6);
+    }
+    return list;
+  }, [filter, search, showAll]);
 
   const flagshipCount = useMemo(() => projects.filter((p) => p.highlight).length, []);
 
@@ -603,6 +609,19 @@ export default function ProjectsSection() {
               </motion.div>
             ))}
           </AnimatePresence>
+        </div>
+
+        {/* Toggle Show All / Show Curated Best Button */}
+        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 pt-8 border-t border-border/60">
+          <button
+            onClick={() => setShowAll((prev) => !prev)}
+            className="action-outline inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-xs font-bold shadow-sm hover:border-primary/50 transition-all cursor-pointer"
+          >
+            <span>{showAll ? "▲ Show Curated Top Executive Systems Only (Top 6)" : `▼ Show All ${projects.length} Engineering Repositories & Deployments`}</span>
+          </button>
+          <span className="text-xs text-muted-foreground font-mono">
+            {showAll ? `Showing all ${projects.length} verified repositories` : "Curated View: Displaying top high-impact Forward Deployed AI systems"}
+          </span>
         </div>
       </div>
     </section>
