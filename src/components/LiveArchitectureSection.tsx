@@ -467,7 +467,7 @@ export default function LiveArchitectureSection() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
-                {(showAllRepos ? filteredRepos : filteredRepos.slice(0, 6)).map((repo) => (
+                {filteredRepos.map((repo) => (
                   <div
                     key={repo.name}
                     className="group relative flex flex-col justify-between p-4 rounded-xl border border-border/70 bg-secondary/20 hover:border-primary/60 hover:bg-secondary/40 transition-all duration-300 shadow-md"
@@ -530,19 +530,6 @@ export default function LiveArchitectureSection() {
                     </div>
                   </div>
                 ))}
-              </div>
-
-              {/* Show All / Show Curated button in Live Architecture Matrix */}
-              <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-border/60">
-                <button
-                  onClick={() => setShowAllRepos((prev) => !prev)}
-                  className="action-outline inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-xs font-bold hover:border-primary/50 transition-all shadow-sm"
-                >
-                  <span>{showAllRepos ? "▲ Show Curated Flagship Deployments (Top 6)" : `▼ View Full Deployment Matrix (${filteredRepos.length} Live Deployments)`}</span>
-                </button>
-                <div className="text-xs text-muted-foreground font-mono">
-                  {showAllRepos ? "Full monorepo telemetry unrolled" : "Showing Top 6 Forward Deployed AI cloud applications"}
-                </div>
               </div>
             </motion.div>
           )}
@@ -635,19 +622,6 @@ export default function LiveArchitectureSection() {
                   </div>
                 </div>
               </div>
-
-              {/* Show All / Show Curated button in Live Architecture Matrix */}
-              <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-border/60">
-                <button
-                  onClick={() => setShowAllRepos((prev) => !prev)}
-                  className="action-outline inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-xs font-bold hover:border-primary/50 transition-all shadow-sm"
-                >
-                  <span>{showAllRepos ? "▲ Show Curated Flagship Deployments (Top 6)" : `▼ View Full Deployment Matrix (${filteredRepos.length} Live Deployments)`}</span>
-                </button>
-                <div className="text-xs text-muted-foreground font-mono">
-                  {showAllRepos ? "Full monorepo telemetry unrolled" : "Showing Top 6 Forward Deployed AI cloud applications"}
-                </div>
-              </div>
             </motion.div>
           )}
 
@@ -716,19 +690,6 @@ export default function LiveArchitectureSection() {
                   <div className="mt-4 pt-4 border-t border-border/60 text-xs font-mono text-primary">
                     $1B+ inventory distortions solved
                   </div>
-                </div>
-              </div>
-
-              {/* Show All / Show Curated button in Live Architecture Matrix */}
-              <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-border/60">
-                <button
-                  onClick={() => setShowAllRepos((prev) => !prev)}
-                  className="action-outline inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-xs font-bold hover:border-primary/50 transition-all shadow-sm"
-                >
-                  <span>{showAllRepos ? "▲ Show Curated Flagship Deployments (Top 6)" : `▼ View Full Deployment Matrix (${filteredRepos.length} Live Deployments)`}</span>
-                </button>
-                <div className="text-xs text-muted-foreground font-mono">
-                  {showAllRepos ? "Full monorepo telemetry unrolled" : "Showing Top 6 Forward Deployed AI cloud applications"}
                 </div>
               </div>
             </motion.div>
