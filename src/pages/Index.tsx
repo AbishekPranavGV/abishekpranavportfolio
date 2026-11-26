@@ -164,7 +164,7 @@ export default function Index() {
               className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1.5 text-xs font-semibold"
             >
               <Github className="h-4 w-4" />
-              <span>GitHub (30 Repos)</span>
+              <span>GitHub (31 Repos)</span>
             </a>
             <a
               href="https://www.linkedin.com/in/abishek-pranav-g-v-/"

@@ -28,8 +28,8 @@ const ROLES = [
 ];
 
 const impactMetrics = [
-  { value: "30", label: "Production Repos", sub: "100% Verified Production Repositories" },
-  { value: "10", label: "Live Vercel Clouds", sub: "Sub-Second Microservices & Web Apps" },
+  { value: "31", label: "Production Repos", sub: "100% Verified Production Repositories" },
+  { value: "14+", label: "Live Cloud Deployments", sub: "Verified Sub-Second Vercel Microservices" },
   { value: "30%", label: "Cycle Time Cut", sub: "Export Logistics & Invoicing Automation" },
   { value: "85%", label: "Forecast Accuracy", sub: "ARIMA & Prophet Demand Modeling" },
   { value: "50%", label: "Screening Time Saved", sub: "Automated Candidate & Data Triage" },
@@ -72,7 +72,7 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
             <span className="text-muted-foreground/60">•</span>
             <span className="text-foreground">Generative Executive AI / Forward Deployed Engineer</span>
             <span className="text-muted-foreground/60">•</span>
-            <span className="text-emerald-400 font-semibold">10 Live Vercel Deployments • 30 Repos</span>
+            <span className="text-emerald-400 font-semibold">14+ Active Cloud Deployments • 31 Production Repos</span>
           </motion.div>
 
           {/* Location & Status Indicator */}
@@ -170,11 +170,11 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="action-outline inline-flex items-center gap-2 rounded-xl px-3.5 py-3.5 text-sm font-semibold hover:text-primary transition-colors"
-                title="GitHub Repositories (30 Repos)"
+                title="GitHub Repositories (31 Repos)"
                 aria-label="GitHub Profile"
               >
                 <Github className="h-4 w-4" />
-                <span className="text-xs font-mono font-bold">30</span>
+                <span className="text-xs font-mono font-bold">31</span>
               </a>
 
               <a

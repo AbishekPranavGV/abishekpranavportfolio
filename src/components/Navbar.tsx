@@ -111,8 +111,8 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
             target="_blank"
             rel="noreferrer"
             className="p-2 rounded-xl border border-border/60 text-muted-foreground hover:text-foreground hover:bg-secondary/40 transition-colors"
-            aria-label="GitHub Profile (30 Repos)"
-            title="GitHub (30 Repositories)"
+            aria-label="GitHub Profile (31 Repos)"
+            title="GitHub (31 Repositories)"
           >
             <Github className="h-4 w-4" />
           </a>
