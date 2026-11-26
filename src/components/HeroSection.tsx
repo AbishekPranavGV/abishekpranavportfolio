@@ -192,21 +192,21 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
 
           {/* Right Profile Photo / Identity Visual Column */}
           <motion.div
-            initial={reduceMotion ? false : { opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={reduceMotion ? false : { opacity: 0, scale: 0.92, y: 15 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-4 flex justify-center"
           >
-            <div className="relative group">
+            <div className="relative group w-full max-w-[310px]">
               {/* Animated outer glowing ring */}
-              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-primary via-cyan-500 to-blue-600 opacity-30 blur-lg group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-pulse" />
+              <div className="absolute -inset-1.5 rounded-3xl bg-gradient-to-r from-blue-600 via-primary to-cyan-500 opacity-20 blur-xl group-hover:opacity-40 transition duration-700 animate-pulse" />
               
-              <div className="relative rounded-3xl border-2 border-primary/30 bg-card/90 p-3 shadow-2xl backdrop-blur-xl">
-                <div className="overflow-hidden rounded-2xl w-56 h-56 sm:w-64 sm:h-64 relative bg-secondary/60">
+              <div className="relative rounded-3xl border border-slate-200/90 bg-white p-3.5 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:border-primary/40">
+                <div className="overflow-hidden rounded-2xl aspect-[4/5] relative bg-slate-50">
                   <img
                     src={linkedinProfilePic}
-                    alt="Abishek Pranav G V - Professional Profile Photo"
-                    className="w-full h-full object-cover object-center filter contrast-[1.02] brightness-[1.02] group-hover:scale-105 transition-transform duration-500"
+                    alt="Abishek Pranav G V - Generative Executive AI & Forward Deployed Engineer"
+                    className="w-full h-full object-cover object-top filter contrast-[1.03] brightness-[1.01] group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       if (!target.src.includes("github")) {
@@ -214,18 +214,20 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
                       }
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-60" />
-                  <div className="absolute bottom-2.5 inset-x-2.5 text-center bg-card/85 backdrop-blur-md rounded-xl py-1.5 px-2 border border-border/60">
-                    <p className="text-xs font-bold text-foreground">Abishek Pranav G V</p>
-                    <p className="text-[10px] text-primary font-mono">BBA (AI) • MBA (AI) • CA (Prep)</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-70" />
+                  
+                  {/* Floating Identity Overlay on Image */}
+                  <div className="absolute bottom-3 inset-x-3 text-center bg-white/95 backdrop-blur-md rounded-xl py-2 px-2.5 border border-slate-200/80 shadow-md">
+                    <p className="text-xs font-bold text-slate-900 tracking-tight">Abishek Pranav G V</p>
+                    <p className="text-[10px] font-semibold text-primary font-mono mt-0.5">BBA (AI) • MBA (AI) • CA (Prep)</p>
                   </div>
                 </div>
               </div>
 
               {/* Floating verified badge */}
-              <div className="absolute -bottom-3 -right-2 bg-emerald-500/10 border border-emerald-500/40 backdrop-blur-md rounded-full px-3 py-1 flex items-center gap-1.5 shadow-lg">
-                <span className="h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
-                <span className="text-[11px] font-bold text-emerald-400">Verified Systems</span>
+              <div className="absolute -bottom-3 -right-2 bg-white border border-emerald-500/30 rounded-full px-3 py-1 flex items-center gap-1.5 shadow-lg">
+                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping" />
+                <span className="text-[11px] font-bold text-emerald-600 font-mono">Verified Systems</span>
               </div>
             </div>
           </motion.div>
