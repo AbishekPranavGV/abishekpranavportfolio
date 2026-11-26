@@ -9,6 +9,7 @@ import SkillsSection from "@/components/SkillsSection";
 import EducationSection from "@/components/EducationSection";
 import ResumeModal from "@/components/ResumeModal";
 import { ArrowUpRight, Github, Linkedin, Mail, Phone, MapPin, Check, Copy, Sparkles, FileText, Download } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Index() {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -52,21 +53,27 @@ export default function Index() {
 
         {/* Contact Section */}
         <section id="contact" className="px-6 py-28 relative">
-          <div className="mx-auto max-w-6xl rounded-3xl border border-primary/25 bg-gradient-to-br from-primary/[0.08] via-card to-card p-8 md:p-16 shadow-2xl relative overflow-hidden">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mx-auto max-w-6xl rounded-3xl border border-primary/25 bg-gradient-to-br from-primary/[0.08] via-card to-card p-8 md:p-16 shadow-2xl relative overflow-hidden"
+          >
             <div aria-hidden="true" className="hero-glow pointer-events-none absolute -right-24 -top-24 h-[400px] w-[400px] rounded-full opacity-40" />
 
             <div className="relative z-10 max-w-3xl">
-              <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary mb-4">
+              <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary mb-4 font-mono">
                 <Sparkles className="h-3.5 w-3.5" />
-                <span>Start a Conversation</span>
+                <span>Start a High-Impact Collaboration</span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-foreground">
-                Looking for a high-impact Business Analyst & Automation Specialist?
+                Ready to Build Production AI & Automation Systems Together?
               </h2>
 
               <p className="mt-4 text-base md:text-lg text-muted-foreground leading-relaxed">
-                Combining finance foundations, business operations, and applied AI automation to eliminate manual bottlenecks, build executive BI dashboards, and engineer intelligent workflows.
+                Combining financial rigor, operational process understanding, and practical AI engineering to eliminate bottlenecks, build executive BI dashboards, and engineer production applications that actually ship.
               </p>
 
               <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -75,7 +82,7 @@ export default function Index() {
                   className="action-primary inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-bold shadow-lg shadow-primary/25 hover:scale-[1.02] active:scale-[0.98] transition-all"
                 >
                   <Mail className="h-4 w-4" />
-                  <span>Send Email</span>
+                  <span>Send Direct Email</span>
                   <ArrowUpRight className="h-4 w-4" />
                 </a>
 
@@ -84,7 +91,7 @@ export default function Index() {
                   className="action-outline inline-flex items-center gap-2 rounded-xl px-5 py-3.5 text-sm font-semibold hover:border-primary/50 transition-all"
                 >
                   <FileText className="h-4 w-4 text-primary" />
-                  <span>View Official CV</span>
+                  <span>View Official CVs</span>
                 </button>
 
                 <button
@@ -135,7 +142,7 @@ export default function Index() {
                 <span>Hybrid / Remote Worldwide</span>
               </div>
             </div>
-          </div>
+          </motion.div>
         </section>
       </main>
 
@@ -145,7 +152,7 @@ export default function Index() {
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
             <span className="font-bold text-foreground">Abishek Pranav G V</span>
             <span className="hidden sm:inline">•</span>
-            <span>Business Analyst | Data & AI Automation | Process Improvement</span>
+            <span>Business Analysis | Data Intelligence | AI Automation</span>
           </div>
 
           <div className="flex items-center gap-6">
@@ -157,7 +164,7 @@ export default function Index() {
               className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1.5 text-xs font-semibold"
             >
               <Github className="h-4 w-4" />
-              <span>GitHub (24 Repos)</span>
+              <span>GitHub (30 Repos)</span>
             </a>
             <a
               href="https://www.linkedin.com/in/abishek-pranav-g-v-/"
