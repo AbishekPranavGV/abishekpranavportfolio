@@ -1,3 +1,4 @@
+import linkedinProfilePic from "@/assets/linkedin-profile.jpg";
 import { useState, useEffect } from "react";
 import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
 import { 
@@ -203,11 +204,14 @@ export default function HeroSection({ onOpenResume }: HeroSectionProps) {
               <div className="relative rounded-3xl border-2 border-primary/30 bg-card/90 p-3 shadow-2xl backdrop-blur-xl">
                 <div className="overflow-hidden rounded-2xl w-56 h-56 sm:w-64 sm:h-64 relative bg-secondary/60">
                   <img
-                    src="https://github.com/AbishekPranavGV.png"
-                    alt="Abishek Pranav G V - Professional Profile"
-                    className="w-full h-full object-cover object-center filter contrast-[1.03] brightness-[1.02] group-hover:scale-105 transition-transform duration-500"
+                    src={linkedinProfilePic}
+                    alt="Abishek Pranav G V - Professional Profile Photo"
+                    className="w-full h-full object-cover object-center filter contrast-[1.02] brightness-[1.02] group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
-                      (e.target as HTMLElement).style.display = 'none';
+                      const target = e.target as HTMLImageElement;
+                      if (!target.src.includes("github")) {
+                        target.src = "https://github.com/AbishekPranavGV.png";
+                      }
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-60" />
