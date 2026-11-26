@@ -439,35 +439,28 @@ export default function LiveArchitectureSection() {
                 <div>
                   <div className="inline-flex items-center gap-2 text-xs font-semibold text-emerald-400">
                     <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                    <span>24 of 24 Repositories 100% Deployed & Passing</span>
+                    <span>Curated Executive AI Systems Deployed & Passing</span>
                   </div>
                   <h3 className="text-2xl font-bold mt-1">Live Result Outputs & Production Matrix</h3>
                   <p className="text-xs text-muted-foreground mt-1">
-                    Every repository below has a verified live production deployment with full visual result previews.
+                    Selected top-tier production deployments with direct live application access and telemetry.
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <input
-                    type="text"
-                    placeholder="Filter 24 systems..."
-                    value={searchRepo}
-                    onChange={(e) => setSearchRepo(e.target.value)}
-                    className="px-3 py-1.5 text-xs rounded-lg border border-border bg-secondary/50 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50"
-                  />
                   <a
                     href="https://github.com/AbishekPranavGV?tab=repositories"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors whitespace-nowrap"
                   >
-                    <span>All Repos</span>
+                    <span>Explore All Repos</span>
                     <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
-                {filteredRepos.map((repo) => (
+                {filteredRepos.slice(0, 6).map((repo) => (
                   <div
                     key={repo.name}
                     className="group relative flex flex-col justify-between p-4 rounded-xl border border-border/70 bg-secondary/20 hover:border-primary/60 hover:bg-secondary/40 transition-all duration-300 shadow-md"
