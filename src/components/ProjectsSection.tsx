@@ -604,6 +604,33 @@ export default function ProjectsSection() {
             ))}
           </AnimatePresence>
         </div>
+
+        {/* Direct GitHub Explorer for Remaining Projects */}
+        <div className="mt-14 rounded-2xl border border-border/80 bg-gradient-to-r from-slate-50 via-white to-slate-50 p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+          <div>
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[11px] font-mono font-semibold mb-2">
+              <Github className="h-3.5 w-3.5" />
+              <span>Full Monorepo & Open Source</span>
+            </div>
+            <h3 className="text-lg md:text-xl font-bold text-slate-900">
+              Looking to explore all 31+ production repositories & live builds?
+            </h3>
+            <p className="text-xs md:text-sm text-slate-600 mt-1 max-w-xl">
+              Inspect all data pipelines, ARIMA forecasting engines, export documentation automations, and full-stack applications directly on GitHub.
+            </p>
+          </div>
+
+          <a
+            href="https://github.com/AbishekPranavGV?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="action-primary inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-xs md:text-sm font-bold shadow-md shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all shrink-0 cursor-pointer"
+          >
+            <Github className="h-4 w-4" />
+            <span>View All 31 Repos on GitHub</span>
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
       </div>
     </section>
   );
